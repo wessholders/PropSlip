@@ -1,0 +1,1886 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#e9f7f7">
+    <title>Propeller Slip Calculator</title>
+    <script>
+      (() => {
+        const key = "prop-slip-appearance";
+        let stored = "system";
+        try {
+          stored = localStorage.getItem(key) || "system";
+        } catch (error) {
+          stored = "system";
+        }
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = stored === "system" ? (prefersDark ? "dark" : "light") : stored;
+        document.documentElement.dataset.appearance = stored;
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #edf7f7;
+        --bg-start: #dff2f3;
+        --bg-end: #f6f1e8;
+        --ink: #102326;
+        --muted: #53676b;
+        --line: #cadadd;
+        --panel: #ffffff;
+        --control: #ffffff;
+        --control-addon: #f0f7f7;
+        --accent: #00747c;
+        --accent-strong: #064f57;
+        --accent-soft: #d9f1f2;
+        --code-ink: #12383b;
+        --accent-warm: #d48212;
+        --warn: #a33d2a;
+        --good: #217948;
+        --result-bg: linear-gradient(180deg, #064f57, #123b42);
+        --result-ink: #f8fffe;
+        --result-muted: rgba(248, 255, 254, 0.78);
+        --detail-bg: rgba(255, 255, 255, 0.1);
+        --detail-border: rgba(255, 255, 255, 0.14);
+        --overlay: rgba(5, 26, 30, 0.54);
+        --shadow: 0 20px 50px rgba(24, 54, 58, 0.14);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      [data-theme="dark"] {
+        color-scheme: dark;
+        --bg: #071f24;
+        --bg-start: #0b343b;
+        --bg-end: #061317;
+        --ink: #edfafa;
+        --muted: #a7c1c5;
+        --line: #24474e;
+        --panel: #0f2a30;
+        --control: #0a2228;
+        --control-addon: #14333a;
+        --accent: #4ecbd2;
+        --accent-strong: #8fe5e8;
+        --accent-soft: #123c43;
+        --code-ink: #d9f7f7;
+        --accent-warm: #f0ad3d;
+        --warn: #ff9a84;
+        --good: #6bd799;
+        --result-bg: linear-gradient(180deg, #0a4951, #0a262c);
+        --result-ink: #f8fffe;
+        --result-muted: rgba(248, 255, 254, 0.76);
+        --detail-bg: rgba(255, 255, 255, 0.08);
+        --detail-border: rgba(255, 255, 255, 0.12);
+        --overlay: rgba(1, 12, 15, 0.7);
+        --shadow: 0 22px 54px rgba(0, 0, 0, 0.32);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        background: var(--bg);
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 18% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 26rem),
+          linear-gradient(180deg, var(--bg-start) 0%, var(--bg) 36%, var(--bg-end) 100%);
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      .app {
+        width: min(100%, 480px);
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: max(18px, env(safe-area-inset-top)) 18px max(24px, env(safe-area-inset-bottom));
+        display: grid;
+        align-content: start;
+        gap: 16px;
+      }
+
+      .masthead {
+        min-height: 116px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 14px;
+        padding: 18px 2px 10px;
+      }
+
+      .title-wrap {
+        min-width: 0;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 10ch;
+        font-size: clamp(2.25rem, 16vw, 4.4rem);
+        line-height: 0.88;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.35;
+      }
+
+      .header-actions {
+        align-self: start;
+        display: grid;
+        justify-items: end;
+        gap: 10px;
+      }
+
+      .icon-button {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--accent-strong);
+        background: var(--panel);
+        box-shadow: 0 10px 24px rgba(24, 54, 58, 0.1);
+        font-size: 1.1rem;
+        font-weight: 900;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .theme-toggle {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .theme-toggle input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+      }
+
+      .switch {
+        position: relative;
+        width: 48px;
+        height: 28px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--control-addon);
+        transition: background-color 160ms ease, border-color 160ms ease;
+      }
+
+      .switch::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--accent-warm);
+        box-shadow: 0 2px 8px rgba(16, 35, 38, 0.22);
+        transition: transform 160ms ease, background-color 160ms ease;
+      }
+
+      .theme-toggle input:checked + .switch {
+        background: var(--accent-soft);
+      }
+
+      .theme-toggle input:checked + .switch::before {
+        transform: translateX(20px);
+        background: var(--accent);
+      }
+
+      .theme-toggle input:focus-visible + .switch {
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 38%, transparent);
+      }
+
+      .calculator {
+        display: grid;
+        gap: 14px;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .inputs {
+        padding: 16px;
+        display: grid;
+        gap: 13px;
+      }
+
+      .field {
+        display: grid;
+        gap: 7px;
+      }
+
+      label {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        color: var(--ink);
+        font-size: 0.88rem;
+        font-weight: 750;
+      }
+
+      label span {
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 650;
+      }
+
+      .control-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        min-height: 52px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--control);
+      }
+
+      input,
+      select {
+        width: 100%;
+        min-width: 0;
+        border: 0;
+        outline: 0;
+        color: var(--ink);
+        background: transparent;
+      }
+
+      input {
+        padding: 0 14px;
+        font-size: 1.25rem;
+        font-weight: 780;
+      }
+
+      input:focus-visible,
+      select:focus-visible,
+      button:focus-visible {
+        box-shadow: inset 0 0 0 2px var(--accent);
+      }
+
+      .unit,
+      select {
+        display: grid;
+        place-items: center;
+        min-width: 72px;
+        padding: 0 12px;
+        border-left: 1px solid var(--line);
+        color: var(--muted);
+        background: var(--control-addon);
+        font-size: 0.88rem;
+        font-weight: 750;
+      }
+
+      select {
+        appearance: none;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 2px;
+      }
+
+      .ghost-button,
+      .preset-button {
+        min-height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--accent-strong);
+        background: var(--control-addon);
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .result {
+        padding: 18px;
+        display: grid;
+        gap: 16px;
+        background: var(--result-bg);
+        color: var(--result-ink);
+      }
+
+      .result-top {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .metric-label {
+        margin: 0;
+        color: var(--result-muted);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      .slip-value {
+        margin: 2px 0 0;
+        font-size: clamp(3rem, 18vw, 4.75rem);
+        font-weight: 850;
+        line-height: 0.94;
+        letter-spacing: 0;
+      }
+
+      .status-pill {
+        justify-self: end;
+        min-width: 94px;
+        padding: 8px 10px;
+        border-radius: 999px;
+        text-align: center;
+        color: var(--result-ink);
+        background: rgba(255, 255, 255, 0.13);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        font-size: 0.78rem;
+        font-weight: 850;
+      }
+
+      .status-pill.good {
+        background: rgba(31, 122, 74, 0.54);
+      }
+
+      .status-pill.warn {
+        background: rgba(165, 64, 45, 0.62);
+      }
+
+      .details {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .detail {
+        min-height: 70px;
+        padding: 11px;
+        border-radius: 8px;
+        background: var(--detail-bg);
+        border: 1px solid var(--detail-border);
+      }
+
+      .detail strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--result-muted);
+        font-size: 0.74rem;
+      }
+
+      .detail span {
+        display: block;
+        font-size: 1.24rem;
+        font-weight: 820;
+        word-break: break-word;
+      }
+
+      .message {
+        min-height: 22px;
+        margin: 0;
+        color: var(--result-muted);
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+
+      .note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.4;
+      }
+
+      .info-dialog {
+        width: min(420px, calc(100vw - 32px));
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--ink);
+        background: var(--panel);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      .info-dialog::backdrop {
+        background: var(--overlay);
+      }
+
+      .info-content {
+        padding: 18px;
+        display: grid;
+        gap: 13px;
+      }
+
+      .dialog-head {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 14px;
+        align-items: center;
+      }
+
+      .dialog-head h2 {
+        margin: 0;
+        font-size: 1.14rem;
+        line-height: 1.2;
+      }
+
+      .close-button {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--accent-strong);
+        background: var(--control-addon);
+        font-size: 1.15rem;
+        font-weight: 850;
+        cursor: pointer;
+      }
+
+      .info-copy {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.42;
+      }
+
+      :root {
+        --app-bg: #f2f2f7;
+        --app-top: #e7f6f8;
+        --app-bottom: #f2f2f7;
+        --label: #11181c;
+        --secondary-label: #5d6870;
+        --tertiary-label: #879199;
+        --separator: rgba(60, 60, 67, 0.18);
+        --group-bg: rgba(255, 255, 255, 0.86);
+        --ios-control-bg: #f8f8fb;
+        --elevated-bg: #ffffff;
+        --ios-accent: #006edb;
+        --ios-accent-pressed: #005fc7;
+        --ios-marine: #007982;
+        --ios-marine-dark: #075059;
+        --ios-success: #34c759;
+        --ios-danger: #ff3b30;
+        --sheet-backdrop: rgba(0, 0, 0, 0.34);
+        --ios-shadow: 0 20px 46px rgba(31, 50, 56, 0.14);
+        --ios-soft-shadow: 0 8px 24px rgba(31, 50, 56, 0.1);
+        --radius-xl: 24px;
+        --radius-lg: 18px;
+        --radius-md: 14px;
+        --tap: 46px;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      }
+
+      [data-theme="dark"] {
+        --app-bg: #000000;
+        --app-top: #071f24;
+        --app-bottom: #000000;
+        --label: #f5f5f7;
+        --secondary-label: #b7bec4;
+        --tertiary-label: #7f8a92;
+        --separator: rgba(235, 235, 245, 0.16);
+        --group-bg: rgba(28, 28, 30, 0.88);
+        --ios-control-bg: #2c2c2e;
+        --elevated-bg: #1c1c1e;
+        --ios-accent: #0a84ff;
+        --ios-accent-pressed: #409cff;
+        --ios-marine: #64d2ff;
+        --ios-marine-dark: #0a4d57;
+        --ios-success: #32d74b;
+        --ios-danger: #ff453a;
+        --sheet-backdrop: rgba(0, 0, 0, 0.58);
+        --ios-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+        --ios-soft-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+      }
+
+      body {
+        color: var(--label);
+        background:
+          radial-gradient(circle at 20% -10%, color-mix(in srgb, var(--ios-marine) 22%, transparent), transparent 22rem),
+          linear-gradient(180deg, var(--app-top), var(--app-bg) 30%, var(--app-bottom));
+        -webkit-font-smoothing: antialiased;
+      }
+
+      button {
+        touch-action: manipulation;
+      }
+
+      .app {
+        width: min(100%, 480px);
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: max(12px, env(safe-area-inset-top)) 16px max(26px, env(safe-area-inset-bottom));
+        display: block;
+      }
+
+      .top-bar {
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .nav-button {
+        min-height: 34px;
+        border: 0;
+        border-radius: 999px;
+        padding: 0 12px;
+        color: var(--ios-accent);
+        background: color-mix(in srgb, var(--group-bg) 80%, transparent);
+        font-size: 0.96rem;
+        font-weight: 650;
+        cursor: pointer;
+      }
+
+      .nav-button:active {
+        color: var(--ios-accent-pressed);
+        transform: scale(0.98);
+      }
+
+      .app-header {
+        padding: 6px 2px 18px;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: none;
+        font-size: clamp(2.45rem, 14vw, 4.1rem);
+        line-height: 0.93;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        max-width: 31ch;
+        margin: 10px 0 0;
+        color: var(--secondary-label);
+        font-size: 1rem;
+        line-height: 1.35;
+      }
+
+      .stack {
+        display: grid;
+        gap: 16px;
+      }
+
+      .result-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 202px;
+        padding: 20px;
+        border-radius: var(--radius-xl);
+        color: var(--label);
+        background: var(--elevated-bg);
+        box-shadow: var(--ios-shadow);
+      }
+
+      .result-content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 16px;
+      }
+
+      .result-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .slip-value {
+        margin: 4px 0 0;
+        font-size: clamp(3.35rem, 18vw, 5rem);
+        font-weight: 780;
+        line-height: 0.92;
+        letter-spacing: 0;
+      }
+
+      .status-pill.good {
+        background: color-mix(in srgb, var(--ios-success) 74%, transparent);
+      }
+
+      .status-pill.warn {
+        background: color-mix(in srgb, var(--ios-danger) 72%, transparent);
+      }
+
+      .mini-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .mini-stat {
+        min-height: 68px;
+        padding: 11px;
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        backdrop-filter: blur(14px);
+      }
+
+      .mini-stat strong {
+        display: block;
+        margin-bottom: 5px;
+        color: rgba(247, 255, 255, 0.72);
+        font-size: 0.73rem;
+        font-weight: 650;
+      }
+
+      .mini-stat span {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: 760;
+        word-break: break-word;
+      }
+
+      .section-title {
+        margin: 0 0 8px 4px;
+        color: var(--secondary-label);
+        font-size: 0.78rem;
+        font-weight: 760;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .group {
+        overflow: hidden;
+        border: 1px solid var(--separator);
+        border-radius: var(--radius-lg);
+        background: var(--group-bg);
+        box-shadow: var(--ios-soft-shadow);
+        backdrop-filter: blur(18px);
+      }
+
+      .field-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(132px, 48%);
+        gap: 14px;
+        align-items: center;
+        min-height: 66px;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--separator);
+      }
+
+      .field-row:last-child {
+        border-bottom: 0;
+      }
+
+      .field-label {
+        min-width: 0;
+      }
+
+      .field-label label {
+        display: block;
+        color: var(--label);
+        font-size: 1rem;
+        font-weight: 620;
+      }
+
+      .field-label span {
+        display: block;
+        margin-top: 3px;
+        color: var(--secondary-label);
+        font-size: 0.78rem;
+        line-height: 1.25;
+      }
+
+      .value-control {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        min-height: 44px;
+        border-radius: 12px;
+        background: var(--ios-control-bg);
+      }
+
+      input {
+        padding: 0 10px 0 12px;
+        text-align: right;
+        font-size: 1.16rem;
+        font-weight: 680;
+        color: var(--label);
+      }
+
+      .unit,
+      select {
+        min-width: 54px;
+        padding: 0 10px;
+        color: var(--secondary-label);
+        background: transparent;
+        border-left: 0;
+        font-size: 0.86rem;
+        font-weight: 650;
+        text-align: center;
+      }
+
+      select {
+        min-width: 76px;
+        appearance: none;
+        cursor: pointer;
+      }
+
+      input:focus-visible,
+      select:focus-visible,
+      button:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--ios-accent) 38%, transparent);
+        outline-offset: 2px;
+        box-shadow: none;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .primary-button,
+      .secondary-button {
+        min-height: var(--tap);
+        border: 0;
+        border-radius: var(--radius-md);
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .primary-button {
+        color: #ffffff;
+        background: var(--ios-accent);
+      }
+
+      .secondary-button {
+        color: var(--ios-accent);
+        background: var(--group-bg);
+        border: 1px solid var(--separator);
+      }
+
+      .primary-button:active,
+      .secondary-button:active {
+        transform: scale(0.985);
+      }
+
+      .privacy-strip {
+        margin: 0;
+        padding: 0 4px;
+        color: var(--secondary-label);
+        font-size: 0.82rem;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      .sheet {
+        position: fixed;
+        inset: auto auto 0 50%;
+        width: min(100vw, 480px);
+        max-height: min(82vh, 720px);
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 26px 26px 0 0;
+        color: var(--label);
+        background: var(--elevated-bg);
+        box-shadow: 0 -18px 46px rgba(0, 0, 0, 0.24);
+        transform: translateX(-50%);
+      }
+
+      .sheet::backdrop {
+        background: var(--sheet-backdrop);
+        backdrop-filter: blur(4px);
+      }
+
+      .sheet-body {
+        padding: 10px 16px max(22px, env(safe-area-inset-bottom));
+        display: grid;
+        gap: 16px;
+      }
+
+      .grabber {
+        justify-self: center;
+        width: 40px;
+        height: 5px;
+        border-radius: 999px;
+        background: var(--separator);
+      }
+
+      .sheet-head {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .sheet-head h2 {
+        margin: 0;
+        font-size: 1.34rem;
+        letter-spacing: 0;
+      }
+
+      .menu-sheet-head {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      .done-button,
+      .back-button {
+        min-height: 36px;
+        border: 0;
+        border-radius: 999px;
+        padding: 0 13px;
+        color: var(--ios-accent);
+        background: var(--ios-control-bg);
+        font-size: 0.96rem;
+        font-weight: 720;
+        cursor: pointer;
+      }
+
+      .back-button {
+        padding-left: 10px;
+      }
+
+      .sheet-copy {
+        margin: 0;
+        color: var(--secondary-label);
+        font-size: 0.95rem;
+        line-height: 1.42;
+      }
+
+      .info-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .info-item {
+        padding: 13px;
+        border-radius: var(--radius-md);
+        background: var(--ios-control-bg);
+      }
+
+      .info-item h3 {
+        margin: 0 0 5px;
+        font-size: 0.96rem;
+      }
+
+      .info-item p {
+        margin: 0;
+        color: var(--secondary-label);
+        font-size: 0.9rem;
+        line-height: 1.38;
+      }
+
+      .formula-card {
+        padding: 14px;
+        border-radius: var(--radius-md);
+        background: var(--ios-control-bg);
+      }
+
+      .formula-card + .formula-card {
+        margin-top: 10px;
+      }
+
+      .formula-row {
+        display: grid;
+        grid-template-columns: auto auto minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 9px;
+        color: var(--label);
+        font-size: 0.9rem;
+        font-weight: 680;
+      }
+
+      .fraction {
+        display: grid;
+        min-width: 0;
+        text-align: center;
+        line-height: 1.25;
+      }
+
+      .fraction span {
+        padding: 3px 4px;
+      }
+
+      .fraction span:first-child {
+        border-bottom: 1px solid var(--separator);
+      }
+
+      .muted-note {
+        margin: 8px 0 0;
+        color: var(--secondary-label);
+        font-size: 0.82rem;
+        line-height: 1.35;
+      }
+
+      .formula-title {
+        margin: 0 0 9px;
+        color: var(--secondary-label);
+        font-size: 0.78rem;
+        font-weight: 760;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .settings-group {
+        overflow: hidden;
+        border: 1px solid var(--separator);
+        border-radius: var(--radius-lg);
+        background: var(--group-bg);
+      }
+
+      .settings-row {
+        padding: 14px;
+        display: grid;
+        gap: 10px;
+        border-bottom: 1px solid var(--separator);
+      }
+
+      .settings-row:last-child {
+        border-bottom: 0;
+      }
+
+      .settings-row strong {
+        font-size: 1rem;
+      }
+
+      .segmented {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        padding: 3px;
+        border-radius: 12px;
+        background: var(--ios-control-bg);
+      }
+
+      .segment {
+        min-height: 34px;
+        border: 0;
+        border-radius: 9px;
+        color: var(--secondary-label);
+        background: transparent;
+        font-size: 0.9rem;
+        font-weight: 680;
+        cursor: pointer;
+      }
+
+      .segment[aria-pressed="true"] {
+        color: var(--label);
+        background: var(--elevated-bg);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
+      }
+
+      .top-bar {
+        justify-content: flex-end;
+      }
+
+      .menu-button {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 0;
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--group-bg) 84%, transparent);
+        box-shadow: var(--ios-soft-shadow);
+        cursor: pointer;
+      }
+
+      .menu-icon {
+        display: grid;
+        gap: 4px;
+        width: 18px;
+      }
+
+      .menu-icon span {
+        display: block;
+        height: 2px;
+        border-radius: 999px;
+        background: var(--ios-accent);
+      }
+
+      .menu-list {
+        overflow: hidden;
+        border: 1px solid var(--separator);
+        border-radius: var(--radius-lg);
+        background: var(--group-bg);
+      }
+
+      .menu-item {
+        width: 100%;
+        min-height: 52px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 12px;
+        border: 0;
+        border-bottom: 1px solid var(--separator);
+        padding: 0 14px;
+        color: var(--label);
+        background: transparent;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 620;
+        cursor: pointer;
+      }
+
+      .menu-item:last-child {
+        border-bottom: 0;
+      }
+
+      .menu-item::after {
+        content: ">";
+        color: var(--tertiary-label);
+        font-weight: 700;
+      }
+
+      .field-row {
+        min-height: 58px;
+      }
+
+      body {
+        background: var(--app-bg);
+      }
+
+      .result-card {
+        min-height: 196px;
+        color: var(--label);
+        background: var(--elevated-bg);
+        border: 1px solid var(--separator);
+        box-shadow: var(--ios-soft-shadow);
+      }
+
+      .metric-label {
+        color: var(--secondary-label);
+      }
+
+      .slip-value {
+        color: var(--label);
+      }
+
+      .message {
+        color: var(--secondary-label);
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-start;
+        min-width: 92px;
+        height: 32px;
+        padding: 0 12px;
+        color: var(--label);
+        background: var(--ios-control-bg);
+        border-color: var(--separator);
+        line-height: 1;
+      }
+
+      .status-pill.good {
+        color: color-mix(in srgb, var(--ios-success) 76%, var(--label));
+        background: color-mix(in srgb, var(--ios-success) 14%, var(--elevated-bg));
+      }
+
+      .status-pill.warn {
+        color: color-mix(in srgb, var(--ios-danger) 76%, var(--label));
+        background: color-mix(in srgb, var(--ios-danger) 12%, var(--elevated-bg));
+      }
+
+      .status-pill.caution {
+        color: #8a4b00;
+        background: color-mix(in srgb, #ff9500 14%, var(--elevated-bg));
+      }
+
+      .account-state {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border-radius: var(--radius-md);
+        background: var(--ios-control-bg);
+      }
+
+      .account-state strong {
+        font-size: 1rem;
+      }
+
+      .account-state p {
+        margin: 0;
+        color: var(--secondary-label);
+        font-size: 0.9rem;
+        line-height: 1.38;
+      }
+
+      .disabled-action {
+        min-height: 42px;
+        border: 0;
+        border-radius: var(--radius-md);
+        color: var(--tertiary-label);
+        background: var(--ios-control-bg);
+        font-weight: 720;
+      }
+
+      .mini-stat {
+        background: var(--ios-control-bg);
+        border-color: var(--separator);
+        backdrop-filter: none;
+      }
+
+      .mini-stat strong {
+        color: var(--secondary-label);
+      }
+
+      .mini-stat span {
+        color: var(--label);
+      }
+
+      .sheet {
+        inset: 50% auto auto 50%;
+        width: min(430px, calc(100vw - 32px));
+        max-height: min(78vh, 680px);
+        border-radius: 24px;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      .sheet-body {
+        overflow: auto;
+        max-height: min(78vh, 680px);
+        padding-bottom: 18px;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .nav-button,
+        .primary-button,
+        .secondary-button,
+        .segment {
+          transition: transform 140ms ease, background-color 160ms ease, color 160ms ease;
+        }
+
+        .sheet[open] {
+          animation: sheet-in 180ms ease-out;
+        }
+
+        @keyframes sheet-in {
+          from {
+            opacity: 0;
+            transform: translate(-50%, -50%);
+          }
+          to {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      @media (min-width: 700px) {
+        .app {
+          min-height: auto;
+          padding-top: 42px;
+          padding-bottom: 42px;
+        }
+
+        .masthead {
+          min-height: 138px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app" aria-labelledby="app-title">
+      <nav class="top-bar" aria-label="App actions">
+        <button class="menu-button" type="button" id="menuButton" aria-label="Open menu">
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </nav>
+
+      <header class="app-header">
+        <h1 id="app-title">Prop Slip</h1>
+        <p class="subtitle">Fast setup math for pitch, gear ratio, RPM, and GPS speed.</p>
+      </header>
+
+      <section class="stack" aria-label="Propeller slip calculator">
+        <section class="result-card" aria-live="polite">
+          <div class="result-content">
+            <div class="result-top">
+              <div>
+                <p class="metric-label">Calculated slip</p>
+                <p class="slip-value" id="slipValue">--</p>
+              </div>
+              <span class="status-pill" id="statusPill">Waiting</span>
+            </div>
+
+            <p class="message" id="resultMessage">Add your numbers to calculate slip.</p>
+
+            <div class="mini-grid">
+              <div class="mini-stat">
+                <strong>Prop RPM</strong>
+                <span id="propRpmValue">--</span>
+              </div>
+              <div class="mini-stat">
+                <strong>Theoretical</strong>
+                <span id="theoreticalValue">--</span>
+              </div>
+              <div class="mini-stat">
+                <strong>Actual</strong>
+                <span id="actualValue">--</span>
+              </div>
+              <div class="mini-stat">
+                <strong>Pitch advance</strong>
+                <span id="advanceValue">--</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <form id="calculator-form">
+          <p class="section-title">Setup</p>
+          <div class="group">
+            <div class="field-row">
+              <div class="field-label">
+                <label for="pitch">Propeller pitch</label>
+              </div>
+              <div class="value-control">
+                <input id="pitch" name="pitch" type="number" inputmode="decimal" min="1" step="0.5" value="24" autocomplete="off">
+                <span class="unit" id="pitchUnitLabel">in</span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-label">
+                <label for="gearRatio">Gear ratio</label>
+              </div>
+              <div class="value-control">
+                <input id="gearRatio" name="gearRatio" type="number" inputmode="decimal" min="0.1" step="0.01" value="1.75" autocomplete="off">
+                <span class="unit">:1</span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-label">
+                <label for="rpm">Engine RPM</label>
+              </div>
+              <div class="value-control">
+                <input id="rpm" name="rpm" type="number" inputmode="numeric" min="100" step="100" value="5600" autocomplete="off">
+                <span class="unit">rpm</span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-label">
+                <label for="speed">GPS speed</label>
+              </div>
+              <div class="value-control">
+                <input id="speed" name="speed" type="number" inputmode="decimal" min="0" step="0.1" value="68" autocomplete="off">
+                <select id="speedUnit" name="speedUnit" aria-label="Speed unit">
+                  <option value="mph" selected>mph</option>
+                  <option value="knots">kn</option>
+                  <option value="kph">km/h</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="actions">
+          <button class="primary-button" type="button" id="exampleButton">Use Example</button>
+          <button class="secondary-button" type="button" id="clearButton">Clear</button>
+        </div>
+
+        <p class="privacy-strip">Guest mode: calculations are not saved.</p>
+      </section>
+    </main>
+
+    <dialog class="sheet" id="menuSheet" aria-labelledby="menuTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head menu-sheet-head">
+          <h2 id="menuTitle">Menu</h2>
+          <button class="done-button" type="button" data-close="menuSheet">Done</button>
+        </div>
+        <div class="menu-list">
+          <button class="menu-item" type="button" data-open-sheet="tutorialSheet">How to Use</button>
+          <button class="menu-item" type="button" data-open-sheet="aboutSheet">About</button>
+          <button class="menu-item" type="button" data-open-sheet="privacySheet">Privacy</button>
+          <button class="menu-item" type="button" data-open-sheet="accessibilitySheet">Accessibility</button>
+          <button class="menu-item" type="button" data-open-sheet="comingSoonSheet">Coming Soon</button>
+          <button class="menu-item" type="button" data-open-sheet="settingsSheet">Settings</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="sheet" id="tutorialSheet" aria-labelledby="tutorialTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head">
+          <button class="back-button" type="button" data-back-menu>Menu</button>
+          <h2 id="tutorialTitle">How to Use</h2>
+          <button class="done-button" type="button" data-close="tutorialSheet">Done</button>
+        </div>
+        <div class="info-list">
+          <section class="info-item">
+            <h3>1. Enter the prop pitch</h3>
+            <p>Use the pitch stamped on the propeller, usually shown in inches.</p>
+          </section>
+          <section class="info-item">
+            <h3>2. Enter gear ratio</h3>
+            <p>Use the lower-unit ratio as a number, such as 1.75 for 1.75:1.</p>
+          </section>
+          <section class="info-item">
+            <h3>3. Add RPM and GPS speed</h3>
+            <p>Use engine RPM and actual GPS speed from the same run for the best estimate.</p>
+          </section>
+          <section class="info-item">
+            <h3>4. Read the slip result</h3>
+            <p>Lower slip often indicates a more efficient setup, but hull, load, trim, water, and prop style all matter.</p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="sheet" id="aboutSheet" aria-labelledby="aboutTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head">
+          <button class="back-button" type="button" data-back-menu>Menu</button>
+          <h2 id="aboutTitle">What is Propeller Slip?</h2>
+          <button class="done-button" type="button" data-close="aboutSheet">Done</button>
+        </div>
+        <p class="sheet-copy">Propeller slip is the gap between how far the propeller should advance in theory and how far the boat actually moves through the water. This guest calculator helps compare setup changes, prop choices, and running conditions.</p>
+        <div class="formula-card" aria-label="Slip percent formula">
+          <p class="formula-title">Slip percentage</p>
+          <div class="formula-row">
+            <span>Slip %</span>
+            <span>=</span>
+            <span class="fraction">
+              <span>Theoretical speed - Actual speed</span>
+              <span>Theoretical speed</span>
+            </span>
+            <span>x 100</span>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="sheet" id="privacySheet" aria-labelledby="privacyTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head">
+          <button class="back-button" type="button" data-back-menu>Menu</button>
+          <h2 id="privacyTitle">Privacy</h2>
+          <button class="done-button" type="button" data-close="privacySheet">Done</button>
+        </div>
+        <div class="info-list">
+          <section class="info-item">
+            <h3>On-device calculation</h3>
+            <p>The calculator runs entirely in this page. Your pitch, ratio, RPM, and speed values are not sent anywhere.</p>
+          </section>
+          <section class="info-item">
+            <h3>Current data storage</h3>
+            <p>No accounts, sign in, saved calculations, analytics, or tracking are active. The app only stores appearance and speed-unit preferences on this device.</p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="sheet" id="accessibilitySheet" aria-labelledby="accessibilityTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head">
+          <button class="back-button" type="button" data-back-menu>Menu</button>
+          <h2 id="accessibilityTitle">Accessibility</h2>
+          <button class="done-button" type="button" data-close="accessibilitySheet">Done</button>
+        </div>
+        <div class="info-list">
+          <section class="info-item">
+            <h3>Current support</h3>
+            <p>Visible labels, large touch targets, keyboard focus, live result updates, dark mode, and reduced-motion support are built in.</p>
+          </section>
+          <section class="info-item">
+            <h3>Color safety</h3>
+            <p>The result also uses text labels like Efficient, Typical, and High slip so color is not the only signal.</p>
+          </section>
+          <section class="info-item">
+            <h3>Color blindness modes</h3>
+            <p>A color-blind-safe palette option is worth considering, but the first step is a full contrast and color-dependence audit.</p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="sheet" id="comingSoonSheet" aria-labelledby="comingSoonTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head">
+          <button class="back-button" type="button" data-back-menu>Menu</button>
+          <h2 id="comingSoonTitle">Coming Soon</h2>
+          <button class="done-button" type="button" data-close="comingSoonSheet">Done</button>
+        </div>
+        <div class="account-state">
+          <strong>Guest mode today</strong>
+          <p>You can use the calculator without an account. Nothing is saved in the current version.</p>
+        </div>
+        <div class="info-list">
+          <section class="info-item">
+            <h3>Accounts</h3>
+            <p>Optional sign in will allow users to save prop slip calculations.</p>
+          </section>
+          <section class="info-item">
+            <h3>Named calculations</h3>
+            <p>Create an account, save prop slip calculations, name each setup, and review saved runs later.</p>
+          </section>
+          <section class="info-item">
+            <h3>History</h3>
+            <p>Saved runs will be designed as an optional feature, separate from guest calculations.</p>
+          </section>
+        </div>
+        <button class="disabled-action" type="button" disabled>Create Account - Coming Soon</button>
+        <button class="disabled-action" type="button" disabled>Sign In - Coming Soon</button>
+      </div>
+    </dialog>
+
+    <dialog class="sheet" id="settingsSheet" aria-labelledby="settingsTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head">
+          <button class="back-button" type="button" data-back-menu>Menu</button>
+          <h2 id="settingsTitle">Settings</h2>
+          <button class="done-button" type="button" data-close="settingsSheet">Done</button>
+        </div>
+        <div class="settings-group">
+          <div class="settings-row">
+            <strong>Appearance</strong>
+            <div class="segmented" role="group" aria-label="Appearance">
+              <button class="segment" type="button" data-appearance="system" aria-pressed="false">System</button>
+              <button class="segment" type="button" data-appearance="light" aria-pressed="false">Light</button>
+              <button class="segment" type="button" data-appearance="dark" aria-pressed="false">Dark</button>
+            </div>
+          </div>
+          <div class="settings-row">
+            <strong>Speed units</strong>
+            <div class="segmented" role="group" aria-label="Speed units">
+              <button class="segment" type="button" data-unit-system="imperial" aria-pressed="false">Imperial</button>
+              <button class="segment" type="button" data-unit-system="metric" aria-pressed="false">Metric</button>
+              <button class="segment" type="button" data-unit-system="nautical" aria-pressed="false">Knots</button>
+            </div>
+          </div>
+        </div>
+        <p class="sheet-copy">System follows your device appearance. Speed unit changes convert the visible speed value. Pitch always remains inches.</p>
+      </div>
+    </dialog>
+
+    <script>
+      const MPH_PER_KNOT = 1.15077945;
+      const MPH_PER_KPH = 0.621371192;
+      const APPEARANCE_KEY = "prop-slip-appearance";
+      const UNIT_SYSTEM_KEY = "prop-slip-unit-system";
+      const UNIT_SYSTEMS = {
+        imperial: { speedUnit: "mph", speedLabel: "mph" },
+        metric: { speedUnit: "kph", speedLabel: "km/h" },
+        nautical: { speedUnit: "knots", speedLabel: "kn" }
+      };
+      const DEFAULTS = {
+        pitch: "24",
+        gearRatio: "1.75",
+        rpm: "5600",
+        speed: "68",
+        speedUnit: "mph"
+      };
+      const authState = {
+        mode: "guest",
+        user: null,
+        savedCalculations: []
+      };
+
+      const systemScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      let activeUnitSystem = "imperial";
+      const fields = {
+        form: document.querySelector("#calculator-form"),
+        pitch: document.querySelector("#pitch"),
+        pitchUnitLabel: document.querySelector("#pitchUnitLabel"),
+        gearRatio: document.querySelector("#gearRatio"),
+        rpm: document.querySelector("#rpm"),
+        speed: document.querySelector("#speed"),
+        speedUnit: document.querySelector("#speedUnit"),
+        slipValue: document.querySelector("#slipValue"),
+        statusPill: document.querySelector("#statusPill"),
+        propRpmValue: document.querySelector("#propRpmValue"),
+        theoreticalValue: document.querySelector("#theoreticalValue"),
+        actualValue: document.querySelector("#actualValue"),
+        advanceValue: document.querySelector("#advanceValue"),
+        resultMessage: document.querySelector("#resultMessage"),
+        exampleButton: document.querySelector("#exampleButton"),
+        clearButton: document.querySelector("#clearButton"),
+        menuButton: document.querySelector("#menuButton"),
+        menuSheet: document.querySelector("#menuSheet"),
+        menuItems: document.querySelectorAll("[data-open-sheet]"),
+        tutorialSheet: document.querySelector("#tutorialSheet"),
+        aboutSheet: document.querySelector("#aboutSheet"),
+        privacySheet: document.querySelector("#privacySheet"),
+        accessibilitySheet: document.querySelector("#accessibilitySheet"),
+        comingSoonSheet: document.querySelector("#comingSoonSheet"),
+        settingsSheet: document.querySelector("#settingsSheet"),
+        closeButtons: document.querySelectorAll("[data-close]"),
+        backButtons: document.querySelectorAll("[data-back-menu]"),
+        appearanceButtons: document.querySelectorAll("[data-appearance]"),
+        unitSystemButtons: document.querySelectorAll("[data-unit-system]"),
+        themeColor: document.querySelector('meta[name="theme-color"]')
+      };
+
+      const numberFormatter = new Intl.NumberFormat("en-US", {
+        maximumFractionDigits: 1
+      });
+
+      const integerFormatter = new Intl.NumberFormat("en-US", {
+        maximumFractionDigits: 0
+      });
+
+      function getStoredAppearance() {
+        try {
+          return localStorage.getItem(APPEARANCE_KEY) || "system";
+        } catch (error) {
+          return "system";
+        }
+      }
+
+      function getStoredUnitSystem() {
+        try {
+          const stored = localStorage.getItem(UNIT_SYSTEM_KEY) || "imperial";
+          return UNIT_SYSTEMS[stored] ? stored : "imperial";
+        } catch (error) {
+          return "imperial";
+        }
+      }
+
+      function toNumber(input) {
+        const value = Number.parseFloat(input.value);
+        return Number.isFinite(value) ? value : NaN;
+      }
+
+      function speedToMph(speed, unit) {
+        if (unit === "knots") return speed * MPH_PER_KNOT;
+        if (unit === "kph") return speed * MPH_PER_KPH;
+        return speed;
+      }
+
+      function speedFromMph(mph, unit) {
+        if (unit === "knots") return mph / MPH_PER_KNOT;
+        if (unit === "kph") return mph / MPH_PER_KPH;
+        return mph;
+      }
+
+      function formatSpeed(mph, unit = UNIT_SYSTEMS[activeUnitSystem].speedUnit) {
+        return `${numberFormatter.format(speedFromMph(mph, unit))} ${UNIT_SYSTEMS[activeUnitSystem].speedLabel}`;
+      }
+
+      function formatInputValue(value, digits = 2) {
+        if (!Number.isFinite(value)) return "";
+        return Number.parseFloat(value.toFixed(digits)).toString();
+      }
+
+      function setWaiting(message) {
+        fields.slipValue.textContent = "--";
+        fields.statusPill.textContent = "Waiting";
+        fields.statusPill.className = "status-pill";
+        fields.propRpmValue.textContent = "--";
+        fields.theoreticalValue.textContent = "--";
+        fields.actualValue.textContent = "--";
+        fields.advanceValue.textContent = "--";
+        fields.resultMessage.textContent = message;
+      }
+
+      function describeSlip(slip) {
+        if (slip < 0) {
+          return {
+            label: "Check data",
+            className: "status-pill warn",
+            scaleClass: "warn",
+            message: "Actual speed is higher than theoretical speed. Check pitch, gear ratio, RPM, or speed units."
+          };
+        }
+
+        if (slip <= 5) {
+          return {
+            label: "Excellent",
+            className: "status-pill good",
+            scaleClass: "good",
+            message: "Excellent slip for many planing boat setups."
+          };
+        }
+
+        if (slip <= 10) {
+          return {
+            label: "Great",
+            className: "status-pill good",
+            scaleClass: "good",
+            message: "Great slip for many planing boat setups."
+          };
+        }
+
+        if (slip <= 15) {
+          return {
+            label: "Good",
+            className: "status-pill",
+            scaleClass: "",
+            message: "Good slip. This is a common working range for many setups."
+          };
+        }
+
+        if (slip <= 20) {
+          return {
+            label: "OK",
+            className: "status-pill caution",
+            scaleClass: "caution",
+            message: "OK, but slip is getting high. Setup, load, trim, or prop condition may be worth checking."
+          };
+        }
+
+        return {
+          label: "Poor",
+          className: "status-pill warn",
+          scaleClass: "warn",
+          message: "Poor slip. Weight, trim, setup height, prop condition, or ventilation may be worth checking."
+        };
+      }
+
+      function calculate() {
+        const pitch = toNumber(fields.pitch);
+        const gearRatio = toNumber(fields.gearRatio);
+        const rpm = toNumber(fields.rpm);
+        const speed = toNumber(fields.speed);
+        const actualMph = speedToMph(speed, fields.speedUnit.value);
+
+        if ([pitch, gearRatio, rpm, speed].some((value) => !Number.isFinite(value))) {
+          setWaiting("Add your numbers to calculate slip.");
+          return;
+        }
+
+        if (pitch <= 0 || gearRatio <= 0 || rpm <= 0 || speed < 0) {
+          setWaiting("Pitch, gear ratio, and RPM must be above zero. Speed cannot be negative.");
+          return;
+        }
+
+        const propRpm = rpm / gearRatio;
+        const theoreticalMph = (propRpm * pitch) / 1056;
+        const slip = ((theoreticalMph - actualMph) / theoreticalMph) * 100;
+        const status = describeSlip(slip);
+
+        fields.slipValue.textContent = `${numberFormatter.format(slip)}%`;
+        fields.statusPill.textContent = status.label;
+        fields.statusPill.className = status.className;
+        fields.propRpmValue.textContent = integerFormatter.format(propRpm);
+        fields.theoreticalValue.textContent = formatSpeed(theoreticalMph);
+        fields.actualValue.textContent = formatSpeed(actualMph);
+        fields.advanceValue.textContent = `${numberFormatter.format(pitch)} in/rev`;
+        fields.resultMessage.textContent = status.message;
+      }
+
+      function loadExample() {
+        const selectedUnits = UNIT_SYSTEMS[activeUnitSystem];
+        fields.pitch.value = DEFAULTS.pitch;
+        fields.gearRatio.value = DEFAULTS.gearRatio;
+        fields.rpm.value = DEFAULTS.rpm;
+        fields.speed.value = formatInputValue(speedFromMph(Number(DEFAULTS.speed), selectedUnits.speedUnit));
+        fields.speedUnit.value = selectedUnits.speedUnit;
+        calculate();
+      }
+
+      function clearInputs() {
+        fields.pitch.value = "";
+        fields.gearRatio.value = "";
+        fields.rpm.value = "";
+        fields.speed.value = "";
+        fields.speedUnit.value = UNIT_SYSTEMS[activeUnitSystem].speedUnit;
+        calculate();
+        fields.pitch.focus();
+      }
+
+      function resolveTheme(appearance) {
+        if (appearance === "system") return systemScheme.matches ? "dark" : "light";
+        return appearance;
+      }
+
+      function applyAppearance(appearance, persist = true) {
+        const theme = resolveTheme(appearance);
+        document.documentElement.dataset.appearance = appearance;
+        document.documentElement.dataset.theme = theme;
+        fields.themeColor.setAttribute("content", theme === "dark" ? "#000000" : "#f2f2f7");
+
+        fields.appearanceButtons.forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.appearance === appearance));
+        });
+
+        if (!persist) return;
+
+        try {
+          localStorage.setItem(APPEARANCE_KEY, appearance);
+        } catch (error) {
+          return;
+        }
+      }
+
+      function applyUnitSystem(unitSystem, convertValues = true, persist = true) {
+        if (!UNIT_SYSTEMS[unitSystem]) return;
+
+        const next = UNIT_SYSTEMS[unitSystem];
+        const currentSpeed = toNumber(fields.speed);
+        const speedMph = speedToMph(currentSpeed, fields.speedUnit.value);
+
+        activeUnitSystem = unitSystem;
+        fields.pitchUnitLabel.textContent = "in";
+        fields.speedUnit.value = next.speedUnit;
+
+        if (convertValues) {
+          if (Number.isFinite(speedMph)) {
+            fields.speed.value = formatInputValue(speedFromMph(speedMph, next.speedUnit));
+          }
+        }
+
+        fields.unitSystemButtons.forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.unitSystem === unitSystem));
+        });
+
+        if (persist) {
+          try {
+            localStorage.setItem(UNIT_SYSTEM_KEY, unitSystem);
+          } catch (error) {
+            return;
+          }
+        }
+
+        calculate();
+      }
+
+      function openSheet(sheet) {
+        if (typeof sheet.showModal === "function") {
+          sheet.showModal();
+          return;
+        }
+
+        sheet.setAttribute("open", "");
+      }
+
+      function closeSheet(sheet) {
+        if (typeof sheet.close === "function") {
+          sheet.close();
+          return;
+        }
+
+        sheet.removeAttribute("open");
+      }
+
+      function switchSheet(fromSheet, toSheet) {
+        closeSheet(fromSheet);
+        openSheet(toSheet);
+      }
+
+      fields.form.addEventListener("input", calculate);
+      fields.form.addEventListener("change", calculate);
+      fields.form.addEventListener("reset", () => {
+        window.setTimeout(() => {
+          fields.pitch.value = "";
+          fields.gearRatio.value = "";
+          fields.rpm.value = "";
+          fields.speed.value = "";
+          fields.speedUnit.value = UNIT_SYSTEMS[activeUnitSystem].speedUnit;
+          calculate();
+        }, 0);
+      });
+      fields.exampleButton.addEventListener("click", loadExample);
+      fields.clearButton.addEventListener("click", clearInputs);
+      fields.menuButton.addEventListener("click", () => openSheet(fields.menuSheet));
+
+      fields.closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          closeSheet(document.querySelector(`#${button.dataset.close}`));
+        });
+      });
+
+      fields.backButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const currentSheet = button.closest("dialog");
+          switchSheet(currentSheet, fields.menuSheet);
+        });
+      });
+
+      fields.menuItems.forEach((button) => {
+        button.addEventListener("click", () => {
+          const targetSheet = document.querySelector(`#${button.dataset.openSheet}`);
+          switchSheet(fields.menuSheet, targetSheet);
+        });
+      });
+
+      [fields.menuSheet, fields.tutorialSheet, fields.aboutSheet, fields.privacySheet, fields.accessibilitySheet, fields.comingSoonSheet, fields.settingsSheet].forEach((sheet) => {
+        sheet.addEventListener("click", (event) => {
+          if (event.target === sheet) closeSheet(sheet);
+        });
+      });
+
+      fields.appearanceButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          applyAppearance(button.dataset.appearance);
+        });
+      });
+
+      fields.unitSystemButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          applyUnitSystem(button.dataset.unitSystem);
+        });
+      });
+
+      fields.speedUnit.addEventListener("change", () => {
+        const nextUnitSystem = {
+          mph: "imperial",
+          kph: "metric",
+          knots: "nautical"
+        }[fields.speedUnit.value] || activeUnitSystem;
+
+        fields.speedUnit.value = UNIT_SYSTEMS[activeUnitSystem].speedUnit;
+        applyUnitSystem(nextUnitSystem);
+      });
+
+      const handleSystemSchemeChange = () => {
+        if (document.documentElement.dataset.appearance === "system") {
+          applyAppearance("system", false);
+        }
+      };
+
+      if (typeof systemScheme.addEventListener === "function") {
+        systemScheme.addEventListener("change", handleSystemSchemeChange);
+      } else if (typeof systemScheme.addListener === "function") {
+        systemScheme.addListener(handleSystemSchemeChange);
+      }
+
+      applyAppearance(getStoredAppearance(), false);
+      applyUnitSystem(getStoredUnitSystem(), true, false);
+    </script>
+  </body>
+</html>
