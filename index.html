@@ -333,7 +333,6 @@
 
       .result-top {
         display: grid;
-        grid-template-columns: 1fr auto;
         gap: 12px;
         align-items: center;
       }
@@ -355,8 +354,14 @@
         letter-spacing: 0;
       }
 
+      .slip-readout {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
       .status-pill {
-        justify-self: end;
         min-width: 94px;
         padding: 8px 10px;
         border-radius: 999px;
@@ -402,14 +407,6 @@
         font-size: 1.24rem;
         font-weight: 820;
         word-break: break-word;
-      }
-
-      .message {
-        min-height: 22px;
-        margin: 0;
-        color: var(--result-muted);
-        font-size: 0.92rem;
-        line-height: 1.35;
       }
 
       .note {
@@ -611,9 +608,7 @@
       }
 
       .result-top {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        display: grid;
         gap: 12px;
       }
 
@@ -623,6 +618,13 @@
         font-weight: 780;
         line-height: 0.92;
         letter-spacing: 0;
+      }
+
+      .slip-readout {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
       }
 
       .status-pill.good {
@@ -1083,15 +1085,11 @@
         color: var(--label);
       }
 
-      .message {
-        color: var(--secondary-label);
-      }
-
       .status-pill {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        align-self: flex-start;
+        align-self: center;
         min-width: 92px;
         height: 32px;
         padding: 0 12px;
@@ -1233,12 +1231,12 @@
             <div class="result-top">
               <div>
                 <p class="metric-label">Calculated slip</p>
-                <p class="slip-value" id="slipValue">--</p>
+                <div class="slip-readout">
+                  <p class="slip-value" id="slipValue">--</p>
+                  <span class="status-pill" id="statusPill">Waiting</span>
+                </div>
               </div>
-              <span class="status-pill" id="statusPill">Waiting</span>
             </div>
-
-            <p class="message" id="resultMessage">Add your numbers to calculate slip.</p>
 
             <div class="mini-grid">
               <div class="mini-stat">
@@ -1536,7 +1534,6 @@
         theoreticalValue: document.querySelector("#theoreticalValue"),
         actualValue: document.querySelector("#actualValue"),
         advanceValue: document.querySelector("#advanceValue"),
-        resultMessage: document.querySelector("#resultMessage"),
         exampleButton: document.querySelector("#exampleButton"),
         clearButton: document.querySelector("#clearButton"),
         menuButton: document.querySelector("#menuButton"),
@@ -1606,7 +1603,7 @@
         return Number.parseFloat(value.toFixed(digits)).toString();
       }
 
-      function setWaiting(message) {
+      function setWaiting() {
         fields.slipValue.textContent = "--";
         fields.statusPill.textContent = "Waiting";
         fields.statusPill.className = "status-pill";
@@ -1614,7 +1611,6 @@
         fields.theoreticalValue.textContent = "--";
         fields.actualValue.textContent = "--";
         fields.advanceValue.textContent = "--";
-        fields.resultMessage.textContent = message;
       }
 
       function describeSlip(slip) {
@@ -1622,8 +1618,7 @@
           return {
             label: "Check data",
             className: "status-pill warn",
-            scaleClass: "warn",
-            message: "Actual speed is higher than theoretical speed. Check pitch, gear ratio, RPM, or speed units."
+            scaleClass: "warn"
           };
         }
 
@@ -1631,8 +1626,7 @@
           return {
             label: "Excellent",
             className: "status-pill good",
-            scaleClass: "good",
-            message: "Excellent slip for many planing boat setups."
+            scaleClass: "good"
           };
         }
 
@@ -1640,8 +1634,7 @@
           return {
             label: "Great",
             className: "status-pill good",
-            scaleClass: "good",
-            message: "Great slip for many planing boat setups."
+            scaleClass: "good"
           };
         }
 
@@ -1649,8 +1642,7 @@
           return {
             label: "Good",
             className: "status-pill",
-            scaleClass: "",
-            message: "Good slip. This is a common working range for many setups."
+            scaleClass: ""
           };
         }
 
@@ -1658,16 +1650,14 @@
           return {
             label: "OK",
             className: "status-pill caution",
-            scaleClass: "caution",
-            message: "OK, but slip is getting high. Setup, load, trim, or prop condition may be worth checking."
+            scaleClass: "caution"
           };
         }
 
         return {
           label: "Poor",
           className: "status-pill warn",
-          scaleClass: "warn",
-          message: "Poor slip. Weight, trim, setup height, prop condition, or ventilation may be worth checking."
+          scaleClass: "warn"
         };
       }
 
@@ -1679,12 +1669,12 @@
         const actualMph = speedToMph(speed, fields.speedUnit.value);
 
         if ([pitch, gearRatio, rpm, speed].some((value) => !Number.isFinite(value))) {
-          setWaiting("Add your numbers to calculate slip.");
+          setWaiting();
           return;
         }
 
         if (pitch <= 0 || gearRatio <= 0 || rpm <= 0 || speed < 0) {
-          setWaiting("Pitch, gear ratio, and RPM must be above zero. Speed cannot be negative.");
+          setWaiting();
           return;
         }
 
@@ -1700,7 +1690,6 @@
         fields.theoreticalValue.textContent = formatSpeed(theoreticalMph);
         fields.actualValue.textContent = formatSpeed(actualMph);
         fields.advanceValue.textContent = `${numberFormatter.format(pitch)} in/rev`;
-        fields.resultMessage.textContent = status.message;
       }
 
       function loadExample() {
