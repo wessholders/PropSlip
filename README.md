@@ -1,8 +1,32 @@
-# Propeller Slip Calculator
+# PropSlip Boating Calculators
 
-A simple mobile-first propeller slip calculator. It runs as a static page with no build step or dependencies.
+PropSlip is a simple mobile-first boating calculator site. It runs as a static page with no build step or dependencies.
 
-## Formula
+The main page currently includes:
+
+- Propeller slip calculator
+- Theoretical Setup calculator for estimating speed from pitch, gear ratio, RPM, and target slip
+
+The Theoretical Setup calculator includes an optional comparison mode. It is off by default and can be turned on inside the Theoretical Setup tab to compare Setup A with Setup B.
+
+`fromGenAI.html` is kept as an experiment/reference file. `index.html` is the deployable page.
+
+## MVP Pages
+
+The deployable site includes menu sheets for:
+
+- How to Use
+- About
+- Privacy
+- Accessibility
+- Terms & Disclaimer
+- Contact
+- Mobile Apps
+- Settings
+
+The public support address is propslipsupport@gmail.com.
+
+## Slip Formula
 
 ```text
 theoretical mph = (engine RPM / gear ratio * propeller pitch) / 1056
@@ -17,3 +41,22 @@ https://en.wikipedia.org/wiki/Propeller_theory
 ## Run
 
 Open `index.html` in a browser.
+
+## Verify
+
+Run the local render check with Chrome:
+
+```text
+node scripts/verify-render.mjs
+```
+
+The script uses a temporary Chrome profile to avoid path/profile lock issues, captures `propslip-home.png` and `propslip-whatif-comparison.png`, checks the Propeller Slip and Theoretical Setup tabs, and verifies the Theoretical Setup comparison toggle.
+
+## Deploy
+
+This repo is ready for a static host with a custom domain.
+
+- Netlify: import the repository, leave the build command empty, and use `.` as the publish directory. `netlify.toml` already defines this.
+- Vercel: import the repository as a static project. `vercel.json` enables clean URLs and basic security headers.
+- Render: create a Static Site from the repository, or use the included `render.yaml`. The static publish path is `.` and the build command is `true`.
+- GitHub Pages still works, but a custom-domain static host will feel more official while preserving the same static files.

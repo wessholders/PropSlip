@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#e9f7f7">
-    <title>Propeller Slip Calculator</title>
+    <meta name="description" content="PropSlip offers calculators for propeller slip, speed estimates, and propeller setup comparisons.">
+    <title>PropSlip Boating Calculators</title>
     <script>
       (() => {
         const key = "prop-slip-appearance";
@@ -78,6 +79,10 @@
 
       * {
         box-sizing: border-box;
+      }
+
+      [hidden] {
+        display: none !important;
       }
 
       html {
@@ -665,6 +670,28 @@
         word-break: break-word;
       }
 
+      .mini-stat.good {
+        color: color-mix(in srgb, var(--ios-success) 76%, var(--label));
+        background: color-mix(in srgb, var(--ios-success) 14%, var(--elevated-bg));
+        border-color: color-mix(in srgb, var(--ios-success) 28%, var(--separator));
+      }
+
+      .mini-stat.warn {
+        color: color-mix(in srgb, var(--ios-danger) 76%, var(--label));
+        background: color-mix(in srgb, var(--ios-danger) 12%, var(--elevated-bg));
+        border-color: color-mix(in srgb, var(--ios-danger) 26%, var(--separator));
+      }
+
+      .mini-stat.good strong,
+      .mini-stat.good span {
+        color: color-mix(in srgb, var(--ios-success) 76%, var(--label));
+      }
+
+      .mini-stat.warn strong,
+      .mini-stat.warn span {
+        color: color-mix(in srgb, var(--ios-danger) 76%, var(--label));
+      }
+
       .section-title {
         margin: 0 0 8px 4px;
         color: var(--secondary-label);
@@ -672,6 +699,10 @@
         font-weight: 760;
         letter-spacing: 0.06em;
         text-transform: uppercase;
+      }
+
+      .section-title.spaced {
+        margin-top: 18px;
       }
 
       .group {
@@ -723,6 +754,10 @@
         min-height: 44px;
         border-radius: 12px;
         background: var(--ios-control-bg);
+      }
+
+      .value-control select {
+        width: auto;
       }
 
       input {
@@ -963,6 +998,11 @@
         border-bottom: 1px solid var(--separator);
       }
 
+      .settings-row.toggle-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+      }
+
       .settings-row:last-child {
         border-bottom: 0;
       }
@@ -971,13 +1011,74 @@
         font-size: 1rem;
       }
 
+      .switch {
+        position: relative;
+        width: 52px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .switch input {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .switch-track {
+        width: 100%;
+        height: 100%;
+        border-radius: 999px;
+        background: var(--ios-control-bg);
+        border: 1px solid var(--separator);
+        transition: background-color 160ms ease, border-color 160ms ease;
+      }
+
+      .switch-track::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--elevated-bg);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
+        transition: transform 160ms ease;
+      }
+
+      .switch input:checked + .switch-track {
+        background: var(--ios-accent);
+        border-color: var(--ios-accent);
+      }
+
+      .switch input:checked + .switch-track::after {
+        transform: translateX(20px);
+      }
+
+      .switch input:focus-visible + .switch-track {
+        outline: 3px solid color-mix(in srgb, var(--ios-accent) 38%, transparent);
+        outline-offset: 2px;
+      }
+
       .segmented {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
         gap: 2px;
         padding: 3px;
         border-radius: 12px;
         background: var(--ios-control-bg);
+      }
+
+      .view-switcher {
+        margin-bottom: 4px;
+        border: 1px solid var(--separator);
+        box-shadow: var(--ios-soft-shadow);
+        backdrop-filter: blur(18px);
+        background: var(--group-bg);
       }
 
       .segment {
@@ -1114,34 +1215,6 @@
         background: color-mix(in srgb, #ff9500 14%, var(--elevated-bg));
       }
 
-      .account-state {
-        display: grid;
-        gap: 10px;
-        padding: 14px;
-        border-radius: var(--radius-md);
-        background: var(--ios-control-bg);
-      }
-
-      .account-state strong {
-        font-size: 1rem;
-      }
-
-      .account-state p {
-        margin: 0;
-        color: var(--secondary-label);
-        font-size: 0.9rem;
-        line-height: 1.38;
-      }
-
-      .disabled-action {
-        min-height: 42px;
-        border: 0;
-        border-radius: var(--radius-md);
-        color: var(--tertiary-label);
-        background: var(--ios-control-bg);
-        font-weight: 720;
-      }
-
       .mini-stat {
         background: var(--ios-control-bg);
         border-color: var(--separator);
@@ -1169,6 +1242,10 @@
         overflow: auto;
         max-height: min(78vh, 680px);
         padding-bottom: 18px;
+      }
+
+      .view[hidden] {
+        display: none !important;
       }
 
       @media (prefers-reduced-motion: no-preference) {
@@ -1221,99 +1298,225 @@
       </nav>
 
       <header class="app-header">
-        <h1 id="app-title">Prop Slip</h1>
-        <p class="subtitle">Fast setup math for pitch, gear ratio, RPM, and GPS speed.</p>
+        <h1 id="app-title">PropSlip</h1>
+        <p class="subtitle">Calculators for propeller slip, speed estimates, and propeller setup comparisons.</p>
       </header>
 
-      <section class="stack" aria-label="Propeller slip calculator">
-        <section class="result-card" aria-live="polite">
-          <div class="result-content">
-            <div class="result-top">
-              <div>
-                <p class="metric-label">Calculated slip</p>
-                <div class="slip-readout">
-                  <p class="slip-value" id="slipValue">--</p>
-                  <span class="status-pill" id="statusPill">Waiting</span>
+      <section class="stack" aria-label="Boating calculators">
+        <div class="segmented view-switcher" id="calculatorSwitcher" role="group" aria-label="Calculator selection">
+          <button class="segment" type="button" data-view="slip" aria-pressed="true">Propeller Slip</button>
+          <button class="segment" type="button" id="whatIfTab" data-view="whatif" aria-pressed="false">Theoretical Setup</button>
+        </div>
+
+        <div id="view-slip" class="view stack">
+          <section class="result-card" aria-live="polite">
+            <div class="result-content">
+              <div class="result-top">
+                <div>
+                  <p class="metric-label">Calculated slip</p>
+                  <div class="slip-readout">
+                    <p class="slip-value" id="slipValue">--</p>
+                    <span class="status-pill" id="statusPill">Waiting</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mini-grid">
+                <div class="mini-stat">
+                  <strong>Prop RPM</strong>
+                  <span id="propRpmValue">--</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>Theoretical</strong>
+                  <span id="theoreticalValue">--</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>Actual</strong>
+                  <span id="actualValue">--</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>Pitch advance</strong>
+                  <span id="advanceValue">--</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <form id="calculator-form">
+            <p class="section-title">Setup</p>
+            <div class="group">
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="pitch">Propeller pitch</label>
+                </div>
+                <div class="value-control">
+                  <input id="pitch" name="pitch" type="number" inputmode="decimal" min="1" step="0.5" value="24" autocomplete="off">
+                  <span class="unit" id="pitchUnitLabel">in</span>
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="gearRatio">Gear ratio</label>
+                </div>
+                <div class="value-control">
+                  <input id="gearRatio" name="gearRatio" type="number" inputmode="decimal" min="0.1" step="0.01" value="1.75" autocomplete="off">
+                  <span class="unit">:1</span>
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="rpm">Engine RPM</label>
+                </div>
+                <div class="value-control">
+                  <input id="rpm" name="rpm" type="number" inputmode="numeric" min="100" step="100" value="5600" autocomplete="off">
+                  <span class="unit">rpm</span>
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="speed">GPS speed</label>
+                </div>
+                <div class="value-control">
+                  <input id="speed" name="speed" type="number" inputmode="decimal" min="0" step="0.1" value="68" autocomplete="off">
+                  <select id="speedUnit" name="speedUnit" aria-label="Speed unit">
+                    <option value="mph" selected>mph</option>
+                    <option value="knots">kn</option>
+                    <option value="kph">km/h</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="actions">
+            <button class="primary-button" type="button" id="exampleButton">Use Example</button>
+            <button class="secondary-button" type="button" id="clearButton">Clear</button>
+          </div>
+
+          <p class="privacy-strip">Calculations run on this device.</p>
+        </div>
+
+        <div id="view-whatif" class="view stack" hidden>
+          <section class="result-card" aria-live="polite">
+            <div class="result-content">
+              <div class="result-top">
+                <div>
+                  <p class="metric-label" id="whatIfMetricLabel">Estimated speed</p>
+                  <div class="slip-readout">
+                    <p class="slip-value" id="whatIfResultValue">--</p>
+                    <span class="status-pill" id="whatIfStatusPill">Waiting</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mini-grid">
+                <div class="mini-stat" id="whatIfStatA">
+                  <strong id="whatIfStatALabel">Prop RPM</strong>
+                  <span id="whatIfStatAValue">--</span>
+                </div>
+                <div class="mini-stat" id="whatIfStatB">
+                  <strong id="whatIfStatBLabel">Theoretical</strong>
+                  <span id="whatIfStatBValue">--</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <form id="whatif-form">
+            <p class="section-title">Setup A</p>
+            <div class="group">
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="comparePitchA">Propeller pitch</label>
+                </div>
+                <div class="value-control">
+                  <input id="comparePitchA" name="comparePitchA" type="number" inputmode="decimal" min="1" step="0.5" value="24" autocomplete="off">
+                  <span class="unit">in</span>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="compareGearRatioA">Gear ratio</label>
+                </div>
+                <div class="value-control">
+                  <input id="compareGearRatioA" name="compareGearRatioA" type="number" inputmode="decimal" min="0.1" step="0.01" value="1.75" autocomplete="off">
+                  <span class="unit">:1</span>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="compareRpmA">Engine RPM</label>
+                </div>
+                <div class="value-control">
+                  <input id="compareRpmA" name="compareRpmA" type="number" inputmode="numeric" min="100" step="100" value="5600" autocomplete="off">
+                  <span class="unit">rpm</span>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="compareSlipA">Target slip</label>
+                </div>
+                <div class="value-control">
+                  <input id="compareSlipA" name="compareSlipA" type="number" inputmode="decimal" min="0" max="100" step="0.1" value="10" autocomplete="off">
+                  <span class="unit">%</span>
                 </div>
               </div>
             </div>
 
-            <div class="mini-grid">
-              <div class="mini-stat">
-                <strong>Prop RPM</strong>
-                <span id="propRpmValue">--</span>
-              </div>
-              <div class="mini-stat">
-                <strong>Theoretical</strong>
-                <span id="theoreticalValue">--</span>
-              </div>
-              <div class="mini-stat">
-                <strong>Actual</strong>
-                <span id="actualValue">--</span>
-              </div>
-              <div class="mini-stat">
-                <strong>Pitch advance</strong>
-                <span id="advanceValue">--</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <form id="calculator-form">
-          <p class="section-title">Setup</p>
-          <div class="group">
-            <div class="field-row">
-              <div class="field-label">
-                <label for="pitch">Propeller pitch</label>
-              </div>
-              <div class="value-control">
-                <input id="pitch" name="pitch" type="number" inputmode="decimal" min="1" step="0.5" value="24" autocomplete="off">
-                <span class="unit" id="pitchUnitLabel">in</span>
-              </div>
+            <div class="settings-row toggle-row">
+              <strong>Compare with Setup B</strong>
+              <label class="switch" for="comparisonModeToggle">
+                <input id="comparisonModeToggle" type="checkbox" autocomplete="off">
+                <span class="switch-track" aria-hidden="true"></span>
+              </label>
             </div>
 
-            <div class="field-row">
-              <div class="field-label">
-                <label for="gearRatio">Gear ratio</label>
+            <div id="compareSetupB" hidden>
+              <p class="section-title spaced">Setup B</p>
+              <div class="group">
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="comparePitchB">Propeller pitch</label>
+                </div>
+                <div class="value-control">
+                  <input id="comparePitchB" name="comparePitchB" type="number" inputmode="decimal" min="1" step="0.5" value="26" autocomplete="off">
+                  <span class="unit">in</span>
+                </div>
               </div>
-              <div class="value-control">
-                <input id="gearRatio" name="gearRatio" type="number" inputmode="decimal" min="0.1" step="0.01" value="1.75" autocomplete="off">
-                <span class="unit">:1</span>
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="compareGearRatioB">Gear ratio</label>
+                </div>
+                <div class="value-control">
+                  <input id="compareGearRatioB" name="compareGearRatioB" type="number" inputmode="decimal" min="0.1" step="0.01" value="1.75" autocomplete="off">
+                  <span class="unit">:1</span>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="compareRpmB">Engine RPM</label>
+                </div>
+                <div class="value-control">
+                  <input id="compareRpmB" name="compareRpmB" type="number" inputmode="numeric" min="100" step="100" value="5600" autocomplete="off">
+                  <span class="unit">rpm</span>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field-label">
+                  <label for="compareSlipB">Target slip</label>
+                </div>
+                <div class="value-control">
+                  <input id="compareSlipB" name="compareSlipB" type="number" inputmode="decimal" min="0" max="100" step="0.1" value="10" autocomplete="off">
+                  <span class="unit">%</span>
+                </div>
+              </div>
               </div>
             </div>
-
-            <div class="field-row">
-              <div class="field-label">
-                <label for="rpm">Engine RPM</label>
-              </div>
-              <div class="value-control">
-                <input id="rpm" name="rpm" type="number" inputmode="numeric" min="100" step="100" value="5600" autocomplete="off">
-                <span class="unit">rpm</span>
-              </div>
-            </div>
-
-            <div class="field-row">
-              <div class="field-label">
-                <label for="speed">GPS speed</label>
-              </div>
-              <div class="value-control">
-                <input id="speed" name="speed" type="number" inputmode="decimal" min="0" step="0.1" value="68" autocomplete="off">
-                <select id="speedUnit" name="speedUnit" aria-label="Speed unit">
-                  <option value="mph" selected>mph</option>
-                  <option value="knots">kn</option>
-                  <option value="kph">km/h</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </form>
-
-        <div class="actions">
-          <button class="primary-button" type="button" id="exampleButton">Use Example</button>
-          <button class="secondary-button" type="button" id="clearButton">Clear</button>
+          </form>
         </div>
-
-        <p class="privacy-strip">Guest mode: calculations are not saved.</p>
       </section>
     </main>
 
@@ -1329,7 +1532,9 @@
           <button class="menu-item" type="button" data-open-sheet="aboutSheet">About</button>
           <button class="menu-item" type="button" data-open-sheet="privacySheet">Privacy</button>
           <button class="menu-item" type="button" data-open-sheet="accessibilitySheet">Accessibility</button>
-          <button class="menu-item" type="button" data-open-sheet="comingSoonSheet">Coming Soon</button>
+          <button class="menu-item" type="button" data-open-sheet="termsSheet">Terms & Disclaimer</button>
+          <button class="menu-item" type="button" data-open-sheet="contactSheet">Contact</button>
+          <button class="menu-item" type="button" data-open-sheet="mobileAppsSheet">Mobile Apps</button>
           <button class="menu-item" type="button" data-open-sheet="settingsSheet">Settings</button>
         </div>
       </div>
@@ -1372,7 +1577,7 @@
           <h2 id="aboutTitle">What is Propeller Slip?</h2>
           <button class="done-button" type="button" data-close="aboutSheet">Done</button>
         </div>
-        <p class="sheet-copy">Propeller slip is the gap between how far the propeller should advance in theory and how far the boat actually moves through the water. This guest calculator helps compare setup changes, prop choices, and running conditions.</p>
+        <p class="sheet-copy">Propeller slip is the gap between how far the propeller should advance in theory and how far the boat actually moves through the water. PropSlip helps compare setup changes, prop choices, and running conditions.</p>
         <div class="formula-card" aria-label="Slip percent formula">
           <p class="formula-title">Slip percentage</p>
           <div class="formula-row">
@@ -1398,12 +1603,28 @@
         </div>
         <div class="info-list">
           <section class="info-item">
+            <h3>Last updated</h3>
+            <p>July 2, 2026.</p>
+          </section>
+          <section class="info-item">
             <h3>On-device calculation</h3>
             <p>The calculator runs entirely in this page. Your pitch, ratio, RPM, and speed values are not sent anywhere.</p>
           </section>
           <section class="info-item">
             <h3>Current data storage</h3>
-            <p>No accounts, sign in, saved calculations, analytics, or tracking are active. The app only stores appearance and speed-unit preferences on this device.</p>
+            <p>PropSlip stores appearance, speed-unit, and theoretical setup comparison preferences in this browser. These preferences stay on this device.</p>
+          </section>
+          <section class="info-item">
+            <h3>Data collection</h3>
+            <p>The current site does not use cookies, analytics, advertising trackers, contact forms, or payment forms. A web host may process standard server logs, such as IP address and request time, to deliver and secure the site.</p>
+          </section>
+          <section class="info-item">
+            <h3>Updates</h3>
+            <p>This notice should be reviewed before public launch and whenever analytics, contact forms, ads, payments, or mobile app data collection are added.</p>
+          </section>
+          <section class="info-item">
+            <h3>Children</h3>
+            <p>PropSlip is not directed to children and does not knowingly collect personal information from children.</p>
           </section>
         </div>
       </div>
@@ -1424,44 +1645,84 @@
           </section>
           <section class="info-item">
             <h3>Color safety</h3>
-            <p>The result also uses text labels like Efficient, Typical, and High slip so color is not the only signal.</p>
+            <p>Results use text labels and numeric values so color is not the only signal.</p>
           </section>
           <section class="info-item">
-            <h3>Color blindness modes</h3>
-            <p>A color-blind-safe palette option is worth considering, but the first step is a full contrast and color-dependence audit.</p>
+            <h3>Target standard</h3>
+            <p>The site should be checked against WCAG Level AA before public launch and again before any iOS or Android app release.</p>
           </section>
         </div>
       </div>
     </dialog>
 
-    <dialog class="sheet" id="comingSoonSheet" aria-labelledby="comingSoonTitle">
+    <dialog class="sheet" id="termsSheet" aria-labelledby="termsTitle">
       <div class="sheet-body">
         <div class="grabber" aria-hidden="true"></div>
         <div class="sheet-head">
           <button class="back-button" type="button" data-back-menu>Menu</button>
-          <h2 id="comingSoonTitle">Coming Soon</h2>
-          <button class="done-button" type="button" data-close="comingSoonSheet">Done</button>
-        </div>
-        <div class="account-state">
-          <strong>Guest mode today</strong>
-          <p>You can use the calculator without an account. Nothing is saved in the current version.</p>
+          <h2 id="termsTitle">Terms & Disclaimer</h2>
+          <button class="done-button" type="button" data-close="termsSheet">Done</button>
         </div>
         <div class="info-list">
           <section class="info-item">
-            <h3>Accounts</h3>
-            <p>Optional sign in will allow users to save prop slip calculations.</p>
+            <h3>Last updated</h3>
+            <p>July 2, 2026.</p>
           </section>
           <section class="info-item">
-            <h3>Named calculations</h3>
-            <p>Create an account, save prop slip calculations, name each setup, and review saved runs later.</p>
+            <h3>Informational use</h3>
+            <p>PropSlip provides estimates for setup planning and comparison. It is not a substitute for manufacturer specifications, professional marine advice, inspection, or safe boating judgment.</p>
           </section>
           <section class="info-item">
-            <h3>History</h3>
-            <p>Saved runs will be designed as an optional feature, separate from guest calculations.</p>
+            <h3>Accuracy</h3>
+            <p>Results depend on the values you enter and simplify real-world conditions. Hull design, load, trim, water, altitude, propeller condition, and measurement error can all change actual performance.</p>
+          </section>
+          <section class="info-item">
+            <h3>Safety</h3>
+            <p>Always operate within posted limits, equipment ratings, local laws, and safe conditions. Do not use calculator output as the only basis for a propeller, engine, or operating decision.</p>
           </section>
         </div>
-        <button class="disabled-action" type="button" disabled>Create Account - Coming Soon</button>
-        <button class="disabled-action" type="button" disabled>Sign In - Coming Soon</button>
+      </div>
+    </dialog>
+
+    <dialog class="sheet" id="contactSheet" aria-labelledby="contactTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head">
+          <button class="back-button" type="button" data-back-menu>Menu</button>
+          <h2 id="contactTitle">Contact</h2>
+          <button class="done-button" type="button" data-close="contactSheet">Done</button>
+        </div>
+        <div class="info-list">
+          <section class="info-item">
+            <h3>Support contact</h3>
+            <p>Email propslipsupport@gmail.com for privacy, accessibility, and site-support questions.</p>
+          </section>
+          <section class="info-item">
+            <h3>Feedback</h3>
+            <p>Use contact messages for calculator bugs, accessibility barriers, and formula questions. Do not send sensitive personal, financial, medical, or location information.</p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="sheet" id="mobileAppsSheet" aria-labelledby="mobileAppsTitle">
+      <div class="sheet-body">
+        <div class="grabber" aria-hidden="true"></div>
+        <div class="sheet-head">
+          <button class="back-button" type="button" data-back-menu>Menu</button>
+          <h2 id="mobileAppsTitle">Mobile Apps</h2>
+          <button class="done-button" type="button" data-close="mobileAppsSheet">Done</button>
+        </div>
+        <div class="info-list">
+          <section class="info-item">
+            <h3>iOS and Android</h3>
+            <p>PropSlip plans to support iOS and Android in the future. The current MVP is this website with the Propeller Slip and Theoretical Setup calculators.</p>
+          </section>
+          <section class="info-item">
+            <h3>App privacy</h3>
+            <p>Before app release, the public privacy notice and store disclosures should match the app's actual data collection, permissions, diagnostics, and third-party SDKs.</p>
+          </section>
+        </div>
       </div>
     </dialog>
 
@@ -1500,6 +1761,7 @@
       const MPH_PER_KPH = 0.621371192;
       const APPEARANCE_KEY = "prop-slip-appearance";
       const UNIT_SYSTEM_KEY = "prop-slip-unit-system";
+      const COMPARISON_MODE_KEY = "prop-slip-comparison-mode";
       const UNIT_SYSTEMS = {
         imperial: { speedUnit: "mph", speedLabel: "mph" },
         metric: { speedUnit: "kph", speedLabel: "km/h" },
@@ -1511,11 +1773,6 @@
         rpm: "5600",
         speed: "68",
         speedUnit: "mph"
-      };
-      const authState = {
-        mode: "guest",
-        user: null,
-        savedCalculations: []
       };
 
       const systemScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -1536,6 +1793,33 @@
         advanceValue: document.querySelector("#advanceValue"),
         exampleButton: document.querySelector("#exampleButton"),
         clearButton: document.querySelector("#clearButton"),
+        whatIfForm: document.querySelector("#whatif-form"),
+        comparePitchA: document.querySelector("#comparePitchA"),
+        compareGearRatioA: document.querySelector("#compareGearRatioA"),
+        compareRpmA: document.querySelector("#compareRpmA"),
+        compareSlipA: document.querySelector("#compareSlipA"),
+        comparePitchB: document.querySelector("#comparePitchB"),
+        compareGearRatioB: document.querySelector("#compareGearRatioB"),
+        compareRpmB: document.querySelector("#compareRpmB"),
+        compareSlipB: document.querySelector("#compareSlipB"),
+        compareSetupB: document.querySelector("#compareSetupB"),
+        whatIfMetricLabel: document.querySelector("#whatIfMetricLabel"),
+        whatIfResultValue: document.querySelector("#whatIfResultValue"),
+        whatIfStatusPill: document.querySelector("#whatIfStatusPill"),
+        whatIfStatA: document.querySelector("#whatIfStatA"),
+        whatIfStatALabel: document.querySelector("#whatIfStatALabel"),
+        whatIfStatAValue: document.querySelector("#whatIfStatAValue"),
+        whatIfStatB: document.querySelector("#whatIfStatB"),
+        whatIfStatBLabel: document.querySelector("#whatIfStatBLabel"),
+        whatIfStatBValue: document.querySelector("#whatIfStatBValue"),
+        whatIfTab: document.querySelector("#whatIfTab"),
+        calculatorSwitcher: document.querySelector("#calculatorSwitcher"),
+        comparisonModeToggle: document.querySelector("#comparisonModeToggle"),
+        viewSwitcherButtons: document.querySelectorAll("[data-view]"),
+        views: {
+          slip: document.querySelector("#view-slip"),
+          whatif: document.querySelector("#view-whatif")
+        },
         menuButton: document.querySelector("#menuButton"),
         menuSheet: document.querySelector("#menuSheet"),
         menuItems: document.querySelectorAll("[data-open-sheet]"),
@@ -1543,7 +1827,9 @@
         aboutSheet: document.querySelector("#aboutSheet"),
         privacySheet: document.querySelector("#privacySheet"),
         accessibilitySheet: document.querySelector("#accessibilitySheet"),
-        comingSoonSheet: document.querySelector("#comingSoonSheet"),
+        termsSheet: document.querySelector("#termsSheet"),
+        contactSheet: document.querySelector("#contactSheet"),
+        mobileAppsSheet: document.querySelector("#mobileAppsSheet"),
         settingsSheet: document.querySelector("#settingsSheet"),
         closeButtons: document.querySelectorAll("[data-close]"),
         backButtons: document.querySelectorAll("[data-back-menu]"),
@@ -1554,6 +1840,11 @@
 
       const numberFormatter = new Intl.NumberFormat("en-US", {
         maximumFractionDigits: 1
+      });
+
+      const diffFormatter = new Intl.NumberFormat("en-US", {
+        maximumFractionDigits: 1,
+        signDisplay: "always"
       });
 
       const integerFormatter = new Intl.NumberFormat("en-US", {
@@ -1577,6 +1868,14 @@
         }
       }
 
+      function getStoredComparisonMode() {
+        try {
+          return localStorage.getItem(COMPARISON_MODE_KEY) === "on";
+        } catch (error) {
+          return false;
+        }
+      }
+
       function toNumber(input) {
         const value = Number.parseFloat(input.value);
         return Number.isFinite(value) ? value : NaN;
@@ -1594,8 +1893,13 @@
         return mph;
       }
 
+      function speedUnitLabel(unit) {
+        const system = Object.values(UNIT_SYSTEMS).find((entry) => entry.speedUnit === unit);
+        return system ? system.speedLabel : unit;
+      }
+
       function formatSpeed(mph, unit = UNIT_SYSTEMS[activeUnitSystem].speedUnit) {
-        return `${numberFormatter.format(speedFromMph(mph, unit))} ${UNIT_SYSTEMS[activeUnitSystem].speedLabel}`;
+        return `${numberFormatter.format(speedFromMph(mph, unit))} ${speedUnitLabel(unit)}`;
       }
 
       function formatInputValue(value, digits = 2) {
@@ -1692,6 +1996,100 @@
         fields.advanceValue.textContent = `${numberFormatter.format(pitch)} in/rev`;
       }
 
+      function estimateSetup(pitch, gearRatio, rpm, slip) {
+        if (![pitch, gearRatio, rpm, slip].every(Number.isFinite)) return null;
+        if (pitch <= 0 || gearRatio <= 0 || rpm <= 0 || slip < 0 || slip > 100) return null;
+
+        const propRpm = rpm / gearRatio;
+        const theoreticalMph = (propRpm * pitch) / 1056;
+        const estimatedMph = theoreticalMph * (1 - (slip / 100));
+        return { propRpm, theoreticalMph, estimatedMph };
+      }
+
+      function setWhatIfWaiting() {
+        fields.whatIfMetricLabel.textContent = fields.comparisonModeToggle.checked ? "Speed difference" : "Estimated speed";
+        fields.whatIfResultValue.textContent = "--";
+        fields.whatIfStatusPill.hidden = false;
+        fields.whatIfStatusPill.textContent = "Waiting";
+        fields.whatIfStatusPill.className = "status-pill";
+        fields.whatIfStatA.className = "mini-stat";
+        fields.whatIfStatB.className = "mini-stat";
+        fields.whatIfStatALabel.textContent = fields.comparisonModeToggle.checked ? "Setup A" : "Prop RPM";
+        fields.whatIfStatAValue.textContent = "--";
+        fields.whatIfStatBLabel.textContent = fields.comparisonModeToggle.checked ? "Setup B" : "Theoretical";
+        fields.whatIfStatBValue.textContent = "--";
+      }
+
+      function calculateWhatIf() {
+        const setupA = estimateSetup(
+          toNumber(fields.comparePitchA),
+          toNumber(fields.compareGearRatioA),
+          toNumber(fields.compareRpmA),
+          toNumber(fields.compareSlipA)
+        );
+
+        if (!setupA) {
+          setWhatIfWaiting();
+          return;
+        }
+
+        const unit = UNIT_SYSTEMS[activeUnitSystem].speedUnit;
+        const label = UNIT_SYSTEMS[activeUnitSystem].speedLabel;
+
+        if (!fields.comparisonModeToggle.checked) {
+          fields.whatIfMetricLabel.textContent = "Estimated speed";
+          fields.whatIfResultValue.textContent = formatSpeed(setupA.estimatedMph, unit);
+          fields.whatIfStatusPill.hidden = false;
+          fields.whatIfStatusPill.textContent = "Setup A";
+          fields.whatIfStatusPill.className = "status-pill";
+          fields.whatIfStatA.className = "mini-stat";
+          fields.whatIfStatB.className = "mini-stat";
+          fields.whatIfStatALabel.textContent = "Prop RPM";
+          fields.whatIfStatAValue.textContent = integerFormatter.format(setupA.propRpm);
+          fields.whatIfStatBLabel.textContent = "Theoretical";
+          fields.whatIfStatBValue.textContent = formatSpeed(setupA.theoreticalMph, unit);
+          return;
+        }
+
+        const setupB = estimateSetup(
+          toNumber(fields.comparePitchB),
+          toNumber(fields.compareGearRatioB),
+          toNumber(fields.compareRpmB),
+          toNumber(fields.compareSlipB)
+        );
+
+        if (!setupB) {
+          setWhatIfWaiting();
+          return;
+        }
+
+        const diff = speedFromMph(setupB.estimatedMph - setupA.estimatedMph, unit);
+
+        fields.whatIfMetricLabel.textContent = "Speed difference";
+        fields.whatIfStatusPill.hidden = true;
+        fields.whatIfStatALabel.textContent = "Setup A";
+        fields.whatIfStatAValue.textContent = formatSpeed(setupA.estimatedMph, unit);
+        fields.whatIfStatBLabel.textContent = "Setup B";
+        fields.whatIfStatBValue.textContent = formatSpeed(setupB.estimatedMph, unit);
+
+        if (Math.abs(diff) < 0.05) {
+          fields.whatIfResultValue.textContent = `0 ${label}`;
+          fields.whatIfStatA.className = "mini-stat";
+          fields.whatIfStatB.className = "mini-stat";
+          return;
+        }
+
+        fields.whatIfResultValue.textContent = `${diffFormatter.format(diff)} ${label}`;
+
+        if (diff > 0) {
+          fields.whatIfStatA.className = "mini-stat warn";
+          fields.whatIfStatB.className = "mini-stat good";
+        } else {
+          fields.whatIfStatA.className = "mini-stat good";
+          fields.whatIfStatB.className = "mini-stat warn";
+        }
+      }
+
       function loadExample() {
         const selectedUnits = UNIT_SYSTEMS[activeUnitSystem];
         fields.pitch.value = DEFAULTS.pitch;
@@ -1700,6 +2098,7 @@
         fields.speed.value = formatInputValue(speedFromMph(Number(DEFAULTS.speed), selectedUnits.speedUnit));
         fields.speedUnit.value = selectedUnits.speedUnit;
         calculate();
+        calculateWhatIf();
       }
 
       function clearInputs() {
@@ -1766,6 +2165,7 @@
         }
 
         calculate();
+        calculateWhatIf();
       }
 
       function openSheet(sheet) {
@@ -1791,6 +2191,38 @@
         openSheet(toSheet);
       }
 
+      function switchView(viewId) {
+        fields.viewSwitcherButtons.forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.view === viewId));
+        });
+
+        Object.entries(fields.views).forEach(([id, view]) => {
+          if (id === viewId) {
+            view.removeAttribute("hidden");
+          } else {
+            view.setAttribute("hidden", "");
+          }
+        });
+      }
+
+      function applyComparisonMode(enabled, persist = true) {
+        fields.comparisonModeToggle.checked = enabled;
+        fields.compareSetupB.hidden = !enabled;
+        calculateWhatIf();
+
+        if (persist) {
+          try {
+            localStorage.setItem(COMPARISON_MODE_KEY, enabled ? "on" : "off");
+          } catch (error) {
+            return;
+          }
+        }
+      }
+
+      fields.viewSwitcherButtons.forEach((button) => {
+        button.addEventListener("click", () => switchView(button.dataset.view));
+      });
+
       fields.form.addEventListener("input", calculate);
       fields.form.addEventListener("change", calculate);
       fields.form.addEventListener("reset", () => {
@@ -1802,6 +2234,11 @@
           fields.speedUnit.value = UNIT_SYSTEMS[activeUnitSystem].speedUnit;
           calculate();
         }, 0);
+      });
+      fields.whatIfForm.addEventListener("input", calculateWhatIf);
+      fields.whatIfForm.addEventListener("change", calculateWhatIf);
+      fields.comparisonModeToggle.addEventListener("change", () => {
+        applyComparisonMode(fields.comparisonModeToggle.checked);
       });
       fields.exampleButton.addEventListener("click", loadExample);
       fields.clearButton.addEventListener("click", clearInputs);
@@ -1827,7 +2264,7 @@
         });
       });
 
-      [fields.menuSheet, fields.tutorialSheet, fields.aboutSheet, fields.privacySheet, fields.accessibilitySheet, fields.comingSoonSheet, fields.settingsSheet].forEach((sheet) => {
+      [fields.menuSheet, fields.tutorialSheet, fields.aboutSheet, fields.privacySheet, fields.accessibilitySheet, fields.termsSheet, fields.contactSheet, fields.mobileAppsSheet, fields.settingsSheet].forEach((sheet) => {
         sheet.addEventListener("click", (event) => {
           if (event.target === sheet) closeSheet(sheet);
         });
@@ -1870,6 +2307,8 @@
 
       applyAppearance(getStoredAppearance(), false);
       applyUnitSystem(getStoredUnitSystem(), true, false);
+      applyComparisonMode(getStoredComparisonMode(), false);
+      calculateWhatIf();
     </script>
   </body>
 </html>
