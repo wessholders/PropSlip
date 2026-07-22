@@ -19,7 +19,6 @@
         --ios-marine-dark: #073746;
         --race-red: #e3342f;
         --race-yellow: #f2b705;
-        --race-white: #f5fbfc;
         --panel-ink: #0b1820;
         --panel-rail: #102a36;
         --surface-sheen: rgba(255, 255, 255, 0.66);
@@ -44,34 +43,33 @@
 
       [data-theme="dark"] {
         color-scheme: dark;
-        --app-bg: #05090c;
-        --app-top: #0d222c;
-        --app-bottom: #05090c;
-        --page-fill: var(--app-bg);
-        --grid-line: rgba(245, 251, 252, 0.025);
-        --grid-cross-line: rgba(245, 251, 252, 0.02);
-        --label: #f4f8f9;
-        --secondary-label: #b9c7cd;
-        --tertiary-label: #7f8a92;
-        --separator: rgba(235, 235, 245, 0.16);
-        --group-bg: rgba(12, 24, 32, 0.94);
-        --ios-control-bg: #111f28;
-        --elevated-bg: #0b151c;
+        --app-bg: #1e1e1e;
+        --app-top: #252526;
+        --app-bottom: #1e1e1e;
+        --page-fill: #1e1e1e;
+        --grid-line: rgba(255, 255, 255, 0.025);
+        --grid-cross-line: rgba(255, 255, 255, 0.018);
+        --label: #d4d4d4;
+        --secondary-label: #a9b0b5;
+        --tertiary-label: #858b90;
+        --separator: rgba(255, 255, 255, 0.14);
+        --group-bg: #252526;
+        --ios-control-bg: #2d2d30;
+        --elevated-bg: #252526;
         --ios-accent: #35c7e8;
         --ios-accent-pressed: #64d2ff;
         --ios-marine: #27d1c4;
         --ios-marine-dark: #062f38;
         --race-red: #ff5a52;
         --race-yellow: #ffd166;
-        --race-white: #f5fbfc;
         --panel-ink: #eaf6f7;
-        --panel-rail: #35c7e8;
+        --panel-rail: #007acc;
         --surface-sheen: rgba(255, 255, 255, 0.025);
         --control-sheen: rgba(255, 255, 255, 0.035);
         --tab-sheen: rgba(255, 255, 255, 0.04);
         --header-sheen: rgba(255, 255, 255, 0.05);
-        --nav-rail: #07131b;
-        --nav-active: #12313e;
+        --nav-rail: #1b1b1c;
+        --nav-active: #2d2d30;
         --ios-success: #32d74b;
         --ios-danger: #ff453a;
         --sheet-backdrop: rgba(0, 0, 0, 0.58);
@@ -151,12 +149,10 @@
         background:
           linear-gradient(
             112deg,
-            transparent 0 68.5%,
-            var(--race-white) 68.5% 69.1%,
-            var(--race-red) 69.1% 71.7%,
-            var(--race-yellow) 71.7% 72.7%,
-            var(--ios-marine) 72.7% 73.1%,
-            transparent 73.1%
+            transparent 0 70.2%,
+            var(--race-red) 70.2% 72.7%,
+            var(--race-yellow) 72.7% 73.6%,
+            transparent 73.6%
           ),
           linear-gradient(180deg, var(--header-sheen), transparent 42%),
           #0b1720;
@@ -168,15 +164,7 @@
         position: absolute;
         inset: auto 18px 0;
         height: 3px;
-        background:
-          linear-gradient(
-            90deg,
-            var(--ios-marine) 0 42%,
-            var(--race-white) 42% 48%,
-            var(--race-red) 48% 58%,
-            var(--race-yellow) 58% 65%,
-            transparent 65%
-          );
+        background: linear-gradient(90deg, var(--ios-marine), transparent 64%);
       }
 
       .brand-lockup {
