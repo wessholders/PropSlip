@@ -392,12 +392,13 @@
         box-shadow: none;
       }
 
-      input[aria-invalid="true"] {
-        color: var(--ios-danger);
+      .field-row.invalid {
+        background: color-mix(in srgb, var(--ios-danger) 5%, transparent);
+        box-shadow: inset 3px 0 0 color-mix(in srgb, var(--ios-danger) 72%, transparent);
       }
 
-      .value-control.invalid {
-        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ios-danger) 58%, transparent);
+      .field-row.invalid .field-label label {
+        color: color-mix(in srgb, var(--ios-danger) 78%, var(--label));
       }
 
       .actions {
@@ -1415,7 +1416,7 @@
 
       function setFieldValidity(input, isValid, messageId) {
         input.setAttribute("aria-invalid", String(!isValid));
-        input.closest(".value-control").classList.toggle("invalid", !isValid);
+        input.closest(".field-row").classList.toggle("invalid", !isValid);
 
         if (isValid) {
           input.removeAttribute("aria-describedby");
