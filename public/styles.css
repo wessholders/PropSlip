@@ -16,6 +16,7 @@
         --ios-marine-dark: #073746;
         --race-red: #e3342f;
         --race-yellow: #f2b705;
+        --race-white: #f5fbfc;
         --panel-ink: #0b1820;
         --panel-rail: #102a36;
         --nav-rail: #07131b;
@@ -52,6 +53,7 @@
         --ios-marine-dark: #062f38;
         --race-red: #ff5a52;
         --race-yellow: #ffd166;
+        --race-white: #f5fbfc;
         --panel-ink: #eaf6f7;
         --panel-rail: #35c7e8;
         --nav-rail: #07131b;
@@ -83,11 +85,10 @@
         margin: 0;
         color: var(--label);
         background:
-          linear-gradient(115deg, transparent 0 68%, rgba(227, 52, 47, 0.055) 68% 68.65%, transparent 68.65%),
           linear-gradient(rgba(7, 19, 27, 0.035) 1px, transparent 1px),
           linear-gradient(90deg, rgba(7, 19, 27, 0.03) 1px, transparent 1px),
           linear-gradient(180deg, var(--app-top), var(--app-bottom));
-        background-size: auto, 32px 32px, 32px 32px, auto;
+        background-size: 32px 32px, 32px 32px, auto;
         -webkit-font-smoothing: antialiased;
       }
 
@@ -134,7 +135,15 @@
         border-radius: var(--radius-xl);
         color: #f5fbfc;
         background:
-          linear-gradient(112deg, transparent 0 72%, var(--race-red) 72% 74%, var(--race-yellow) 74% 75%, transparent 75%),
+          linear-gradient(
+            112deg,
+            transparent 0 68.5%,
+            var(--race-white) 68.5% 69.1%,
+            var(--race-red) 69.1% 71.7%,
+            var(--race-yellow) 71.7% 72.7%,
+            var(--ios-marine) 72.7% 73.1%,
+            transparent 73.1%
+          ),
           linear-gradient(180deg, rgba(255, 255, 255, 0.09), transparent 42%),
           #0b1720;
         box-shadow: var(--ios-shadow);
@@ -145,7 +154,15 @@
         position: absolute;
         inset: auto 18px 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--ios-marine), transparent 64%);
+        background:
+          linear-gradient(
+            90deg,
+            var(--ios-marine) 0 42%,
+            var(--race-white) 42% 48%,
+            var(--race-red) 48% 58%,
+            var(--race-yellow) 58% 65%,
+            transparent 65%
+          );
       }
 
       .brand-lockup {
@@ -180,9 +197,12 @@
         max-width: 34ch;
         margin: 11px 0 0;
         color: #b9cbd1;
+        font-family: var(--mono);
         font-size: 0.9rem;
-        font-weight: 520;
+        font-weight: 720;
+        letter-spacing: 0.06em;
         line-height: 1.28;
+        text-transform: uppercase;
       }
 
       .header-spec {
@@ -222,7 +242,6 @@
         border-radius: var(--radius-xl);
         color: var(--label);
         background:
-          linear-gradient(90deg, rgba(0, 126, 167, 0.12) 0 3px, transparent 3px),
           linear-gradient(180deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0)),
           var(--elevated-bg);
         box-shadow: var(--ios-soft-shadow);
@@ -320,9 +339,7 @@
         min-height: 68px;
         padding: 11px;
         border-radius: var(--radius-md);
-        background:
-          linear-gradient(90deg, rgba(7, 19, 27, 0.06), transparent 34%),
-          var(--ios-control-bg);
+        background: var(--ios-control-bg);
         border: 1px solid var(--separator);
       }
 
