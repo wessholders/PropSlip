@@ -198,10 +198,10 @@
       function setupValidationConfigs(prefix) {
         const fieldSuffix = prefix === "A" ? "A" : "B";
         return [
-          { key: "pitch", input: fields[`comparePitch${fieldSuffix}`], label: `Setup ${fieldSuffix} propeller pitch`, minExclusive: 0 },
+          { key: "slip", input: fields[`compareSlip${fieldSuffix}`], label: `Setup ${fieldSuffix} target slip`, minInclusive: 0, maxInclusive: 100 },
           { key: "gearRatio", input: fields[`compareGearRatio${fieldSuffix}`], label: `Setup ${fieldSuffix} gear ratio`, minExclusive: 0 },
-          { key: "rpm", input: fields[`compareRpm${fieldSuffix}`], label: `Setup ${fieldSuffix} engine RPM`, minExclusive: 0 },
-          { key: "slip", input: fields[`compareSlip${fieldSuffix}`], label: `Setup ${fieldSuffix} target slip`, minInclusive: 0, maxInclusive: 100 }
+          { key: "pitch", input: fields[`comparePitch${fieldSuffix}`], label: `Setup ${fieldSuffix} propeller pitch`, minExclusive: 0 },
+          { key: "rpm", input: fields[`compareRpm${fieldSuffix}`], label: `Setup ${fieldSuffix} engine RPM`, minExclusive: 0 }
         ];
       }
 
