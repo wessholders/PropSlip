@@ -342,6 +342,16 @@
         background: var(--ios-control-bg);
       }
 
+      input,
+      select {
+        width: 100%;
+        min-width: 0;
+        border: 0;
+        outline: 0;
+        color: var(--label);
+        background: transparent;
+      }
+
       .value-control select {
         width: auto;
       }
@@ -356,6 +366,8 @@
 
       .unit,
       select {
+        display: grid;
+        place-items: center;
         min-width: 54px;
         padding: 0 10px;
         color: var(--secondary-label);
