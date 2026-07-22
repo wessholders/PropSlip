@@ -392,34 +392,36 @@
         box-shadow: none;
       }
 
+      input[aria-invalid="true"] {
+        color: var(--ios-danger);
+      }
+
+      .value-control.invalid {
+        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ios-danger) 58%, transparent);
+      }
+
       .actions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: center;
         gap: 10px;
       }
 
-      .primary-button,
       .secondary-button {
         min-height: var(--tap);
         border: 0;
         border-radius: var(--radius-md);
+        color: var(--ios-accent);
+        background: var(--group-bg);
+        border: 1px solid var(--separator);
         font-size: 1rem;
         font-weight: 700;
         cursor: pointer;
       }
 
-      .primary-button {
-        color: #ffffff;
-        background: var(--ios-accent);
+      .actions .secondary-button {
+        width: min(100%, 180px);
       }
 
-      .secondary-button {
-        color: var(--ios-accent);
-        background: var(--group-bg);
-        border: 1px solid var(--separator);
-      }
-
-      .primary-button:active,
       .secondary-button:active {
         transform: scale(0.985);
       }
@@ -431,6 +433,14 @@
         font-size: 0.82rem;
         line-height: 1.4;
         text-align: center;
+      }
+
+      .validation-message {
+        margin: 8px 4px 0;
+        color: var(--ios-danger);
+        font-size: 0.82rem;
+        font-weight: 650;
+        line-height: 1.35;
       }
 
       .sheet {
@@ -781,7 +791,6 @@
       }
 
       @media (prefers-reduced-motion: no-preference) {
-        .primary-button,
         .secondary-button,
         .segment {
           transition: transform 140ms ease, background-color 160ms ease, color 160ms ease;
@@ -908,10 +917,10 @@
                 </div>
               </div>
             </div>
+            <p class="validation-message" id="slipValidation" aria-live="polite" hidden></p>
           </form>
 
           <div class="actions">
-            <button class="primary-button" type="button" id="exampleButton">Use Example</button>
             <button class="secondary-button" type="button" id="clearButton">Clear</button>
           </div>
 
@@ -984,6 +993,7 @@
                 </div>
               </div>
             </div>
+            <p class="validation-message" id="setupAValidation" aria-live="polite" hidden></p>
 
             <div class="settings-row toggle-row">
               <strong>Compare with Setup B</strong>
@@ -1033,6 +1043,7 @@
                 </div>
               </div>
               </div>
+              <p class="validation-message" id="setupBValidation" aria-live="polite" hidden></p>
             </div>
           </form>
         </div>
@@ -1286,14 +1297,6 @@
         metric: { speedUnit: "kph", speedLabel: "km/h" },
         nautical: { speedUnit: "knots", speedLabel: "kn" }
       };
-      const DEFAULTS = {
-        pitch: "24",
-        gearRatio: "1.75",
-        rpm: "5600",
-        speed: "68",
-        speedUnit: "mph"
-      };
-
       const systemScheme = window.matchMedia("(prefers-color-scheme: dark)");
       let activeUnitSystem = "imperial";
       const fields = {
@@ -1308,8 +1311,8 @@
         statusPill: document.querySelector("#statusPill"),
         propRpmValue: document.querySelector("#propRpmValue"),
         theoreticalValue: document.querySelector("#theoreticalValue"),
-        exampleButton: document.querySelector("#exampleButton"),
         clearButton: document.querySelector("#clearButton"),
+        slipValidation: document.querySelector("#slipValidation"),
         whatIfForm: document.querySelector("#whatif-form"),
         comparePitchA: document.querySelector("#comparePitchA"),
         compareGearRatioA: document.querySelector("#compareGearRatioA"),
@@ -1320,6 +1323,8 @@
         compareRpmB: document.querySelector("#compareRpmB"),
         compareSlipB: document.querySelector("#compareSlipB"),
         compareSetupB: document.querySelector("#compareSetupB"),
+        setupAValidation: document.querySelector("#setupAValidation"),
+        setupBValidation: document.querySelector("#setupBValidation"),
         whatIfMetricLabel: document.querySelector("#whatIfMetricLabel"),
         whatIfResultValue: document.querySelector("#whatIfResultValue"),
         whatIfStatusPill: document.querySelector("#whatIfStatusPill"),
@@ -1350,8 +1355,8 @@
         settingsSheet: document.querySelector("#settingsSheet"),
         closeButtons: document.querySelectorAll("[data-close]"),
         backButtons: document.querySelectorAll("[data-back-menu]"),
-        appearanceButtons: document.querySelectorAll("[data-appearance]"),
-        unitSystemButtons: document.querySelectorAll("[data-unit-system]"),
+        appearanceButtons: document.querySelectorAll("button[data-appearance]"),
+        unitSystemButtons: document.querySelectorAll("button[data-unit-system]"),
         themeColor: document.querySelector('meta[name="theme-color"]')
       };
 
@@ -1398,6 +1403,97 @@
         return Number.isFinite(value) ? value : NaN;
       }
 
+      function formatList(items) {
+        if (items.length <= 1) return items[0] || "";
+        if (items.length === 2) return `${items[0]} and ${items[1]}`;
+        return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+      }
+
+      function sentenceCase(text) {
+        return text.charAt(0).toUpperCase() + text.slice(1);
+      }
+
+      function setFieldValidity(input, isValid, messageId) {
+        input.setAttribute("aria-invalid", String(!isValid));
+        input.closest(".value-control").classList.toggle("invalid", !isValid);
+
+        if (isValid) {
+          input.removeAttribute("aria-describedby");
+        } else {
+          input.setAttribute("aria-describedby", messageId);
+        }
+      }
+
+      function clearValidation(messageElement, configs) {
+        messageElement.hidden = true;
+        messageElement.textContent = "";
+        configs.forEach((config) => setFieldValidity(config.input, true, messageElement.id));
+      }
+
+      function validateFields(messageElement, configs) {
+        const values = {};
+        const missing = [];
+        const errors = [];
+
+        configs.forEach((config) => {
+          const rawValue = config.input.value.trim();
+          const value = Number.parseFloat(rawValue);
+          let error = "";
+
+          if (rawValue === "") {
+            missing.push(config.label);
+            error = `${sentenceCase(config.label)} is required.`;
+          } else if (!Number.isFinite(value)) {
+            error = `${sentenceCase(config.label)} must be a number.`;
+          } else if (config.minExclusive !== undefined && value <= config.minExclusive) {
+            error = `${sentenceCase(config.label)} must be greater than ${config.minExclusive}.`;
+          } else if (config.minInclusive !== undefined && value < config.minInclusive) {
+            error = `${sentenceCase(config.label)} must be at least ${config.minInclusive}.`;
+          } else if (config.maxInclusive !== undefined && value > config.maxInclusive) {
+            error = `${sentenceCase(config.label)} must be ${config.maxInclusive} or less.`;
+          }
+
+          if (error) {
+            errors.push(error);
+            setFieldValidity(config.input, false, messageElement.id);
+          } else {
+            values[config.key] = value;
+            setFieldValidity(config.input, true, messageElement.id);
+          }
+        });
+
+        if (errors.length === 0) {
+          messageElement.hidden = true;
+          messageElement.textContent = "";
+          return { isValid: true, values, hasMissing: false };
+        }
+
+        messageElement.textContent = missing.length === errors.length
+          ? `Enter ${formatList(missing)}.`
+          : errors[0];
+        messageElement.hidden = false;
+        return { isValid: false, values, hasMissing: missing.length > 0 };
+      }
+
+      function slipValidationConfigs() {
+        return [
+          { key: "pitch", input: fields.pitch, label: "propeller pitch", minExclusive: 0 },
+          { key: "gearRatio", input: fields.gearRatio, label: "gear ratio", minExclusive: 0 },
+          { key: "rpm", input: fields.rpm, label: "engine RPM", minExclusive: 0 },
+          { key: "speed", input: fields.speed, label: "GPS speed", minInclusive: 0 }
+        ];
+      }
+
+      function setupValidationConfigs(prefix) {
+        const fieldSuffix = prefix === "A" ? "A" : "B";
+        return [
+          { key: "pitch", input: fields[`comparePitch${fieldSuffix}`], label: `Setup ${fieldSuffix} propeller pitch`, minExclusive: 0 },
+          { key: "gearRatio", input: fields[`compareGearRatio${fieldSuffix}`], label: `Setup ${fieldSuffix} gear ratio`, minExclusive: 0 },
+          { key: "rpm", input: fields[`compareRpm${fieldSuffix}`], label: `Setup ${fieldSuffix} engine RPM`, minExclusive: 0 },
+          { key: "slip", input: fields[`compareSlip${fieldSuffix}`], label: `Setup ${fieldSuffix} target slip`, minInclusive: 0, maxInclusive: 100 }
+        ];
+      }
+
       function speedToMph(speed, unit) {
         if (unit === "knots") return speed * MPH_PER_KNOT;
         if (unit === "kph") return speed * MPH_PER_KPH;
@@ -1424,10 +1520,10 @@
         return Number.parseFloat(value.toFixed(digits)).toString();
       }
 
-      function setWaiting() {
+      function setWaiting(label = "Waiting", className = "status-pill") {
         fields.slipValue.textContent = "--";
-        fields.statusPill.textContent = "Waiting";
-        fields.statusPill.className = "status-pill";
+        fields.statusPill.textContent = label;
+        fields.statusPill.className = className;
         fields.propRpmValue.textContent = "--";
         fields.theoreticalValue.textContent = "--";
       }
@@ -1481,22 +1577,14 @@
       }
 
       function calculate() {
-        const pitch = toNumber(fields.pitch);
-        const gearRatio = toNumber(fields.gearRatio);
-        const rpm = toNumber(fields.rpm);
-        const speed = toNumber(fields.speed);
+        const validation = validateFields(fields.slipValidation, slipValidationConfigs());
+        if (!validation.isValid) {
+          setWaiting(validation.hasMissing ? "Incomplete" : "Check setup", "status-pill warn");
+          return;
+        }
+
+        const { pitch, gearRatio, rpm, speed } = validation.values;
         const actualMph = speedToMph(speed, fields.speedUnit.value);
-
-        if ([pitch, gearRatio, rpm, speed].some((value) => !Number.isFinite(value))) {
-          setWaiting();
-          return;
-        }
-
-        if (pitch <= 0 || gearRatio <= 0 || rpm <= 0 || speed < 0) {
-          setWaiting();
-          return;
-        }
-
         const propRpm = rpm / gearRatio;
         const theoreticalMph = (propRpm * pitch) / 1056;
         const slip = ((theoreticalMph - actualMph) / theoreticalMph) * 100;
@@ -1519,12 +1607,12 @@
         return { propRpm, theoreticalMph, estimatedMph };
       }
 
-      function setWhatIfWaiting() {
+      function setWhatIfWaiting(label = "Waiting", className = "status-pill") {
         fields.whatIfMetricLabel.textContent = fields.comparisonModeToggle.checked ? "Speed difference" : "Estimated speed";
         fields.whatIfResultValue.textContent = "--";
         fields.whatIfStatusPill.hidden = false;
-        fields.whatIfStatusPill.textContent = "Waiting";
-        fields.whatIfStatusPill.className = "status-pill";
+        fields.whatIfStatusPill.textContent = label;
+        fields.whatIfStatusPill.className = className;
         fields.whatIfStatA.className = "mini-stat";
         fields.whatIfStatB.className = "mini-stat";
         fields.whatIfStatALabel.textContent = fields.comparisonModeToggle.checked ? "Setup A" : "Prop RPM";
@@ -1534,22 +1622,24 @@
       }
 
       function calculateWhatIf() {
-        const setupA = estimateSetup(
-          toNumber(fields.comparePitchA),
-          toNumber(fields.compareGearRatioA),
-          toNumber(fields.compareRpmA),
-          toNumber(fields.compareSlipA)
-        );
-
-        if (!setupA) {
-          setWhatIfWaiting();
+        const setupAValidation = validateFields(fields.setupAValidation, setupValidationConfigs("A"));
+        if (!setupAValidation.isValid) {
+          clearValidation(fields.setupBValidation, setupValidationConfigs("B"));
+          setWhatIfWaiting(setupAValidation.hasMissing ? "Incomplete" : "Check setup", "status-pill warn");
           return;
         }
 
+        const setupA = estimateSetup(
+          setupAValidation.values.pitch,
+          setupAValidation.values.gearRatio,
+          setupAValidation.values.rpm,
+          setupAValidation.values.slip
+        );
         const unit = UNIT_SYSTEMS[activeUnitSystem].speedUnit;
         const label = UNIT_SYSTEMS[activeUnitSystem].speedLabel;
 
         if (!fields.comparisonModeToggle.checked) {
+          clearValidation(fields.setupBValidation, setupValidationConfigs("B"));
           fields.whatIfMetricLabel.textContent = "Estimated speed";
           fields.whatIfResultValue.textContent = formatSpeed(setupA.estimatedMph, unit);
           fields.whatIfStatusPill.hidden = false;
@@ -1564,18 +1654,18 @@
           return;
         }
 
-        const setupB = estimateSetup(
-          toNumber(fields.comparePitchB),
-          toNumber(fields.compareGearRatioB),
-          toNumber(fields.compareRpmB),
-          toNumber(fields.compareSlipB)
-        );
-
-        if (!setupB) {
-          setWhatIfWaiting();
+        const setupBValidation = validateFields(fields.setupBValidation, setupValidationConfigs("B"));
+        if (!setupBValidation.isValid) {
+          setWhatIfWaiting(setupBValidation.hasMissing ? "Incomplete" : "Check setup", "status-pill warn");
           return;
         }
 
+        const setupB = estimateSetup(
+          setupBValidation.values.pitch,
+          setupBValidation.values.gearRatio,
+          setupBValidation.values.rpm,
+          setupBValidation.values.slip
+        );
         const diff = speedFromMph(setupB.estimatedMph - setupA.estimatedMph, unit);
 
         fields.whatIfMetricLabel.textContent = "Speed difference";
@@ -1601,17 +1691,6 @@
           fields.whatIfStatA.className = "mini-stat good";
           fields.whatIfStatB.className = "mini-stat warn";
         }
-      }
-
-      function loadExample() {
-        const selectedUnits = UNIT_SYSTEMS[activeUnitSystem];
-        fields.pitch.value = DEFAULTS.pitch;
-        fields.gearRatio.value = DEFAULTS.gearRatio;
-        fields.rpm.value = DEFAULTS.rpm;
-        fields.speed.value = formatInputValue(speedFromMph(Number(DEFAULTS.speed), selectedUnits.speedUnit));
-        fields.speedUnit.value = selectedUnits.speedUnit;
-        calculate();
-        calculateWhatIf();
       }
 
       function clearInputs() {
@@ -1787,7 +1866,6 @@
       fields.comparisonModeToggle.addEventListener("change", () => {
         applyComparisonMode(fields.comparisonModeToggle.checked);
       });
-      fields.exampleButton.addEventListener("click", loadExample);
       fields.clearButton.addEventListener("click", clearInputs);
       fields.menuButton.addEventListener("click", () => openSheet(fields.menuSheet));
 

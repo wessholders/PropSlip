@@ -5,7 +5,7 @@
 - [ ] Add stronger production security headers, including CSP, HSTS, and frame protections.
 - [ ] Add browser compatibility fallbacks for `color-mix()`, dynamic viewport sizing, and `<dialog>`.
 - [x] Convert calculator switching to tab semantics.
-- [ ] Add explicit validation messages and accessible error states.
+- [x] Add explicit validation messages and accessible error states.
 - [ ] Narrow live-region announcements to the primary result/status values.
 - [ ] Add favicon, touch icon, canonical URL, Open Graph/Twitter metadata, `robots.txt`, and optional manifest.
 - [ ] Prevent accidental form submission on calculator forms.
