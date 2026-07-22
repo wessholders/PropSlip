@@ -566,6 +566,7 @@
 
       fields.form.addEventListener("input", calculate);
       fields.form.addEventListener("change", calculate);
+      fields.form.addEventListener("submit", (event) => event.preventDefault());
       fields.form.addEventListener("reset", () => {
         window.setTimeout(() => {
           fields.pitch.value = "";
@@ -578,6 +579,7 @@
       });
       fields.whatIfForm.addEventListener("input", calculateWhatIf);
       fields.whatIfForm.addEventListener("change", calculateWhatIf);
+      fields.whatIfForm.addEventListener("submit", (event) => event.preventDefault());
       fields.comparisonModeToggle.addEventListener("change", () => {
         applyComparisonMode(fields.comparisonModeToggle.checked);
       });

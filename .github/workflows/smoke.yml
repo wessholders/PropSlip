@@ -1,0 +1,36 @@
+name: Smoke Test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  render-smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Find Chrome
+        shell: bash
+        run: |
+          for path in /usr/bin/google-chrome /usr/bin/google-chrome-stable /usr/bin/chromium-browser /usr/bin/chromium; do
+            if [ -x "$path" ]; then
+              echo "CHROME_PATH=$path" >> "$GITHUB_ENV"
+              exit 0
+            fi
+          done
+
+          echo "No Chrome or Chromium executable found" >&2
+          exit 1
+
+      - name: Run render smoke test
+        run: node scripts/verify-render.mjs

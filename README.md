@@ -44,13 +44,15 @@ Open `public/index.html` in a browser.
 
 ## Verify
 
-Run the local render check with Chrome:
+Run the local render check with Node.js 22 or newer and Chrome/Chromium:
 
 ```text
 node scripts/verify-render.mjs
 ```
 
-The script uses a temporary Chrome profile to avoid path/profile lock issues, captures `propslip-home.png` and `propslip-whatif-comparison.png`, checks the Propeller Slip and Theoretical Setup tabs, and verifies the Theoretical Setup comparison toggle.
+The script auto-detects common Chrome paths on Windows, macOS, and Linux. If Chrome is installed somewhere else, set `CHROME_PATH` to the executable path before running it.
+
+The script uses a temporary Chrome profile to avoid path/profile lock issues, captures `propslip-home.png` and `propslip-whatif-comparison.png`, checks the Propeller Slip and Theoretical Setup tabs, and verifies the Theoretical Setup comparison toggle. The same smoke test runs in GitHub Actions on pushes to `main` and pull requests.
 
 ## Deploy
 

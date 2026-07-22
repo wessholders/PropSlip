@@ -1,10 +1,24 @@
 import { spawn } from "node:child_process";
+import { existsSync } from "node:fs";
 import { mkdtemp, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const chromePath = process.env.CHROME_PATH || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+function defaultChromePath() {
+  const candidates = process.platform === "win32"
+    ? [
+        "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+      ]
+    : process.platform === "darwin"
+      ? ["/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"]
+      : ["/usr/bin/google-chrome", "/usr/bin/google-chrome-stable", "/usr/bin/chromium-browser", "/usr/bin/chromium"];
+
+  return candidates.find((candidate) => existsSync(candidate)) || candidates[0];
+}
+
+const chromePath = process.env.CHROME_PATH || defaultChromePath();
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = resolve(root, "public");
 const indexUrl = `file:///${resolve(publicDir, "index.html").replace(/\\/g, "/").replace(/ /g, "%20")}`;
