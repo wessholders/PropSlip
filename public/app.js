@@ -478,6 +478,7 @@
         }
 
         sheet.setAttribute("open", "");
+        document.body.classList.add("sheet-open");
       }
 
       function closeSheet(sheet) {
@@ -487,6 +488,9 @@
         }
 
         sheet.removeAttribute("open");
+        if (!document.querySelector(".sheet[open]")) {
+          document.body.classList.remove("sheet-open");
+        }
       }
 
       function switchSheet(fromSheet, toSheet) {

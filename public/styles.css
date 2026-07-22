@@ -64,6 +64,8 @@
 
       body {
         min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
         margin: 0;
         color: var(--label);
         background: var(--app-bg);
@@ -83,6 +85,8 @@
       .app {
         width: min(100%, 480px);
         min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
         margin: 0 auto;
         padding: max(12px, env(safe-area-inset-top)) 16px max(26px, env(safe-area-inset-bottom));
         display: block;
@@ -188,17 +192,22 @@
       }
 
       .status-pill.good {
+        color: #217948;
+        background: #edf8f1;
         color: color-mix(in srgb, var(--ios-success) 76%, var(--label));
         background: color-mix(in srgb, var(--ios-success) 14%, var(--elevated-bg));
       }
 
       .status-pill.warn {
+        color: #b42318;
+        background: #fff1ef;
         color: color-mix(in srgb, var(--ios-danger) 76%, var(--label));
         background: color-mix(in srgb, var(--ios-danger) 12%, var(--elevated-bg));
       }
 
       .status-pill.caution {
         color: #8a4b00;
+        background: #fff6e6;
         background: color-mix(in srgb, #ff9500 14%, var(--elevated-bg));
       }
 
@@ -233,12 +242,18 @@
       }
 
       .mini-stat.good {
+        color: #217948;
+        background: #edf8f1;
+        border-color: rgba(52, 199, 89, 0.28);
         color: color-mix(in srgb, var(--ios-success) 76%, var(--label));
         background: color-mix(in srgb, var(--ios-success) 14%, var(--elevated-bg));
         border-color: color-mix(in srgb, var(--ios-success) 28%, var(--separator));
       }
 
       .mini-stat.warn {
+        color: #b42318;
+        background: #fff1ef;
+        border-color: rgba(255, 59, 48, 0.26);
         color: color-mix(in srgb, var(--ios-danger) 76%, var(--label));
         background: color-mix(in srgb, var(--ios-danger) 12%, var(--elevated-bg));
         border-color: color-mix(in srgb, var(--ios-danger) 26%, var(--separator));
@@ -246,11 +261,13 @@
 
       .mini-stat.good strong,
       .mini-stat.good span {
+        color: #217948;
         color: color-mix(in srgb, var(--ios-success) 76%, var(--label));
       }
 
       .mini-stat.warn strong,
       .mini-stat.warn span {
+        color: #b42318;
         color: color-mix(in srgb, var(--ios-danger) 76%, var(--label));
       }
 
@@ -363,17 +380,21 @@
       input:focus-visible,
       select:focus-visible,
       button:focus-visible {
+        outline: 3px solid rgba(0, 110, 219, 0.38);
         outline: 3px solid color-mix(in srgb, var(--ios-accent) 38%, transparent);
         outline-offset: 2px;
         box-shadow: none;
       }
 
       .field-row.invalid {
+        background: rgba(255, 59, 48, 0.05);
+        box-shadow: inset 3px 0 0 rgba(255, 59, 48, 0.72);
         background: color-mix(in srgb, var(--ios-danger) 5%, transparent);
         box-shadow: inset 3px 0 0 color-mix(in srgb, var(--ios-danger) 72%, transparent);
       }
 
       .field-row.invalid .field-label label {
+        color: #b42318;
         color: color-mix(in srgb, var(--ios-danger) 78%, var(--label));
       }
 
@@ -423,8 +444,11 @@
       .sheet {
         position: fixed;
         inset: auto auto 0 50%;
+        z-index: 1000;
         width: min(100vw, 480px);
         max-height: min(82vh, 720px);
+        max-height: min(82svh, 720px);
+        max-height: min(82dvh, 720px);
         margin: 0;
         padding: 0;
         border: 0;
@@ -435,7 +459,24 @@
         transform: translateX(-50%);
       }
 
+      .sheet:not([open]) {
+        display: none;
+      }
+
+      .sheet[open] {
+        display: block;
+      }
+
       .sheet::backdrop {
+        background: var(--sheet-backdrop);
+        backdrop-filter: blur(4px);
+      }
+
+      body.sheet-open::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 999;
         background: var(--sheet-backdrop);
         backdrop-filter: blur(4px);
       }
@@ -645,6 +686,7 @@
       }
 
       .switch input:focus-visible + .switch-track {
+        outline: 3px solid rgba(0, 110, 219, 0.38);
         outline: 3px solid color-mix(in srgb, var(--ios-accent) 38%, transparent);
         outline-offset: 2px;
       }
@@ -695,6 +737,7 @@
         height: 42px;
         border: 0;
         border-radius: 50%;
+        background: rgba(255, 255, 255, 0.72);
         background: color-mix(in srgb, var(--group-bg) 84%, transparent);
         box-shadow: var(--ios-soft-shadow);
         cursor: pointer;
@@ -752,6 +795,8 @@
         inset: 50% auto auto 50%;
         width: min(430px, calc(100vw - 32px));
         max-height: min(78vh, 680px);
+        max-height: min(78svh, 680px);
+        max-height: min(78dvh, 680px);
         border-radius: 24px;
         transform: translate(-50%, -50%);
         box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
@@ -760,6 +805,8 @@
       .sheet-body {
         overflow: auto;
         max-height: min(78vh, 680px);
+        max-height: min(78svh, 680px);
+        max-height: min(78dvh, 680px);
         padding-bottom: 18px;
       }
 
