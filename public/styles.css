@@ -102,6 +102,7 @@
           var(--page-fill);
         background-size: 32px 32px, 32px 32px, auto;
         -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
       }
 
       button {
@@ -136,33 +137,49 @@
 
       .app-header {
         position: relative;
+        overflow: hidden;
+        width: 100vw;
+        margin: 0 calc(50% - 50vw) 4px;
+        padding: 18px 0 17px;
+        border: 1px solid rgba(7, 19, 27, 0.82);
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+        color: #f5fbfc;
+        background: #0b1720;
+        box-shadow: var(--ios-shadow);
+      }
+
+      .header-inner {
+        position: relative;
+        z-index: 1;
+        width: min(100%, 480px);
+        margin: 0 auto;
+        padding: 0 24px;
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
         gap: 16px;
         align-items: end;
-        overflow: hidden;
-        margin-bottom: 4px;
-        padding: 18px 18px 17px;
-        border: 1px solid rgba(7, 19, 27, 0.82);
-        border-radius: var(--radius-xl);
-        color: #f5fbfc;
-        background:
-          linear-gradient(
-            112deg,
-            transparent 0 70.2%,
-            var(--race-red) 70.2% 72.7%,
-            var(--race-yellow) 72.7% 73.6%,
-            transparent 73.6%
-          ),
-          linear-gradient(180deg, var(--header-sheen), transparent 42%),
-          #0b1720;
-        box-shadow: var(--ios-shadow);
+      }
+
+      .header-inner::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: -18px;
+        right: 100px;
+        bottom: -17px;
+        width: 22px;
+        background: var(--race-red);
+        box-shadow: 12px 0 0 var(--race-yellow);
+        transform: skewX(-18deg);
+        transform-origin: center;
       }
 
       .app-header::before {
         content: "";
         position: absolute;
-        inset: auto 18px 0;
+        inset: auto 0 0;
         height: 3px;
         background: linear-gradient(90deg, var(--ios-marine), transparent 64%);
       }
