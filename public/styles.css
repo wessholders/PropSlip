@@ -36,6 +36,7 @@
         --radius-lg: 8px;
         --radius-md: 6px;
         --tap: 46px;
+        --banner-inner: 600px;
         --sans: Bahnschrift, "Aptos", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
         --mono: "Cascadia Mono", "Roboto Mono", "SFMono-Regular", Consolas, monospace;
         font-family: var(--sans);
@@ -128,7 +129,9 @@
       .top-bar {
         position: relative;
         z-index: 3;
+        width: 100vw;
         height: 0;
+        margin: 0 calc(50% - 50vw);
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -153,7 +156,7 @@
       .header-inner {
         position: relative;
         z-index: 1;
-        width: min(100%, 480px);
+        width: min(100%, var(--banner-inner));
         margin: 0 auto;
         padding: 0 24px;
         display: grid;
@@ -895,7 +898,7 @@
       .menu-button {
         position: absolute;
         top: 14px;
-        right: 14px;
+        right: max(24px, calc((100vw - var(--banner-inner)) / 2 + 24px));
         display: grid;
         place-items: center;
         width: 38px;
