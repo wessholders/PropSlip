@@ -6,7 +6,8 @@ import { fileURLToPath } from "node:url";
 
 const chromePath = process.env.CHROME_PATH || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const indexUrl = `file:///${resolve(root, "index.html").replace(/\\/g, "/").replace(/ /g, "%20")}`;
+const publicDir = resolve(root, "public");
+const indexUrl = `file:///${resolve(publicDir, "index.html").replace(/\\/g, "/").replace(/ /g, "%20")}`;
 const profileDir = await mkdtemp(join(tmpdir(), "propslip-chrome-profile-"));
 const port = 9224;
 

@@ -1,7 +1,7 @@
 # PropSlip To-Do
 
-- [x] Remove duplicated and legacy CSS from `index.html`.
-- [ ] Publish only deployable static assets instead of the repository root.
+- [x] Remove duplicated and legacy CSS from `public/index.html`.
+- [x] Publish only deployable static assets instead of the repository root.
 - [ ] Add stronger production security headers, including CSP, HSTS, and frame protections.
 - [ ] Add browser compatibility fallbacks for `color-mix()`, dynamic viewport sizing, and `<dialog>`.
 - [x] Convert calculator switching to tab semantics.

@@ -9,7 +9,7 @@ The main page currently includes:
 
 The Theoretical Setup calculator includes an optional comparison mode. It is off by default and can be turned on inside the Theoretical Setup tab to compare Setup A with Setup B.
 
-`fromGenAI.html` is kept as an experiment/reference file. `index.html` is the deployable page.
+`public/index.html` is the deployable page.
 
 ## MVP Pages
 
@@ -40,7 +40,7 @@ https://en.wikipedia.org/wiki/Propeller_theory
 
 ## Run
 
-Open `index.html` in a browser.
+Open `public/index.html` in a browser.
 
 ## Verify
 
@@ -56,7 +56,7 @@ The script uses a temporary Chrome profile to avoid path/profile lock issues, ca
 
 This repo is ready for a static host with a custom domain.
 
-- Netlify: import the repository, leave the build command empty, and use `.` as the publish directory. `netlify.toml` already defines this.
-- Vercel: import the repository as a static project. `vercel.json` enables clean URLs and basic security headers.
-- Render: create a Static Site from the repository, or use the included `render.yaml`. The static publish path is `.` and the build command is `true`.
+- Netlify: import the repository, leave the build command empty, and use `public` as the publish directory. `netlify.toml` already defines this.
+- Vercel: import the repository as a static project. `vercel.json` points the output directory at `public` and enables clean URLs and basic security headers.
+- Render: create a Static Site from the repository, or use the included `render.yaml`. The static publish path is `public` and the build command is `true`.
 - GitHub Pages still works, but a custom-domain static host will feel more official while preserving the same static files.
