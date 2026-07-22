@@ -33,12 +33,12 @@
         </div>
 
         <div id="view-slip" class="view stack" role="tabpanel" aria-labelledby="slipTab">
-          <section class="result-card" aria-live="polite">
+          <section class="result-card">
             <div class="result-content">
               <div class="result-top">
                 <div>
                   <p class="metric-label">Calculated slip</p>
-                  <div class="slip-readout">
+                  <div class="slip-readout" aria-live="polite" aria-atomic="true">
                     <p class="slip-value" id="slipValue">--</p>
                     <span class="status-pill" id="statusPill">Waiting</span>
                   </div>
@@ -116,12 +116,12 @@
         </div>
 
         <div id="view-whatif" class="view stack" role="tabpanel" aria-labelledby="whatIfTab" hidden>
-          <section class="result-card" aria-live="polite">
+          <section class="result-card">
             <div class="result-content">
               <div class="result-top">
                 <div>
                   <p class="metric-label" id="whatIfMetricLabel">Estimated speed</p>
-                  <div class="slip-readout">
+                  <div class="slip-readout" aria-live="polite" aria-atomic="true">
                     <p class="slip-value" id="whatIfResultValue">--</p>
                     <span class="status-pill" id="whatIfStatusPill">Waiting</span>
                   </div>
