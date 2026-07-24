@@ -179,6 +179,13 @@ try {
     defaultState,
     whatIfState
   }, null, 2));
+} catch (error) {
+  console.error(error);
+  if (process.env.GITHUB_ACTIONS) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error(`::error title=Render smoke crashed::${workflowEscape(message)}`);
+  }
+  process.exitCode = 1;
 } finally {
   chrome.kill();
   await new Promise((resolveExit) => {
