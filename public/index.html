@@ -28,27 +28,27 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="app" aria-labelledby="app-title">
-      <nav class="top-bar" aria-label="App actions">
-        <button class="menu-button" type="button" id="menuButton" aria-label="Open menu">
-          <span class="menu-icon" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
-      </nav>
+    <nav class="top-bar" aria-label="App actions">
+      <button class="menu-button" type="button" id="menuButton" aria-label="Open menu">
+        <span class="menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </nav>
 
-      <header class="app-header">
-        <div class="header-inner">
-          <div class="brand-lockup">
-            <p class="brand-kicker">Prop setup calculator</p>
-            <h1 id="app-title">PropSlip</h1>
-            <p class="subtitle">Pitch / RPM / Gear / Speed</p>
-          </div>
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="brand-lockup">
+          <p class="brand-kicker">Prop setup calculator</p>
+          <h1 id="app-title">PropSlip</h1>
+          <p class="subtitle">Pitch / RPM / Gear / Speed</p>
         </div>
-      </header>
+      </div>
+    </header>
 
+    <main class="app" aria-labelledby="app-title">
       <section class="stack" aria-label="Boating calculators">
         <div class="segmented view-switcher" id="calculatorSwitcher" role="tablist" aria-label="Calculator selection">
           <button class="segment" type="button" id="slipTab" role="tab" data-view="slip" aria-selected="true" aria-controls="view-slip">Propeller Slip</button>
