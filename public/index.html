@@ -165,47 +165,6 @@
           </section>
 
           <form id="whatif-form">
-            <p class="section-title">Setup A</p>
-            <div class="group">
-              <div class="field-row">
-                <div class="field-label">
-                  <label for="compareSlipA">Target slip</label>
-                </div>
-                <div class="value-control">
-                  <input id="compareSlipA" name="compareSlipA" type="number" inputmode="decimal" min="0" max="100" step="0.1" value="10" autocomplete="off">
-                  <span class="unit">%</span>
-                </div>
-              </div>
-              <div class="field-row">
-                <div class="field-label">
-                  <label for="compareGearRatioA">Gear ratio</label>
-                </div>
-                <div class="value-control">
-                  <input id="compareGearRatioA" name="compareGearRatioA" type="number" inputmode="decimal" min="0.1" step="0.01" value="1.75" autocomplete="off">
-                  <span class="unit">:1</span>
-                </div>
-              </div>
-              <div class="field-row">
-                <div class="field-label">
-                  <label for="comparePitchA">Propeller pitch</label>
-                </div>
-                <div class="value-control">
-                  <input id="comparePitchA" name="comparePitchA" type="number" inputmode="decimal" min="1" step="0.5" value="24" autocomplete="off">
-                  <span class="unit">in</span>
-                </div>
-              </div>
-              <div class="field-row">
-                <div class="field-label">
-                  <label for="compareRpmA">Engine RPM</label>
-                </div>
-                <div class="value-control">
-                  <input id="compareRpmA" name="compareRpmA" type="number" inputmode="numeric" min="100" step="100" value="5600" autocomplete="off">
-                  <span class="unit">rpm</span>
-                </div>
-              </div>
-            </div>
-            <p class="validation-message" id="setupAValidation" aria-live="polite" hidden></p>
-
             <div class="settings-row toggle-row">
               <strong>Compare with Setup B</strong>
               <label class="switch" for="comparisonModeToggle">
@@ -214,8 +173,51 @@
               </label>
             </div>
 
-            <div id="compareSetupB" hidden>
-              <p class="section-title spaced">Setup B</p>
+            <div class="setup-panel">
+              <p class="section-title">Setup A</p>
+              <div class="group">
+                <div class="field-row">
+                  <div class="field-label">
+                    <label for="compareSlipA">Target slip</label>
+                  </div>
+                  <div class="value-control">
+                    <input id="compareSlipA" name="compareSlipA" type="number" inputmode="decimal" min="0" max="100" step="0.1" value="10" autocomplete="off">
+                    <span class="unit">%</span>
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field-label">
+                    <label for="compareGearRatioA">Gear ratio</label>
+                  </div>
+                  <div class="value-control">
+                    <input id="compareGearRatioA" name="compareGearRatioA" type="number" inputmode="decimal" min="0.1" step="0.01" value="1.75" autocomplete="off">
+                    <span class="unit">:1</span>
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field-label">
+                    <label for="comparePitchA">Propeller pitch</label>
+                  </div>
+                  <div class="value-control">
+                    <input id="comparePitchA" name="comparePitchA" type="number" inputmode="decimal" min="1" step="0.5" value="24" autocomplete="off">
+                    <span class="unit">in</span>
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field-label">
+                    <label for="compareRpmA">Engine RPM</label>
+                  </div>
+                  <div class="value-control">
+                    <input id="compareRpmA" name="compareRpmA" type="number" inputmode="numeric" min="100" step="100" value="5600" autocomplete="off">
+                    <span class="unit">rpm</span>
+                  </div>
+                </div>
+              </div>
+              <p class="validation-message" id="setupAValidation" aria-live="polite" hidden></p>
+            </div>
+
+            <div class="setup-panel" id="compareSetupB" hidden>
+              <p class="section-title">Setup B</p>
               <div class="group">
                 <div class="field-row">
                   <div class="field-label">
@@ -260,6 +262,17 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer" aria-label="Site information">
+      <div class="footer-inner">
+        <button type="button" data-open-sheet="tutorialSheet">How to Use</button>
+        <button type="button" data-open-sheet="aboutSheet">About</button>
+        <button type="button" data-open-sheet="privacySheet">Privacy</button>
+        <button type="button" data-open-sheet="accessibilitySheet">Accessibility</button>
+        <button type="button" data-open-sheet="termsSheet">Terms</button>
+        <button type="button" data-open-sheet="contactSheet">Contact</button>
+      </div>
+    </footer>
 
     <dialog class="sheet" id="menuSheet" aria-labelledby="menuTitle">
       <div class="sheet-body">

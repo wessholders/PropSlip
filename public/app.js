@@ -602,7 +602,12 @@
       fields.menuItems.forEach((button) => {
         button.addEventListener("click", () => {
           const targetSheet = document.querySelector(`#${button.dataset.openSheet}`);
-          switchSheet(fields.menuSheet, targetSheet);
+          const currentSheet = button.closest("dialog");
+          if (currentSheet) {
+            switchSheet(currentSheet, targetSheet);
+          } else {
+            openSheet(targetSheet);
+          }
         });
       });
 

@@ -576,6 +576,10 @@
         line-height: 1.35;
       }
 
+      .site-footer {
+        display: none;
+      }
+
       .sheet {
         position: fixed;
         inset: auto auto 0 50%;
@@ -1037,12 +1041,13 @@
         .subtitle {
           align-self: end;
           justify-self: end;
-          max-width: 28ch;
+          max-width: none;
           margin: 0 52px 8px 0;
           color: #d5e3e7;
           font-size: 0.92rem;
           line-height: 1.55;
           text-align: right;
+          white-space: nowrap;
         }
 
         .menu-button {
@@ -1065,6 +1070,10 @@
           align-items: start;
           grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
           gap: 22px;
+        }
+
+        #view-slip {
+          align-items: stretch;
         }
 
         .view > .result-card {
@@ -1115,6 +1124,66 @@
           min-width: 0;
         }
 
+        #calculator-form {
+          display: grid;
+          grid-template-rows: auto minmax(0, 1fr) auto;
+        }
+
+        #calculator-form .group {
+          display: grid;
+          grid-template-rows: repeat(4, 1fr);
+        }
+
+        #view-whatif {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        #view-whatif > .result-card {
+          position: relative;
+          top: auto;
+          min-height: 218px;
+        }
+
+        #view-whatif .result-content {
+          min-height: 166px;
+        }
+
+        #view-whatif .result-top {
+          min-height: 0;
+        }
+
+        #view-whatif .slip-readout {
+          display: flex;
+        }
+
+        #whatif-form {
+          display: grid;
+          width: min(100%, 560px);
+          justify-self: center;
+          grid-template-columns: minmax(0, 1fr);
+          align-items: start;
+          gap: 12px 22px;
+        }
+
+        #whatif-form .toggle-row {
+          justify-self: end;
+          min-width: min(100%, 320px);
+          margin: -6px 0 -2px;
+        }
+
+        #whatif-form:has(#comparisonModeToggle:checked) {
+          width: 100%;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        #whatif-form:has(#comparisonModeToggle:checked) .toggle-row {
+          grid-column: 1 / -1;
+        }
+
+        .setup-panel {
+          min-width: 0;
+        }
+
         .field-row {
           min-height: 64px;
           grid-template-columns: minmax(0, 1fr) 196px;
@@ -1124,6 +1193,40 @@
         .actions,
         .privacy-strip {
           grid-column: 2;
+        }
+
+        .site-footer {
+          display: block;
+          width: min(100%, var(--desktop-inner));
+          margin: 0 auto;
+          padding: 0 28px 38px;
+        }
+
+        .footer-inner {
+          display: flex;
+          justify-content: center;
+          gap: 18px;
+          flex-wrap: wrap;
+          padding-top: 18px;
+          border-top: 1px solid var(--separator);
+        }
+
+        .footer-inner button {
+          border: 0;
+          padding: 4px 0;
+          color: var(--secondary-label);
+          background: transparent;
+          font-family: var(--mono);
+          font-size: 0.76rem;
+          font-weight: 760;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+
+        .footer-inner button:hover,
+        .footer-inner button:focus-visible {
+          color: var(--ios-accent);
         }
       }
 
