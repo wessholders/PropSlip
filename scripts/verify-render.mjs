@@ -172,7 +172,7 @@ try {
   if (defaultState.overflowEls.length > 0) failures.push("default mobile render has horizontal overflow");
   if (whatIfState.singleMode.metric !== "Estimated speed") failures.push("single Theoretical Setup mode should show Estimated speed");
   if (!whatIfState.singleMode.setupBHidden) failures.push("Setup B should be hidden in single Theoretical Setup mode");
-  if (whatIfState.singleMode.statusHidden) failures.push("single Theoretical Setup mode should show the Setup A status pill");
+  if (!whatIfState.singleMode.statusHidden) failures.push("single Theoretical Setup mode should hide the Setup A status pill");
   if (whatIfState.comparisonMode.metric !== "Speed difference") failures.push("comparison mode should show Speed difference");
   if (whatIfState.comparisonMode.setupBHidden) failures.push("Setup B should be visible in comparison mode");
   if (!whatIfState.comparisonMode.statusHidden) failures.push("comparison mode should hide the faster/slower status pill");

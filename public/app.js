@@ -319,16 +319,17 @@
       }
 
       function setWhatIfWaiting(label = "Waiting", className = "status-pill") {
-        fields.whatIfMetricLabel.textContent = fields.comparisonModeToggle.checked ? "Speed difference" : "Estimated speed";
+        const comparisonMode = fields.comparisonModeToggle.checked;
+        fields.whatIfMetricLabel.textContent = comparisonMode ? "Speed difference" : "Estimated speed";
         fields.whatIfResultValue.textContent = "--";
-        fields.whatIfStatusPill.hidden = false;
+        fields.whatIfStatusPill.hidden = true;
         fields.whatIfStatusPill.textContent = label;
         fields.whatIfStatusPill.className = className;
         fields.whatIfStatA.className = "mini-stat";
         fields.whatIfStatB.className = "mini-stat";
-        fields.whatIfStatALabel.textContent = fields.comparisonModeToggle.checked ? "Setup A" : "Prop RPM";
+        fields.whatIfStatALabel.textContent = comparisonMode ? "Setup A" : "Prop RPM";
         fields.whatIfStatAValue.textContent = "--";
-        fields.whatIfStatBLabel.textContent = fields.comparisonModeToggle.checked ? "Setup B" : "Theoretical";
+        fields.whatIfStatBLabel.textContent = comparisonMode ? "Setup B" : "Theoretical";
         fields.whatIfStatBValue.textContent = "--";
       }
 
@@ -353,8 +354,8 @@
           clearValidation(fields.setupBValidation, setupValidationConfigs("B"));
           fields.whatIfMetricLabel.textContent = "Estimated speed";
           fields.whatIfResultValue.textContent = formatSpeed(setupA.estimatedMph, unit);
-          fields.whatIfStatusPill.hidden = false;
-          fields.whatIfStatusPill.textContent = "Setup A";
+          fields.whatIfStatusPill.hidden = true;
+          fields.whatIfStatusPill.textContent = "";
           fields.whatIfStatusPill.className = "status-pill";
           fields.whatIfStatA.className = "mini-stat";
           fields.whatIfStatB.className = "mini-stat";

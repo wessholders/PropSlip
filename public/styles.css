@@ -776,6 +776,13 @@
         font-size: 1rem;
       }
 
+      .compare-toggle {
+        margin-top: 4px;
+        border: 1px solid var(--separator);
+        border-radius: var(--radius-md);
+        background: var(--ios-control-bg);
+      }
+
       .switch {
         position: relative;
         width: 52px;
@@ -996,9 +1003,16 @@
       }
 
       @media (min-width: 860px) {
+        body {
+          display: flex;
+          flex-direction: column;
+        }
+
         .app {
           width: min(100%, var(--desktop-inner));
-          padding: 34px 28px 52px;
+          flex: 0 0 auto;
+          min-height: auto;
+          padding: 34px 28px 26px;
         }
 
         .app-header {
@@ -1126,7 +1140,7 @@
 
         #calculator-form {
           display: grid;
-          grid-template-rows: auto minmax(0, 1fr) auto;
+          grid-template-rows: minmax(0, 1fr) auto;
         }
 
         #calculator-form .group {
@@ -1149,11 +1163,30 @@
         }
 
         #view-whatif .result-top {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+          align-items: start;
+          gap: 22px;
           min-height: 0;
         }
 
         #view-whatif .slip-readout {
           display: flex;
+        }
+
+        #view-whatif .compare-toggle {
+          justify-self: end;
+          width: 100%;
+          margin: 0;
+          padding: 12px 13px;
+        }
+
+        #view-whatif .compare-toggle strong {
+          font-family: var(--mono);
+          font-size: 0.78rem;
+          font-weight: 820;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
         }
 
         #whatif-form {
@@ -1165,19 +1198,9 @@
           gap: 12px 22px;
         }
 
-        #whatif-form .toggle-row {
-          justify-self: end;
-          min-width: min(100%, 320px);
-          margin: -6px 0 -2px;
-        }
-
-        #whatif-form:has(#comparisonModeToggle:checked) {
+        #view-whatif:has(#comparisonModeToggle:checked) #whatif-form {
           width: 100%;
           grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        #whatif-form:has(#comparisonModeToggle:checked) .toggle-row {
-          grid-column: 1 / -1;
         }
 
         .setup-panel {
@@ -1198,7 +1221,7 @@
         .site-footer {
           display: block;
           width: min(100%, var(--desktop-inner));
-          margin: 0 auto;
+          margin: auto auto 0;
           padding: 0 28px 38px;
         }
 
@@ -1227,6 +1250,10 @@
         .footer-inner button:hover,
         .footer-inner button:focus-visible {
           color: var(--ios-accent);
+        }
+
+        .menu-list .footer-menu-item {
+          display: none;
         }
       }
 

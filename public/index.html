@@ -82,7 +82,6 @@
           </section>
 
           <form id="calculator-form">
-            <p class="section-title">Setup</p>
             <div class="group">
               <div class="field-row">
                 <div class="field-label">
@@ -149,6 +148,13 @@
                     <span class="status-pill" id="whatIfStatusPill">Waiting</span>
                   </div>
                 </div>
+                <div class="settings-row toggle-row compare-toggle">
+                  <strong>Compare Setups</strong>
+                  <label class="switch" for="comparisonModeToggle">
+                    <input id="comparisonModeToggle" type="checkbox" autocomplete="off">
+                    <span class="switch-track" aria-hidden="true"></span>
+                  </label>
+                </div>
               </div>
 
               <div class="mini-grid">
@@ -165,14 +171,6 @@
           </section>
 
           <form id="whatif-form">
-            <div class="settings-row toggle-row">
-              <strong>Compare with Setup B</strong>
-              <label class="switch" for="comparisonModeToggle">
-                <input id="comparisonModeToggle" type="checkbox" autocomplete="off">
-                <span class="switch-track" aria-hidden="true"></span>
-              </label>
-            </div>
-
             <div class="setup-panel">
               <p class="section-title">Setup A</p>
               <div class="group">
@@ -282,12 +280,12 @@
           <button class="done-button" type="button" data-close="menuSheet">Done</button>
         </div>
         <div class="menu-list">
-          <button class="menu-item" type="button" data-open-sheet="tutorialSheet">How to Use</button>
-          <button class="menu-item" type="button" data-open-sheet="aboutSheet">About</button>
-          <button class="menu-item" type="button" data-open-sheet="privacySheet">Privacy</button>
-          <button class="menu-item" type="button" data-open-sheet="accessibilitySheet">Accessibility</button>
-          <button class="menu-item" type="button" data-open-sheet="termsSheet">Terms & Disclaimer</button>
-          <button class="menu-item" type="button" data-open-sheet="contactSheet">Contact</button>
+          <button class="menu-item footer-menu-item" type="button" data-open-sheet="tutorialSheet">How to Use</button>
+          <button class="menu-item footer-menu-item" type="button" data-open-sheet="aboutSheet">About</button>
+          <button class="menu-item footer-menu-item" type="button" data-open-sheet="privacySheet">Privacy</button>
+          <button class="menu-item footer-menu-item" type="button" data-open-sheet="accessibilitySheet">Accessibility</button>
+          <button class="menu-item footer-menu-item" type="button" data-open-sheet="termsSheet">Terms & Disclaimer</button>
+          <button class="menu-item footer-menu-item" type="button" data-open-sheet="contactSheet">Contact</button>
           <button class="menu-item" type="button" data-open-sheet="mobileAppsSheet">Mobile Apps</button>
           <button class="menu-item" type="button" data-open-sheet="settingsSheet">Settings</button>
         </div>
