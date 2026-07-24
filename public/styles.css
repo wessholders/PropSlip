@@ -577,6 +577,40 @@
       }
 
       .site-footer {
+        display: block;
+        width: min(100%, 480px);
+        margin: 0 auto;
+        padding: 0 16px max(28px, env(safe-area-inset-bottom));
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: center;
+        gap: 12px 16px;
+        flex-wrap: wrap;
+        padding-top: 16px;
+        border-top: 1px solid var(--separator);
+      }
+
+      .footer-inner button {
+        border: 0;
+        padding: 4px 0;
+        color: var(--secondary-label);
+        background: transparent;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 760;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .footer-inner button:hover,
+      .footer-inner button:focus-visible {
+        color: var(--ios-accent);
+      }
+
+      .menu-list .footer-menu-item {
         display: none;
       }
 
@@ -648,6 +682,15 @@
       }
 
       .menu-sheet-head {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      .sheet.standalone-sheet .grabber,
+      .sheet.standalone-sheet .back-button {
+        display: none;
+      }
+
+      .sheet.standalone-sheet .sheet-head {
         grid-template-columns: minmax(0, 1fr) auto;
       }
 
@@ -1219,7 +1262,6 @@
         }
 
         .site-footer {
-          display: block;
           width: min(100%, var(--desktop-inner));
           margin: auto auto 0;
           padding: 0 28px 38px;
@@ -1252,10 +1294,6 @@
           color: var(--ios-accent);
         }
 
-        .menu-list .footer-menu-item {
-          display: none;
-        }
-
         .sheet {
           width: min(680px, calc(100vw - 64px));
           border: 1px solid var(--separator);
@@ -1268,13 +1306,7 @@
           gap: 18px;
         }
 
-        .sheet.standalone-sheet .grabber,
-        .sheet.standalone-sheet .back-button {
-          display: none;
-        }
-
         .sheet.standalone-sheet .sheet-head {
-          grid-template-columns: minmax(0, 1fr) auto;
           padding-bottom: 14px;
           border-bottom: 1px solid var(--separator);
         }
