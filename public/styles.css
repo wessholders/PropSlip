@@ -934,10 +934,56 @@
       }
 
       .compare-toggle {
-        margin-top: 4px;
-        border: 1px solid var(--separator);
+        position: absolute;
+        top: -18px;
+        right: 0;
+        z-index: 2;
+      }
+
+      .compare-button {
+        position: relative;
+        min-height: 32px;
+        display: inline-grid;
+        place-items: center;
+        padding: 0 10px;
+        border: 2px solid var(--ios-marine);
         border-radius: var(--radius-md);
-        background: var(--ios-control-bg);
+        color: var(--ios-accent);
+        background: var(--elevated-bg);
+        box-shadow: 0 2px 0 var(--ios-marine);
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        font-weight: 860;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .compare-button input {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .compare-button span {
+        pointer-events: none;
+      }
+
+      .compare-button:has(input:checked) {
+        color: #f5fbfc;
+        border-color: var(--ios-accent);
+        background: var(--ios-accent);
+        box-shadow: 0 2px 0 var(--ios-marine-dark);
+      }
+
+      .compare-button:has(input:focus-visible) {
+        outline: 3px solid rgba(0, 110, 219, 0.38);
+        outline: 3px solid color-mix(in srgb, var(--ios-accent) 38%, transparent);
+        outline-offset: 3px;
       }
 
       .switch {
@@ -1322,7 +1368,7 @@
 
         #view-whatif .result-top {
           display: grid;
-          grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+          grid-template-columns: minmax(0, 1fr);
           align-items: start;
           gap: 22px;
           min-height: 0;
@@ -1334,17 +1380,7 @@
 
         #view-whatif .compare-toggle {
           justify-self: end;
-          width: 100%;
           margin: 0;
-          padding: 12px 13px;
-        }
-
-        #view-whatif .compare-toggle strong {
-          font-family: var(--mono);
-          font-size: 0.78rem;
-          font-weight: 820;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
         }
 
         #whatif-form {
