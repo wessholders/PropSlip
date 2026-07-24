@@ -174,6 +174,23 @@ try {
       };
     })()`);
   const comparisonScreenshot = await send(ws, "Page.captureScreenshot", { format: "png" });
+  const refreshState = await evaluateValue(ws, `new Promise((resolve) => {
+      localStorage.setItem("prop-slip-comparison-mode", "on");
+      window.addEventListener("load", () => {
+        window.setTimeout(() => {
+          resolve({
+            slipHidden: document.querySelector("#view-slip").hidden,
+            whatIfHidden: document.querySelector("#view-whatif").hidden,
+            slipSelected: document.querySelector("#slipTab").getAttribute("aria-selected"),
+            whatIfSelected: document.querySelector("#whatIfTab").getAttribute("aria-selected"),
+            comparisonModeOn: document.querySelector("#comparisonModeToggle").checked,
+            setupBHidden: document.querySelector("#compareSetupB").hidden,
+            storedComparisonMode: localStorage.getItem("prop-slip-comparison-mode")
+          });
+        }, 0);
+      }, { once: true });
+      location.reload();
+    })()`);
   ws.close();
 
   const failures = [];
@@ -196,9 +213,16 @@ try {
   if (whatIfState.reverseComparisonMode.resultValue.startsWith("-")) failures.push("reverse comparison diff should not be negative");
   if (!whatIfState.reverseComparisonMode.setupAClass.includes("good")) failures.push("faster Setup A tile should be highlighted green in reverse comparison");
   if (!whatIfState.reverseComparisonMode.setupBClass.includes("warn")) failures.push("slower Setup B tile should be highlighted red in reverse comparison");
+  if (refreshState.slipHidden) failures.push("refresh should return to Propeller Slip view");
+  if (!refreshState.whatIfHidden) failures.push("refresh should hide Theoretical Setup view");
+  if (refreshState.slipSelected !== "true") failures.push("refresh should select Propeller Slip tab");
+  if (refreshState.whatIfSelected !== "false") failures.push("refresh should deselect Theoretical Setup tab");
+  if (refreshState.comparisonModeOn) failures.push("refresh should turn comparison mode off");
+  if (!refreshState.setupBHidden) failures.push("refresh should hide Setup B");
+  if (refreshState.storedComparisonMode !== null) failures.push("refresh should clear stored comparison mode");
 
   if (failures.length > 0) {
-    console.error(JSON.stringify({ failures, defaultState, whatIfState }, null, 2));
+    console.error(JSON.stringify({ failures, defaultState, whatIfState, refreshState }, null, 2));
     if (process.env.GITHUB_ACTIONS) {
       console.error(`::error title=Render smoke failed::${workflowEscape(failures.join("; "))}`);
     }
@@ -210,7 +234,8 @@ try {
   console.log(JSON.stringify({
     screenshots: ["propslip-home.png", "propslip-whatif-comparison.png"],
     defaultState,
-    whatIfState
+    whatIfState,
+    refreshState
   }, null, 2));
 } catch (error) {
   console.error(error);

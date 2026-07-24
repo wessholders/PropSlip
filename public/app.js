@@ -2,7 +2,6 @@
       const MPH_PER_KPH = 0.621371192;
       const APPEARANCE_KEY = "prop-slip-appearance";
       const UNIT_SYSTEM_KEY = "prop-slip-unit-system";
-      const COMPARISON_MODE_KEY = "prop-slip-comparison-mode";
       const UNIT_SYSTEMS = {
         imperial: { speedUnit: "mph", speedLabel: "mph" },
         metric: { speedUnit: "kph", speedLabel: "km/h" },
@@ -101,11 +100,11 @@
         }
       }
 
-      function getStoredComparisonMode() {
+      function clearStoredComparisonMode() {
         try {
-          return localStorage.getItem(COMPARISON_MODE_KEY) === "on";
+          localStorage.removeItem("prop-slip-comparison-mode");
         } catch (error) {
-          return false;
+          return;
         }
       }
 
@@ -541,18 +540,10 @@
         nextButton.focus();
       }
 
-      function applyComparisonMode(enabled, persist = true) {
+      function applyComparisonMode(enabled) {
         fields.comparisonModeToggle.checked = enabled;
         fields.compareSetupB.hidden = !enabled;
         calculateWhatIf();
-
-        if (persist) {
-          try {
-            localStorage.setItem(COMPARISON_MODE_KEY, enabled ? "on" : "off");
-          } catch (error) {
-            return;
-          }
-        }
       }
 
       fields.viewSwitcherButtons.forEach((button) => {
@@ -670,7 +661,8 @@
 
       applyAppearance(getStoredAppearance(), false);
       applyUnitSystem(getStoredUnitSystem(), true, false);
-      applyComparisonMode(getStoredComparisonMode(), false);
-      calculateWhatIf();
+      clearStoredComparisonMode();
+      switchView("slip");
+      applyComparisonMode(false);
       document.documentElement.dataset.ready = "true";
 
