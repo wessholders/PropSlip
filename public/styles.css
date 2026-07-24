@@ -337,6 +337,13 @@
         gap: 12px;
       }
 
+      .result-heading {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
       .metric-label {
         margin: 0;
         color: var(--secondary-label);
@@ -473,8 +480,16 @@
       }
 
       .section-title {
-        margin: 0 0 8px 2px;
-        color: var(--secondary-label);
+        position: relative;
+        z-index: 1;
+        width: max-content;
+        margin: 0 0 -1px 10px;
+        padding: 7px 12px 6px;
+        border: 1px solid var(--separator);
+        border-bottom: 0;
+        border-radius: var(--radius-md) var(--radius-md) 0 0;
+        color: var(--label);
+        background: var(--group-bg);
         font-family: var(--mono);
         font-size: 0.72rem;
         font-weight: 820;
@@ -934,25 +949,23 @@
       }
 
       .compare-toggle {
-        position: absolute;
-        top: -18px;
-        right: 0;
-        z-index: 2;
+        flex: 0 0 auto;
       }
 
       .compare-button {
         position: relative;
-        min-height: 32px;
+        min-height: 34px;
         display: inline-grid;
         place-items: center;
-        padding: 0 10px;
-        border: 2px solid var(--ios-marine);
+        padding: 0 12px;
+        border: 1px solid rgba(245, 251, 252, 0.14);
+        border-left: 4px solid var(--ios-marine);
         border-radius: var(--radius-md);
-        color: var(--ios-accent);
-        background: var(--elevated-bg);
-        box-shadow: 0 2px 0 var(--ios-marine);
+        color: #f5fbfc;
+        background: var(--nav-rail);
+        box-shadow: inset 0 -2px 0 var(--race-red), var(--ios-soft-shadow);
         font-family: var(--mono);
-        font-size: 0.68rem;
+        font-size: 0.66rem;
         font-weight: 860;
         letter-spacing: 0.08em;
         line-height: 1;
@@ -974,10 +987,11 @@
       }
 
       .compare-button:has(input:checked) {
+        border-color: rgba(245, 251, 252, 0.18);
+        border-left-color: var(--race-red);
         color: #f5fbfc;
-        border-color: var(--ios-accent);
-        background: var(--ios-accent);
-        box-shadow: 0 2px 0 var(--ios-marine-dark);
+        background: var(--nav-active);
+        box-shadow: inset 0 -2px 0 var(--ios-marine), var(--ios-soft-shadow);
       }
 
       .compare-button:has(input:focus-visible) {
@@ -1367,10 +1381,6 @@
         }
 
         #view-whatif .result-top {
-          display: grid;
-          grid-template-columns: minmax(0, 1fr);
-          align-items: start;
-          gap: 22px;
           min-height: 0;
         }
 
@@ -1379,7 +1389,6 @@
         }
 
         #view-whatif .compare-toggle {
-          justify-self: end;
           margin: 0;
         }
 

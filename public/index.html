@@ -153,17 +153,19 @@
             <div class="result-content">
               <div class="result-top">
                 <div>
-                  <p class="metric-label" id="whatIfMetricLabel">Estimated speed</p>
+                  <div class="result-heading">
+                    <p class="metric-label" id="whatIfMetricLabel">Estimated speed</p>
+                    <div class="compare-toggle">
+                      <label class="compare-button" for="comparisonModeToggle">
+                        <input id="comparisonModeToggle" type="checkbox" autocomplete="off">
+                        <span>Compare</span>
+                      </label>
+                    </div>
+                  </div>
                   <div class="slip-readout" aria-live="polite" aria-atomic="true">
                     <p class="slip-value" id="whatIfResultValue">--</p>
                     <span class="status-pill" id="whatIfStatusPill">Waiting</span>
                   </div>
-                </div>
-                <div class="compare-toggle">
-                  <label class="compare-button" for="comparisonModeToggle">
-                    <input id="comparisonModeToggle" type="checkbox" autocomplete="off">
-                    <span>Compare</span>
-                  </label>
                 </div>
               </div>
 
