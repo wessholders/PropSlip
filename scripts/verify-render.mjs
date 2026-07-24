@@ -75,6 +75,24 @@ async function send(ws, method, params = {}) {
   });
 }
 
+async function evaluateValue(ws, expression) {
+  const result = await send(ws, "Runtime.evaluate", { expression, returnByValue: true });
+  if (result.exceptionDetails) {
+    const exception = result.exceptionDetails.exception;
+    throw new Error(exception?.description || exception?.value || result.exceptionDetails.text || "Runtime.evaluate failed");
+  }
+  return result.result.value;
+}
+
+async function waitForExpression(ws, expression, attempts = 80) {
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    const value = await evaluateValue(ws, expression);
+    if (value) return;
+    await wait(250);
+  }
+  throw new Error(`Timed out waiting for ${expression}`);
+}
+
 function workflowEscape(value) {
   return String(value)
     .replace(/%/g, "%25")
@@ -91,6 +109,7 @@ try {
   await new Promise((resolveOpen) => ws.addEventListener("open", resolveOpen, { once: true }));
   await send(ws, "Runtime.enable");
   await send(ws, "Page.enable");
+  await waitForExpression(ws, `document.readyState !== "loading" && document.querySelector("#calculatorSwitcher") && document.querySelector("#slipValue").textContent.trim() !== "--"`);
 
   const expression = `({
     innerWidth: window.innerWidth,
@@ -114,10 +133,9 @@ try {
       .slice(0, 10)
   })`;
 
-  const result = await send(ws, "Runtime.evaluate", { expression, returnByValue: true });
+  const defaultState = await evaluateValue(ws, expression);
   const screenshot = await send(ws, "Page.captureScreenshot", { format: "png" });
-  const toggleResult = await send(ws, "Runtime.evaluate", {
-    expression: `(() => {
+  const whatIfState = await evaluateValue(ws, `(() => {
       document.querySelector("#whatIfTab").click();
       const singleMode = {
         whatIfHidden: document.querySelector("#view-whatif").hidden,
@@ -141,14 +159,10 @@ try {
           setupBClass: document.querySelector("#whatIfStatB").className
         }
       };
-    })()`,
-    returnByValue: true
-  });
+    })()`);
   const comparisonScreenshot = await send(ws, "Page.captureScreenshot", { format: "png" });
   ws.close();
 
-  const defaultState = result.result.value;
-  const whatIfState = toggleResult.result.value;
   const failures = [];
 
   if (defaultState.switcherHidden) failures.push("calculator switcher should be visible by default");
