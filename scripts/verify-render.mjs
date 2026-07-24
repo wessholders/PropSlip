@@ -146,9 +146,22 @@ try {
         setupBHidden: document.querySelector("#compareSetupB").hidden
       };
       document.querySelector("#comparisonModeToggle").click();
+      const comparisonMode = {
+        whatIfHidden: document.querySelector("#view-whatif").hidden,
+        resultValue: document.querySelector("#whatIfResultValue").textContent.trim(),
+        metric: document.querySelector("#whatIfMetricLabel").textContent.trim(),
+        status: document.querySelector("#whatIfStatusPill").textContent.trim(),
+        statusHidden: document.querySelector("#whatIfStatusPill").hidden,
+        setupBHidden: document.querySelector("#compareSetupB").hidden,
+        setupAClass: document.querySelector("#whatIfStatA").className,
+        setupBClass: document.querySelector("#whatIfStatB").className
+      };
+      document.querySelector("#comparePitchB").value = "22";
+      document.querySelector("#comparePitchB").dispatchEvent(new Event("input", { bubbles: true }));
       return {
         singleMode,
-        comparisonMode: {
+        comparisonMode,
+        reverseComparisonMode: {
           whatIfHidden: document.querySelector("#view-whatif").hidden,
           resultValue: document.querySelector("#whatIfResultValue").textContent.trim(),
           metric: document.querySelector("#whatIfMetricLabel").textContent.trim(),
@@ -178,7 +191,11 @@ try {
   if (!whatIfState.comparisonMode.statusHidden) failures.push("comparison mode should hide the faster/slower status pill");
   if (!whatIfState.comparisonMode.setupAClass.includes("warn")) failures.push("slower Setup A tile should be highlighted red");
   if (!whatIfState.comparisonMode.setupBClass.includes("good")) failures.push("faster Setup B tile should be highlighted green");
-  if (whatIfState.comparisonMode.resultValue !== "+5.5 mph") failures.push(`expected comparison diff +5.5 mph, got ${whatIfState.comparisonMode.resultValue}`);
+  if (whatIfState.comparisonMode.resultValue !== "5.5 mph") failures.push(`expected comparison diff 5.5 mph, got ${whatIfState.comparisonMode.resultValue}`);
+  if (whatIfState.reverseComparisonMode.resultValue !== "5.5 mph") failures.push(`expected reverse comparison absolute diff 5.5 mph, got ${whatIfState.reverseComparisonMode.resultValue}`);
+  if (whatIfState.reverseComparisonMode.resultValue.startsWith("-")) failures.push("reverse comparison diff should not be negative");
+  if (!whatIfState.reverseComparisonMode.setupAClass.includes("good")) failures.push("faster Setup A tile should be highlighted green in reverse comparison");
+  if (!whatIfState.reverseComparisonMode.setupBClass.includes("warn")) failures.push("slower Setup B tile should be highlighted red in reverse comparison");
 
   if (failures.length > 0) {
     console.error(JSON.stringify({ failures, defaultState, whatIfState }, null, 2));

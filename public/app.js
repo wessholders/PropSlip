@@ -379,6 +379,7 @@
           setupBValidation.values.slip
         );
         const diff = speedFromMph(setupB.estimatedMph - setupA.estimatedMph, unit);
+        const speedDifference = Math.abs(diff);
 
         fields.whatIfMetricLabel.textContent = "Speed difference";
         fields.whatIfStatusPill.hidden = true;
@@ -387,14 +388,14 @@
         fields.whatIfStatBLabel.textContent = "Setup B";
         fields.whatIfStatBValue.textContent = formatSpeed(setupB.estimatedMph, unit);
 
-        if (Math.abs(diff) < 0.05) {
+        if (speedDifference < 0.05) {
           fields.whatIfResultValue.textContent = `0 ${label}`;
           fields.whatIfStatA.className = "mini-stat";
           fields.whatIfStatB.className = "mini-stat";
           return;
         }
 
-        fields.whatIfResultValue.textContent = `${diffFormatter.format(diff)} ${label}`;
+        fields.whatIfResultValue.textContent = `${numberFormatter.format(speedDifference)} ${label}`;
 
         if (diff > 0) {
           fields.whatIfStatA.className = "mini-stat warn";
