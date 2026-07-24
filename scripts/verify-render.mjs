@@ -73,6 +73,13 @@ async function send(ws, method, params = {}) {
   });
 }
 
+function workflowEscape(value) {
+  return String(value)
+    .replace(/%/g, "%25")
+    .replace(/\r/g, "%0D")
+    .replace(/\n/g, "%0A");
+}
+
 try {
   const pages = await fetchJson(`http://127.0.0.1:${port}/json`);
   const page = pages.find((entry) => entry.type === "page");
@@ -158,6 +165,10 @@ try {
   if (whatIfState.comparisonMode.resultValue !== "+5.5 mph") failures.push(`expected comparison diff +5.5 mph, got ${whatIfState.comparisonMode.resultValue}`);
 
   if (failures.length > 0) {
+    console.error(JSON.stringify({ failures, defaultState, whatIfState }, null, 2));
+    if (process.env.GITHUB_ACTIONS) {
+      console.error(`::error title=Render smoke failed::${workflowEscape(failures.join("; "))}`);
+    }
     throw new Error(failures.join("; "));
   }
 
