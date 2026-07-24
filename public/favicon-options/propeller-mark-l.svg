@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">PropSlip cleaver propeller favicon option L</title>
+  <rect width="64" height="64" rx="10" fill="#0b1720"/>
+  <path d="M41 0h9L30 64h-9z" fill="#e3342f"/>
+  <path d="M51 0h5L36 64h-5z" fill="#f2b705"/>
+  <path d="M10 49h28v4H10z" fill="#00a5b5"/>
+  <circle cx="32" cy="32" r="21" fill="#0b1720" opacity="0.88"/>
+  <g fill="#f5fbfc" transform="rotate(-7 32 32)">
+    <path d="M30.5 29.6c-2.6-4-6.1-8.9-8.3-13.4l5.4-8.4 16.9 2.8-2.5 8.8c-2.2 3.7-6 5.7-9.1 7.3-1.1.6-1.9 1.6-2.4 2.9z"/>
+    <path d="M34.6 31.2c4.8-.2 10.9-.5 15.8.2l4.6 8.8-10.9 13.2-6.4-6.6c-2.1-3.8-1.9-8.1-1.7-11.5.1-1.3-.4-2.6-1.4-4.1z"/>
+    <path d="M30.7 35.1c-2.1 4.3-4.8 9.8-7.6 13.9l-10-.3-6-16 8.9-2.2c4.3.1 7.9 2.4 10.7 4.2 1 .7 2.4.8 4 .4z"/>
+    <circle cx="32" cy="32" r="6.8"/>
+  </g>
+  <circle cx="32" cy="32" r="2.7" fill="#0b1720"/>
+</svg>
