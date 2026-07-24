@@ -8,6 +8,6 @@
 - [x] Convert calculator switching to tab semantics.
 - [x] Add explicit validation messages and accessible error states.
 - [x] Narrow live-region announcements to the primary result/status values.
-- [ ] Add favicon, touch icon, canonical URL, Open Graph/Twitter metadata, `robots.txt`, and optional manifest.
+- [x] Add favicon, touch icon, canonical URL, Open Graph/Twitter metadata, `robots.txt`, and optional manifest.
 - [x] Prevent accidental form submission on calculator forms.
 - [x] Document verification prerequisites and run the render smoke test in CI.
