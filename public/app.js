@@ -472,30 +472,35 @@
         calculateWhatIf();
       }
 
+      function syncSheetOpenState() {
+        const hasOpenSheet = Boolean(document.querySelector(".sheet[open]"));
+        document.documentElement.classList.toggle("sheet-open", hasOpenSheet);
+        document.body.classList.toggle("sheet-open", hasOpenSheet);
+      }
+
       function openSheet(sheet, options = {}) {
         sheet.classList.toggle("standalone-sheet", Boolean(options.standalone));
-
         if (typeof sheet.showModal === "function") {
           sheet.showModal();
+          syncSheetOpenState();
           return;
         }
 
         sheet.setAttribute("open", "");
-        document.body.classList.add("sheet-open");
+        syncSheetOpenState();
       }
 
       function closeSheet(sheet) {
         if (typeof sheet.close === "function") {
           sheet.close();
           sheet.classList.remove("standalone-sheet");
+          syncSheetOpenState();
           return;
         }
 
         sheet.removeAttribute("open");
         sheet.classList.remove("standalone-sheet");
-        if (!document.querySelector(".sheet[open]")) {
-          document.body.classList.remove("sheet-open");
-        }
+        syncSheetOpenState();
       }
 
       function switchSheet(fromSheet, toSheet) {
@@ -619,6 +624,11 @@
       [fields.menuSheet, fields.tutorialSheet, fields.aboutSheet, fields.privacySheet, fields.accessibilitySheet, fields.termsSheet, fields.contactSheet, fields.mobileAppsSheet, fields.settingsSheet].forEach((sheet) => {
         sheet.addEventListener("click", (event) => {
           if (event.target === sheet) closeSheet(sheet);
+        });
+
+        sheet.addEventListener("close", () => {
+          sheet.classList.remove("standalone-sheet");
+          syncSheetOpenState();
         });
       });
 
