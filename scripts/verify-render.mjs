@@ -29,8 +29,10 @@ const chrome = spawn(chromePath, [
   "--headless=new",
   "--disable-gpu",
   "--disable-extensions",
+  "--disable-dev-shm-usage",
   "--no-sandbox",
   "--no-first-run",
+  "--remote-debugging-address=127.0.0.1",
   `--remote-debugging-port=${port}`,
   `--user-data-dir=${profileDir}`,
   "--window-size=390,900",
@@ -42,7 +44,7 @@ const chrome = spawn(chromePath, [
 
 const wait = (ms) => new Promise((resolveWait) => setTimeout(resolveWait, ms));
 
-async function fetchJson(url, attempts = 20) {
+async function fetchJson(url, attempts = 80) {
   for (let attempt = 0; attempt < attempts; attempt += 1) {
     try {
       const response = await fetch(url);
