@@ -493,6 +493,10 @@
         margin-top: 18px;
       }
 
+      .setup-panel + .setup-panel {
+        margin-top: 34px;
+      }
+
       .group {
         overflow: hidden;
         border: 1px solid var(--separator);
@@ -1400,6 +1404,10 @@
 
         .setup-panel {
           min-width: 0;
+        }
+
+        #view-whatif:has(#comparisonModeToggle:checked) .setup-panel + .setup-panel {
+          margin-top: 0;
         }
 
         .field-row {
