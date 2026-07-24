@@ -671,4 +671,5 @@
       applyUnitSystem(getStoredUnitSystem(), true, false);
       applyComparisonMode(getStoredComparisonMode(), false);
       calculateWhatIf();
+      document.documentElement.dataset.ready = "true";
 
