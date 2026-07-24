@@ -472,7 +472,9 @@
         calculateWhatIf();
       }
 
-      function openSheet(sheet) {
+      function openSheet(sheet, options = {}) {
+        sheet.classList.toggle("standalone-sheet", Boolean(options.standalone));
+
         if (typeof sheet.showModal === "function") {
           sheet.showModal();
           return;
@@ -485,10 +487,12 @@
       function closeSheet(sheet) {
         if (typeof sheet.close === "function") {
           sheet.close();
+          sheet.classList.remove("standalone-sheet");
           return;
         }
 
         sheet.removeAttribute("open");
+        sheet.classList.remove("standalone-sheet");
         if (!document.querySelector(".sheet[open]")) {
           document.body.classList.remove("sheet-open");
         }
@@ -607,7 +611,7 @@
           if (currentSheet) {
             switchSheet(currentSheet, targetSheet);
           } else {
-            openSheet(targetSheet);
+            openSheet(targetSheet, { standalone: true });
           }
         });
       });
