@@ -36,7 +36,8 @@
         --radius-lg: 8px;
         --radius-md: 6px;
         --tap: 46px;
-        --banner-inner: 600px;
+        --banner-inner: 1040px;
+        --desktop-inner: 1040px;
         --sans: Bahnschrift, "Aptos", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
         --mono: "Cascadia Mono", "Roboto Mono", "SFMono-Regular", Consolas, monospace;
         font-family: var(--sans);
@@ -987,6 +988,142 @@
           min-height: auto;
           padding-top: 42px;
           padding-bottom: 42px;
+        }
+      }
+
+      @media (min-width: 860px) {
+        .app {
+          width: min(100%, var(--desktop-inner));
+          padding: 34px 28px 52px;
+        }
+
+        .app-header {
+          margin-bottom: 8px;
+          padding: 28px 0 26px;
+        }
+
+        .header-inner {
+          width: min(100%, var(--banner-inner));
+          padding: 0 38px;
+          grid-template-columns: minmax(0, auto) minmax(260px, 0.42fr);
+          justify-content: space-between;
+          column-gap: clamp(48px, 9vw, 132px);
+          row-gap: 10px;
+        }
+
+        .header-inner::after {
+          top: -28px;
+          right: clamp(300px, 36vw, 430px);
+          bottom: -26px;
+          width: 26px;
+          box-shadow: 14px 0 0 var(--race-yellow);
+        }
+
+        .brand-lockup {
+          display: contents;
+        }
+
+        .brand-kicker {
+          grid-column: 1 / -1;
+          margin-bottom: 10px;
+          font-size: 0.72rem;
+          letter-spacing: 0.2em;
+        }
+
+        h1 {
+          font-size: clamp(4.4rem, 8vw, 6.8rem);
+        }
+
+        .subtitle {
+          align-self: end;
+          justify-self: end;
+          max-width: 28ch;
+          margin: 0 52px 8px 0;
+          color: #d5e3e7;
+          font-size: 0.92rem;
+          line-height: 1.55;
+          text-align: right;
+        }
+
+        .menu-button {
+          top: 22px;
+          right: max(38px, calc((100% - var(--banner-inner)) / 2 + 38px));
+          width: 42px;
+          height: 42px;
+        }
+
+        .stack {
+          gap: 20px;
+        }
+
+        .view-switcher {
+          width: min(520px, 100%);
+          margin: 0 auto 6px;
+        }
+
+        .view {
+          align-items: start;
+          grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+          gap: 22px;
+        }
+
+        .view > .result-card {
+          position: sticky;
+          top: 24px;
+        }
+
+        .result-card {
+          min-height: 318px;
+          padding: 24px;
+        }
+
+        .result-content {
+          min-height: 266px;
+          align-content: space-between;
+          gap: 22px;
+        }
+
+        .result-top {
+          min-height: 150px;
+          align-content: start;
+        }
+
+        .slip-readout {
+          display: grid;
+          gap: 14px;
+        }
+
+        .slip-value {
+          font-size: clamp(4.7rem, 7.2vw, 6.6rem);
+        }
+
+        .status-pill {
+          justify-self: start;
+        }
+
+        .mini-grid {
+          gap: 12px;
+        }
+
+        .mini-stat {
+          min-height: 82px;
+          padding: 13px;
+        }
+
+        #calculator-form,
+        #whatif-form {
+          min-width: 0;
+        }
+
+        .field-row {
+          min-height: 64px;
+          grid-template-columns: minmax(0, 1fr) 196px;
+          padding: 11px 16px;
+        }
+
+        .actions,
+        .privacy-strip {
+          grid-column: 2;
         }
       }
 
