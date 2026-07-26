@@ -1,12 +1,7 @@
-      const MPH_PER_KNOT = 1.15077945;
-      const MPH_PER_KPH = 0.621371192;
+      const calculators = window.PropSlipCalculators;
       const APPEARANCE_KEY = "prop-slip-appearance";
       const UNIT_SYSTEM_KEY = "prop-slip-unit-system";
-      const UNIT_SYSTEMS = {
-        imperial: { speedUnit: "mph", speedLabel: "mph" },
-        metric: { speedUnit: "kph", speedLabel: "km/h" },
-        nautical: { speedUnit: "knots", speedLabel: "kn" }
-      };
+      const UNIT_SYSTEMS = calculators.UNIT_SYSTEMS;
       const systemScheme = window.matchMedia("(prefers-color-scheme: dark)");
       let activeUnitSystem = "imperial";
       const fields = {
@@ -205,15 +200,11 @@
       }
 
       function speedToMph(speed, unit) {
-        if (unit === "knots") return speed * MPH_PER_KNOT;
-        if (unit === "kph") return speed * MPH_PER_KPH;
-        return speed;
+        return calculators.speedToMph(speed, unit);
       }
 
       function speedFromMph(mph, unit) {
-        if (unit === "knots") return mph / MPH_PER_KNOT;
-        if (unit === "kph") return mph / MPH_PER_KPH;
-        return mph;
+        return calculators.speedFromMph(mph, unit);
       }
 
       function speedUnitLabel(unit) {
@@ -293,28 +284,24 @@
           return;
         }
 
-        const { pitch, gearRatio, rpm, speed } = validation.values;
-        const actualMph = speedToMph(speed, fields.speedUnit.value);
-        const propRpm = rpm / gearRatio;
-        const theoreticalMph = (propRpm * pitch) / 1056;
-        const slip = ((theoreticalMph - actualMph) / theoreticalMph) * 100;
-        const status = describeSlip(slip);
+        const result = calculators.calculateSlip({
+          pitch: validation.values.pitch,
+          gearRatio: validation.values.gearRatio,
+          rpm: validation.values.rpm,
+          speed: validation.values.speed,
+          speedUnit: fields.speedUnit.value
+        });
+        const status = describeSlip(result.slip);
 
-        fields.slipValue.textContent = `${numberFormatter.format(slip)}%`;
+        fields.slipValue.textContent = `${numberFormatter.format(result.slip)}%`;
         fields.statusPill.textContent = status.label;
         fields.statusPill.className = status.className;
-        fields.propRpmValue.textContent = integerFormatter.format(propRpm);
-        fields.theoreticalValue.textContent = formatSpeed(theoreticalMph);
+        fields.propRpmValue.textContent = integerFormatter.format(result.propRpm);
+        fields.theoreticalValue.textContent = formatSpeed(result.theoreticalMph);
       }
 
       function estimateSetup(pitch, gearRatio, rpm, slip) {
-        if (![pitch, gearRatio, rpm, slip].every(Number.isFinite)) return null;
-        if (pitch <= 0 || gearRatio <= 0 || rpm <= 0 || slip < 0 || slip > 100) return null;
-
-        const propRpm = rpm / gearRatio;
-        const theoreticalMph = (propRpm * pitch) / 1056;
-        const estimatedMph = theoreticalMph * (1 - (slip / 100));
-        return { propRpm, theoreticalMph, estimatedMph };
+        return calculators.estimateSetup(pitch, gearRatio, rpm, slip);
       }
 
       function setWhatIfWaiting(label = "Waiting", className = "status-pill") {

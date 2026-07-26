@@ -646,15 +646,6 @@
         transform: scale(0.985);
       }
 
-      .privacy-strip {
-        margin: 0;
-        padding: 0 4px;
-        color: var(--secondary-label);
-        font-size: 0.82rem;
-        line-height: 1.4;
-        text-align: center;
-      }
-
       .validation-message {
         margin: 8px 4px 0;
         color: var(--ios-danger);
@@ -695,6 +686,26 @@
       .footer-inner button:hover,
       .footer-inner button:focus-visible {
         color: var(--ios-accent);
+      }
+
+      .footer-meta {
+        margin: 10px 0 0;
+        color: var(--tertiary-label);
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        line-height: 1.35;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .inline-link {
+        color: var(--ios-accent);
+        font-weight: 760;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
       }
 
       .menu-list .footer-menu-item {
@@ -1416,9 +1427,8 @@
           padding: 11px 16px;
         }
 
-        .actions,
-        .privacy-strip {
-          grid-column: 2;
+        #view-slip .actions {
+          grid-column: 1 / -1;
         }
 
         .site-footer {
@@ -1452,6 +1462,11 @@
         .footer-inner button:hover,
         .footer-inner button:focus-visible {
           color: var(--ios-accent);
+        }
+
+        .footer-meta {
+          margin-top: 12px;
+          font-size: 0.72rem;
         }
 
         .sheet {

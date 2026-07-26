@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Run calculator formula checks
+        run: node scripts/verify-calculators.js
+
       - name: Find Chrome
         shell: bash
         run: |

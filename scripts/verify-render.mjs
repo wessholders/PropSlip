@@ -76,7 +76,7 @@ async function send(ws, method, params = {}) {
 }
 
 async function evaluateValue(ws, expression) {
-  const result = await send(ws, "Runtime.evaluate", { expression, returnByValue: true });
+  const result = await send(ws, "Runtime.evaluate", { expression, returnByValue: true, awaitPromise: true });
   if (result.exceptionDetails) {
     const exception = result.exceptionDetails.exception;
     throw new Error(exception?.description || exception?.value || result.exceptionDetails.text || "Runtime.evaluate failed");
@@ -174,23 +174,19 @@ try {
       };
     })()`);
   const comparisonScreenshot = await send(ws, "Page.captureScreenshot", { format: "png" });
-  const refreshState = await evaluateValue(ws, `new Promise((resolve) => {
-      localStorage.setItem("prop-slip-comparison-mode", "on");
-      window.addEventListener("load", () => {
-        window.setTimeout(() => {
-          resolve({
-            slipHidden: document.querySelector("#view-slip").hidden,
-            whatIfHidden: document.querySelector("#view-whatif").hidden,
-            slipSelected: document.querySelector("#slipTab").getAttribute("aria-selected"),
-            whatIfSelected: document.querySelector("#whatIfTab").getAttribute("aria-selected"),
-            comparisonModeOn: document.querySelector("#comparisonModeToggle").checked,
-            setupBHidden: document.querySelector("#compareSetupB").hidden,
-            storedComparisonMode: localStorage.getItem("prop-slip-comparison-mode")
-          });
-        }, 0);
-      }, { once: true });
-      location.reload();
-    })()`);
+  await evaluateValue(ws, `localStorage.setItem("prop-slip-comparison-mode", "on"); true`);
+  await send(ws, "Page.reload", { ignoreCache: true });
+  await wait(500);
+  await waitForExpression(ws, `document.readyState !== "loading" && document.documentElement.dataset.ready === "true"`);
+  const refreshState = await evaluateValue(ws, `({
+    slipHidden: document.querySelector("#view-slip").hidden,
+    whatIfHidden: document.querySelector("#view-whatif").hidden,
+    slipSelected: document.querySelector("#slipTab").getAttribute("aria-selected"),
+    whatIfSelected: document.querySelector("#whatIfTab").getAttribute("aria-selected"),
+    comparisonModeOn: document.querySelector("#comparisonModeToggle").checked,
+    setupBHidden: document.querySelector("#compareSetupB").hidden,
+    storedComparisonMode: localStorage.getItem("prop-slip-comparison-mode")
+  })`);
   ws.close();
 
   const failures = [];

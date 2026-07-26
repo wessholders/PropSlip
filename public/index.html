@@ -144,8 +144,6 @@
           <div class="actions">
             <button class="secondary-button" type="button" id="clearButton">Clear</button>
           </div>
-
-          <p class="privacy-strip">Calculations run on this device.</p>
         </div>
 
         <div id="view-whatif" class="view stack" role="tabpanel" aria-labelledby="whatIfTab" hidden>
@@ -282,6 +280,7 @@
         <button type="button" data-open-sheet="termsSheet">Terms</button>
         <button type="button" data-open-sheet="contactSheet">Contact</button>
       </div>
+      <p class="footer-meta">Version 0.1.0 · Last updated July 26, 2026</p>
     </footer>
 
     <dialog class="sheet" id="menuSheet" aria-labelledby="menuTitle">
@@ -376,7 +375,7 @@
           </section>
           <section class="info-item">
             <h3>Browser storage</h3>
-            <p>PropSlip stores appearance, speed-unit, and theoretical setup comparison preferences in this browser. These preferences stay on this device.</p>
+            <p>PropSlip stores appearance and speed-unit preferences in this browser. These preferences stay on this device.</p>
           </section>
           <section class="info-item">
             <h3>Data collection</h3>
@@ -421,7 +420,7 @@
           </section>
           <section class="info-item">
             <h3>Report a barrier</h3>
-            <p>Email propslipsupport@gmail.com with the page, device, browser, and accessibility issue so it can be reviewed.</p>
+            <p>Email <a class="inline-link" href="mailto:propslipsupport@gmail.com">propslipsupport@gmail.com</a> with the page, device, browser, and accessibility issue so it can be reviewed.</p>
           </section>
         </div>
       </div>
@@ -483,7 +482,7 @@
         <div class="info-list">
           <section class="info-item">
             <h3>Support contact</h3>
-            <p>Email propslipsupport@gmail.com for privacy, accessibility, and site-support questions.</p>
+            <p>Email <a class="inline-link" href="mailto:propslipsupport@gmail.com">propslipsupport@gmail.com</a> for privacy, accessibility, and site-support questions.</p>
           </section>
           <section class="info-item">
             <h3>Feedback</h3>
@@ -544,6 +543,7 @@
       </div>
     </dialog>
 
+    <script src="calculators.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

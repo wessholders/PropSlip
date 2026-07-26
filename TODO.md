@@ -11,3 +11,7 @@
 - [x] Add favicon, touch icon, canonical URL, Open Graph/Twitter metadata, `robots.txt`, and optional manifest.
 - [x] Prevent accidental form submission on calculator forms.
 - [x] Document verification prerequisites and run the render smoke test in CI.
+- [x] Extract calculator formulas into shared logic with deterministic test vectors.
+- [ ] Improve desktop layout for the two-calculator MVP.
+- [ ] Add reserved non-live ad slot experiments before choosing an ad provider.
+- [ ] Create Android app foundation after the shared calculator contract is stable.
