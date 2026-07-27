@@ -26,7 +26,7 @@ The deployable site includes menu sheets for:
 
 The public support address is propslipsupport@gmail.com.
 
-Long-term monetization, Android, and iOS planning notes live in `ROADMAP.md`.
+Long-term monetization, Android, and iOS planning notes live in `ROADMAP.md`. The detailed Android transition plan lives in `ANDROID_TRANSITION_PLAN.md`.
 
 ## Slip Formula
 

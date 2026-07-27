@@ -13,5 +13,8 @@
 - [x] Document verification prerequisites and run the render smoke test in CI.
 - [x] Extract calculator formulas into shared logic with deterministic test vectors.
 - [ ] Improve desktop layout for the two-calculator MVP.
+- [ ] Decide Android package name, Play developer account type, and public developer name.
+- [ ] Scaffold native Android project with Kotlin, Compose, and a pure calculator module.
+- [ ] Port calculator contract to Kotlin and mirror the JavaScript formula test vectors.
+- [ ] Build Android calculator UI without ads or billing.
 - [ ] Add reserved non-live ad slot experiments before choosing an ad provider.
-- [ ] Create Android app foundation after the shared calculator contract is stable.

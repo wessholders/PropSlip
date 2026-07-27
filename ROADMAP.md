@@ -1,6 +1,6 @@
 # PropSlip Monetization and App Roadmap
 
-These notes capture the long-term direction so near-term website work does not block future revenue, Android, or iOS plans.
+These notes capture the long-term direction so near-term website work does not block future revenue, Android, or iOS plans. For the detailed Android build path, see `ANDROID_TRANSITION_PLAN.md`.
 
 ## North Star
 
