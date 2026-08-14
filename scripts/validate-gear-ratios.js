@@ -149,18 +149,12 @@ function collectJsonFiles(directory) {
   return files;
 }
 
-function validateYamahaFilename(filePath, data) {
+function validateYamahaFilename(filePath) {
   const errors = [];
   const filename = path.basename(filePath, ".json");
 
   if (!/^[0-9]{4}$/.test(filename)) {
     errors.push("Yamaha year files must be named with a four-digit year, such as 2005.json");
-    return errors;
-  }
-
-  const filenameYear = Number(filename);
-  if (data.year !== filenameYear) {
-    errors.push(`Filename year ${filenameYear} must match JSON year ${JSON.stringify(data.year)}`);
   }
 
   return errors;
@@ -189,7 +183,7 @@ function validateFile(filePath) {
   const errors = validateSchema(data, schema).map((error) => `${relativePath}: ${error}`);
 
   if (manufacturer === "yamaha") {
-    errors.push(...validateYamahaFilename(filePath, data).map((error) => `${relativePath}: ${error}`));
+    errors.push(...validateYamahaFilename(filePath).map((error) => `${relativePath}: ${error}`));
   }
 
   return errors;

@@ -39,29 +39,23 @@ For example, researched 2005 Yamaha data should be placed at:
 data/gear-ratios/yamaha/2005.json
 ```
 
-Yamaha files use this hierarchy:
+Yamaha files use this hierarchy, with manufacturer and year implied by the path:
 
 ```text
-Manufacturer -> Year -> Horsepower -> Exact Yamaha Model Code -> Gear Ratio(s)
+yamaha/[YEAR].json -> Horsepower -> Exact Yamaha Model Code -> Gear Ratio(s)
 ```
 
 Shape:
 
 ```json
 {
-  "manufacturer": "Yamaha",
-  "year": 2005,
-  "horsepower": {
-    "70": {
-      "70TLR": {
-        "gear_ratios": [
-          {
-            "ratio": "2.33:1",
-            "source_url": "https://example.com/source"
-          }
-        ],
-        "diagram_url": "https://example.com/parts-diagram"
-      }
+  "70": {
+    "70TLR": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://example.com/source",
+      "diagram": "https://example.com/parts-diagram"
     }
   }
 }
@@ -69,29 +63,23 @@ Shape:
 
 ## Field Rules
 
-- `manufacturer`: required. Yamaha files must use `"Yamaha"`.
-- `year`: required integer. It must match the filename, such as `2005.json`.
-- `horsepower`: required object. Horsepower values are object keys and must stay strings, including decimal ratings like `"9.9"`.
+- Manufacturer: implied by the directory name, such as `yamaha/`.
+- Year: implied by the four-digit filename, such as `2005.json`.
+- Horsepower: top-level object keys. Horsepower values must stay strings, including decimal ratings like `"9.9"`.
 - Model code keys: exact manufacturer model designations. Preserve spelling, punctuation, and suffixes. Do not combine models just because they share a ratio.
-- `gear_ratios`: required array. It may be empty when a model is known but its ratio is unresolved.
-- `ratio`: required for every populated gear-ratio entry. Canonical display format is like `2.33:1`.
-- `source_url`: optional URL for the source that supports that specific ratio.
-- `diagram_url`: optional URL associated with the model, usually a lower-unit, lower-casing, drive, or gearcase diagram.
+- `ratios`: required array of ratio strings. It may be empty when a model is known but its ratio is unresolved.
+- Ratio strings: canonical display format is like `2.33:1`.
+- `source`: optional URL for the source that supports the model's listed ratio data.
+- `diagram`: optional URL associated with the model, usually a lower-unit, lower-casing, drive, or gearcase diagram.
 
-`source_url` proves or supports a ratio. `diagram_url` points to a relevant parts diagram for the model and does not necessarily prove the ratio.
+`source` proves or supports the listed ratio data. `diagram` points to a relevant parts diagram for the model and does not necessarily prove the ratio.
 
 Multiple documented ratios remain separate entries:
 
 ```json
-"gear_ratios": [
-  {
-    "ratio": "2.00:1",
-    "source_url": "https://example.com/source-a"
-  },
-  {
-    "ratio": "2.33:1",
-    "source_url": "https://example.com/source-b"
-  }
+"ratios": [
+  "2.00:1",
+  "2.33:1"
 ]
 ```
 
@@ -103,4 +91,4 @@ Run:
 node scripts/validate-gear-ratios.js
 ```
 
-The validator recursively checks researched JSON files, applies the manufacturer-specific schema when one exists, verifies Yamaha filename/year agreement, and exits non-zero when invalid data is found.
+The validator recursively checks researched JSON files, applies the manufacturer-specific schema when one exists, verifies Yamaha filenames use four-digit years, and exits non-zero when invalid data is found.

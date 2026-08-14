@@ -2,54 +2,35 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://prop-slip.com/schemas/gear-ratios/yamaha-year.schema.json",
   "title": "Yamaha yearly outboard gear ratio data",
+  "description": "A Yamaha model-year file keyed by horsepower, then exact Yamaha model code. Manufacturer and year are implied by the directory and filename.",
   "type": "object",
-  "additionalProperties": false,
-  "required": ["manufacturer", "year", "horsepower"],
-  "properties": {
-    "manufacturer": {
-      "const": "Yamaha"
+  "propertyNames": {
+    "pattern": "^[0-9]+(?:\\.[0-9]+)?$"
+  },
+  "additionalProperties": {
+    "type": "object",
+    "propertyNames": {
+      "minLength": 1
     },
-    "year": {
-      "type": "integer"
-    },
-    "horsepower": {
+    "additionalProperties": {
       "type": "object",
-      "propertyNames": {
-        "pattern": "^[0-9]+(?:\\.[0-9]+)?$"
-      },
-      "additionalProperties": {
-        "type": "object",
-        "propertyNames": {
-          "minLength": 1
-        },
-        "additionalProperties": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["gear_ratios"],
-          "properties": {
-            "gear_ratios": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": ["ratio"],
-                "properties": {
-                  "ratio": {
-                    "type": "string",
-                    "pattern": "^[0-9]+(?:\\.[0-9]+)?:1$"
-                  },
-                  "source_url": {
-                    "type": "string",
-                    "format": "uri"
-                  }
-                }
-              }
-            },
-            "diagram_url": {
-              "type": "string",
-              "format": "uri"
-            }
+      "additionalProperties": false,
+      "required": ["ratios"],
+      "properties": {
+        "ratios": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]+(?:\\.[0-9]+)?:1$"
           }
+        },
+        "source": {
+          "type": "string",
+          "format": "uri"
+        },
+        "diagram": {
+          "type": "string",
+          "format": "uri"
         }
       }
     }

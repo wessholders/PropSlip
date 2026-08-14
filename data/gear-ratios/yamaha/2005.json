@@ -1,952 +1,721 @@
 {
-  "manufacturer": "Yamaha",
-  "year": 2005,
-  "horsepower": {
-    "2.5": {
-      "F2.5MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f2.5mshd-outboard-motor-parts-diagram-catalog"
-      }
+  "2.5": {
+    "F2.5MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f2.5mshd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "4": {
+    "F4MLHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f4mlhd-outboard-motor-parts-diagram-catalog"
     },
-    "4": {
-      "F4MLHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f4mlhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F4MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f4mshd-outboard-motor-parts-diagram-catalog"
-      }
+    "F4MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f4mshd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "6": {
+    "F6MLHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f6mlhd-outboard-motor-parts-diagram-catalog"
     },
-    "6": {
-      "F6MLHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f6mlhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F6MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f6mshd-outboard-motor-parts-diagram-catalog"
-      }
+    "F6MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f6mshd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "8": {
+    "8MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-8mshd-outboard-motor-parts-diagram-catalog"
     },
-    "8": {
-      "8MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-8mshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F8MLHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f8mlhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F8MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f8mshd-outboard-motor-parts-diagram-catalog"
-      },
-      "T8ELHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8elhd-outboard-motor-parts-diagram-catalog"
-      },
-      "T8EXHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8exhd-outboard-motor-parts-diagram-catalog"
-      },
-      "T8PLHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8plhd-outboard-motor-parts-diagram-catalog"
-      },
-      "T8PLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8plrd-outboard-motor-parts-diagram-catalog"
-      },
-      "T8PXHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8pxhd-outboard-motor-parts-diagram-catalog"
-      },
-      "T8PXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8pxrd-outboard-motor-parts-diagram-catalog"
-      }
+    "F8MLHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f8mlhd-outboard-motor-parts-diagram-catalog"
     },
-    "9.9": {
-      "9.9MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-9.9mshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F9.9ELR2D": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f9.9elr2d-outboard-motor-parts-diagram-catalog"
-      },
-      "F9.9MLH2D": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f9.9mlh2d-outboard-motor-parts-diagram-catalog"
-      },
-      "F9.9MSH2D": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f9.9msh2d-outboard-motor-parts-diagram-catalog"
-      },
-      "T9.9ELH2D": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t9.9elh2d-outboard-motor-parts-diagram-catalog"
-      },
-      "T9.9ELR2D": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t9.9elr2d-outboard-motor-parts-diagram-catalog"
-      },
-      "T9.9EXH2D": {
-        "gear_ratios": [
-          {
-            "ratio": "2.92:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t9.9exh2d-outboard-motor-parts-diagram-catalog"
-      }
+    "F8MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f8mshd-outboard-motor-parts-diagram-catalog"
     },
-    "15": {
-      "15MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-15mshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F15ELHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15elhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F15ESHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15eshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F15MLHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15mlhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F15MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15mshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F15PLHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15plhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F15PLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15plrd-outboard-motor-parts-diagram-catalog"
-      }
+    "T8ELHD": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8elhd-outboard-motor-parts-diagram-catalog"
     },
-    "25": {
-      "25MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-25mshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F25ELHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25elhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F25ELRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25elrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F25ESHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25eshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F25ESRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25esrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F25MLHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25mlhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F25MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25mshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F25TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.08:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "T25TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.42:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t25tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t25tlrd-outboard-motor-parts-diagram-catalog"
-      }
+    "T8EXHD": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8exhd-outboard-motor-parts-diagram-catalog"
     },
-    "30": {
-      "F30TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f30tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f30tlrd-outboard-motor-parts-diagram-catalog"
-      }
+    "T8PLHD": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8plhd-outboard-motor-parts-diagram-catalog"
     },
-    "40": {
-      "40TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.85:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-40tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F40MLHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40mlhd-outboard-motor-parts-diagram-catalog"
-      },
-      "F40MSHD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40mshd-outboard-motor-parts-diagram-catalog"
-      },
-      "F40TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F40EJRD": {
-        "gear_ratios": [],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40ejrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F40MJHD": {
-        "gear_ratios": [],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40mjhd-outboard-motor-parts-diagram-catalog"
-      }
+    "T8PLRD": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8plrd-outboard-motor-parts-diagram-catalog"
     },
-    "50": {
-      "50TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.85:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-50tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F50TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.85:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f50tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "T50TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.33:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t50tlrd-outboard-motor-parts-diagram-catalog"
-      }
+    "T8PXHD": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8pxhd-outboard-motor-parts-diagram-catalog"
     },
-    "60": {
-      "60TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.33:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-60tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F60TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.85:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f60tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "T60TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.33:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t60tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F60TJRD": {
-        "gear_ratios": [],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f60tjrd-outboard-motor-parts-diagram-catalog"
-      }
+    "T8PXRD": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t8pxrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "9.9": {
+    "9.9MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-9.9mshd-outboard-motor-parts-diagram-catalog"
     },
-    "70": {
-      "70TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.33:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-70tlrd-outboard-motor-parts-diagram-catalog"
-      }
+    "F9.9ELR2D": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f9.9elr2d-outboard-motor-parts-diagram-catalog"
     },
-    "75": {
-      "F75TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.31:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f75tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f75tlrd-outboard-motor-parts-diagram-catalog"
-      }
+    "F9.9MLH2D": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f9.9mlh2d-outboard-motor-parts-diagram-catalog"
     },
-    "90": {
-      "90TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-90tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F90TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.31:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F90TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.31:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F90TJRD": {
-        "gear_ratios": [],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90tjrd-outboard-motor-parts-diagram-catalog"
-      }
+    "F9.9MSH2D": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f9.9msh2d-outboard-motor-parts-diagram-catalog"
     },
-    "115": {
-      "115TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-115tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "115TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-115txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F115TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.15:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f115tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F115TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.15:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f115txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f115txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "LF115TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.15:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf115txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F115TJRD": {
-        "gear_ratios": [],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f115tjrd-outboard-motor-parts-diagram-catalog"
-      }
+    "T9.9ELH2D": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t9.9elh2d-outboard-motor-parts-diagram-catalog"
     },
-    "150": {
-      "150TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-150txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-150txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "DX150TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-dx150tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-dx150tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "V150TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-v150tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-v150tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F150TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f150tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F150TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f150txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "LF150TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf150txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "LZ150TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz150txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz150txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "VZ150TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz150tlrd-outboard-motor-parts-diagram-catalog"
-          },
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz150tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz150tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "Z150TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z150txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z150txrd-outboard-motor-parts-diagram-catalog"
-      }
+    "T9.9ELR2D": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t9.9elr2d-outboard-motor-parts-diagram-catalog"
     },
-    "175": {
-      "VZ175TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz175tlrd-outboard-motor-parts-diagram-catalog"
-          },
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz175tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz175tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "Z175TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z175txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z175txrd-outboard-motor-parts-diagram-catalog"
-      }
+    "T9.9EXH2D": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t9.9exh2d-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "15": {
+    "15MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-15mshd-outboard-motor-parts-diagram-catalog"
     },
-    "200": {
-      "SX200TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-sx200txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "VX200TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.81:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vx200tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vx200tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "F200TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f200txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "LF200TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf200txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "LZ200TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz200txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "VZ200TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.81:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz200tlrd-outboard-motor-parts-diagram-catalog"
-          },
-          {
-            "ratio": "1.75:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz200tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz200tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "Z200TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z200tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z200tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "Z200TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.86:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z200txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z200txrd-outboard-motor-parts-diagram-catalog"
-      }
+    "F15ELHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15elhd-outboard-motor-parts-diagram-catalog"
     },
-    "225": {
-      "F225TURD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f225turd-outboard-motor-parts-diagram-catalog"
-      },
-      "F225TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f225txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f225txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "LF225TURD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf225turd-outboard-motor-parts-diagram-catalog"
-      },
-      "LFG225TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lfg225txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "VZ225TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.81:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz225tlrd-outboard-motor-parts-diagram-catalog"
-          },
-          {
-            "ratio": "1.75:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz225tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz225tlrd-outboard-motor-parts-diagram-catalog"
-      }
+    "F15ESHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15eshd-outboard-motor-parts-diagram-catalog"
     },
-    "250": {
-      "F250TURD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f250turd-outboard-motor-parts-diagram-catalog"
-      },
-      "F250TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f250txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f250txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "LF250TURD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf250turd-outboard-motor-parts-diagram-catalog"
-      },
-      "LF250TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "2.00:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf250txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "LZ250TURD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.81:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz250turd-outboard-motor-parts-diagram-catalog"
-      },
-      "LZ250TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.81:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz250txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "VZ250TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.81:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz250tlrd-outboard-motor-parts-diagram-catalog"
-          },
-          {
-            "ratio": "1.75:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz250tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz250tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "Z250TURD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.81:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z250turd-outboard-motor-parts-diagram-catalog"
-      },
-      "Z250TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.81:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z250txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z250txrd-outboard-motor-parts-diagram-catalog"
-      }
+    "F15MLHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15mlhd-outboard-motor-parts-diagram-catalog"
     },
-    "300": {
-      "LZ300TURD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.75:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz300turd-outboard-motor-parts-diagram-catalog"
-      },
-      "LZ300TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.75:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz300txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz300txrd-outboard-motor-parts-diagram-catalog"
-      },
-      "VZ300TLRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.75:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz300tlrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz300tlrd-outboard-motor-parts-diagram-catalog"
-      },
-      "Z300TURD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.75:1",
-            "source_url": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z300turd-outboard-motor-parts-diagram-catalog"
-      },
-      "Z300TXRD": {
-        "gear_ratios": [
-          {
-            "ratio": "1.75:1",
-            "source_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z300txrd-outboard-motor-parts-diagram-catalog"
-          }
-        ],
-        "diagram_url": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z300txrd-outboard-motor-parts-diagram-catalog"
-      }
+    "F15MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15mshd-outboard-motor-parts-diagram-catalog"
+    },
+    "F15PLHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15plhd-outboard-motor-parts-diagram-catalog"
+    },
+    "F15PLRD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f15plrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "25": {
+    "25MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-25mshd-outboard-motor-parts-diagram-catalog"
+    },
+    "F25ELHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25elhd-outboard-motor-parts-diagram-catalog"
+    },
+    "F25ELRD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25elrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F25ESHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25eshd-outboard-motor-parts-diagram-catalog"
+    },
+    "F25ESRD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25esrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F25MLHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25mlhd-outboard-motor-parts-diagram-catalog"
+    },
+    "F25MSHD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25mshd-outboard-motor-parts-diagram-catalog"
+    },
+    "F25TLRD": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f25tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "T25TLRD": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t25tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t25tlrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "30": {
+    "F30TLRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f30tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f30tlrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "40": {
+    "40TLRD": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-40tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F40MLHD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40mlhd-outboard-motor-parts-diagram-catalog"
+    },
+    "F40MSHD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40mshd-outboard-motor-parts-diagram-catalog"
+    },
+    "F40TLRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f40tlrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "50": {
+    "50TLRD": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-50tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F50TLRD": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f50tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "T50TLRD": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t50tlrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "60": {
+    "60TLRD": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-60tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F60TLRD": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f60tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "T60TLRD": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-t60tlrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "70": {
+    "70TLRD": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-70tlrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "75": {
+    "F75TLRD": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f75tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f75tlrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "90": {
+    "90TLRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-90tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F90TLRD": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F90TXRD": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f90txrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "115": {
+    "115TLRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-115tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "115TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-115txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F115TLRD": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f115tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F115TXRD": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f115txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f115txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "LF115TXRD": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf115txrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "150": {
+    "150TXRD": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-150txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-150txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "DX150TLRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-dx150tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-dx150tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "V150TLRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-v150tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-v150tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F150TLRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f150tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F150TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f150txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "LF150TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf150txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "LZ150TXRD": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz150txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz150txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "VZ150TLRD": {
+      "ratios": [
+        "1.86:1",
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz150tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz150tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "Z150TXRD": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z150txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z150txrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "175": {
+    "VZ175TLRD": {
+      "ratios": [
+        "1.86:1",
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz175tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz175tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "Z175TXRD": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z175txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z175txrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "200": {
+    "SX200TXRD": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-sx200txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "VX200TLRD": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vx200tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vx200tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "F200TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f200txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "LF200TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf200txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "LZ200TXRD": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz200txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "VZ200TLRD": {
+      "ratios": [
+        "1.81:1",
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz200tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz200tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "Z200TLRD": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z200tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z200tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "Z200TXRD": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z200txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z200txrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "225": {
+    "F225TURD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f225turd-outboard-motor-parts-diagram-catalog"
+    },
+    "F225TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f225txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f225txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "LF225TURD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf225turd-outboard-motor-parts-diagram-catalog"
+    },
+    "LFG225TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lfg225txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "VZ225TLRD": {
+      "ratios": [
+        "1.81:1",
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz225tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz225tlrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "250": {
+    "F250TURD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f250turd-outboard-motor-parts-diagram-catalog"
+    },
+    "F250TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f250txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-f250txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "LF250TURD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf250turd-outboard-motor-parts-diagram-catalog"
+    },
+    "LF250TXRD": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lf250txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "LZ250TURD": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz250turd-outboard-motor-parts-diagram-catalog"
+    },
+    "LZ250TXRD": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz250txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "VZ250TLRD": {
+      "ratios": [
+        "1.81:1",
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz250tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz250tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "Z250TURD": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z250turd-outboard-motor-parts-diagram-catalog"
+    },
+    "Z250TXRD": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z250txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z250txrd-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "300": {
+    "LZ300TURD": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz300turd-outboard-motor-parts-diagram-catalog"
+    },
+    "LZ300TXRD": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz300txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-lz300txrd-outboard-motor-parts-diagram-catalog"
+    },
+    "VZ300TLRD": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz300tlrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-vz300tlrd-outboard-motor-parts-diagram-catalog"
+    },
+    "Z300TURD": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z300turd-outboard-motor-parts-diagram-catalog"
+    },
+    "Z300TXRD": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z300txrd-outboard-motor-parts-diagram-catalog",
+      "diagram": "https://jlmmarine.com/blogs/diagrams/yamaha-2005-z300txrd-outboard-motor-parts-diagram-catalog"
     }
   }
 }
