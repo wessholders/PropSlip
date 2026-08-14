@@ -56,7 +56,6 @@
         accessibilitySheet: document.querySelector("#accessibilitySheet"),
         termsSheet: document.querySelector("#termsSheet"),
         contactSheet: document.querySelector("#contactSheet"),
-        mobileAppsSheet: document.querySelector("#mobileAppsSheet"),
         settingsSheet: document.querySelector("#settingsSheet"),
         closeButtons: document.querySelectorAll("[data-close]"),
         backButtons: document.querySelectorAll("[data-back-menu]"),
@@ -77,6 +76,9 @@
       const integerFormatter = new Intl.NumberFormat("en-US", {
         maximumFractionDigits: 0
       });
+
+      let sheetOpener = null;
+      let suppressCloseRestore = false;
 
       function getStoredAppearance() {
         try {
@@ -466,6 +468,7 @@
       }
 
       function openSheet(sheet, options = {}) {
+        if (options.opener) sheetOpener = options.opener;
         sheet.classList.toggle("standalone-sheet", Boolean(options.standalone));
         if (typeof sheet.showModal === "function") {
           sheet.showModal();
@@ -477,21 +480,31 @@
         syncSheetOpenState();
       }
 
-      function closeSheet(sheet) {
+      function restoreSheetFocus() {
+        if (sheetOpener && sheetOpener.isConnected) {
+          sheetOpener.focus({ preventScroll: true });
+        }
+      }
+
+      function closeSheet(sheet, options = {}) {
+        const shouldRestoreFocus = options.restoreFocus !== false;
         if (typeof sheet.close === "function") {
+          suppressCloseRestore = true;
           sheet.close();
           sheet.classList.remove("standalone-sheet");
           syncSheetOpenState();
+          if (shouldRestoreFocus) restoreSheetFocus();
           return;
         }
 
         sheet.removeAttribute("open");
         sheet.classList.remove("standalone-sheet");
         syncSheetOpenState();
+        if (shouldRestoreFocus) restoreSheetFocus();
       }
 
       function switchSheet(fromSheet, toSheet) {
-        closeSheet(fromSheet);
+        closeSheet(fromSheet, { restoreFocus: false });
         openSheet(toSheet);
       }
 
@@ -573,7 +586,7 @@
         applyComparisonMode(fields.comparisonModeToggle.checked);
       });
       fields.clearButton.addEventListener("click", clearInputs);
-      fields.menuButton.addEventListener("click", () => openSheet(fields.menuSheet));
+      fields.menuButton.addEventListener("click", () => openSheet(fields.menuSheet, { opener: fields.menuButton }));
 
       fields.closeButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -595,12 +608,12 @@
           if (currentSheet) {
             switchSheet(currentSheet, targetSheet);
           } else {
-            openSheet(targetSheet, { standalone: true });
+            openSheet(targetSheet, { standalone: true, opener: button });
           }
         });
       });
 
-      [fields.menuSheet, fields.tutorialSheet, fields.aboutSheet, fields.privacySheet, fields.accessibilitySheet, fields.termsSheet, fields.contactSheet, fields.mobileAppsSheet, fields.settingsSheet].forEach((sheet) => {
+      [fields.menuSheet, fields.tutorialSheet, fields.aboutSheet, fields.privacySheet, fields.accessibilitySheet, fields.termsSheet, fields.contactSheet, fields.settingsSheet].forEach((sheet) => {
         sheet.addEventListener("click", (event) => {
           if (event.target === sheet) closeSheet(sheet);
         });
@@ -608,6 +621,11 @@
         sheet.addEventListener("close", () => {
           sheet.classList.remove("standalone-sheet");
           syncSheetOpenState();
+          if (suppressCloseRestore) {
+            suppressCloseRestore = false;
+          } else {
+            restoreSheetFocus();
+          }
         });
       });
 

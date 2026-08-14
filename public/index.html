@@ -28,17 +28,6 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="app-loader" role="status" aria-live="polite" aria-label="Loading PropSlip">
-      <div class="loader-mark" aria-hidden="true">
-        <img src="favicon.svg" alt="">
-      </div>
-      <div class="loader-copy">
-        <p class="loader-kicker">Prop setup calculator</p>
-        <p class="loader-brand">PropSlip</p>
-        <p class="loader-system">Pitch / RPM / Gear / Speed</p>
-      </div>
-    </div>
-
     <nav class="top-bar" aria-label="App actions">
       <button class="menu-button" type="button" id="menuButton" aria-label="Open menu">
         <span class="menu-icon" aria-hidden="true">
@@ -62,8 +51,14 @@
     <main class="app" aria-labelledby="app-title">
       <section class="stack" aria-label="Boating calculators">
         <div class="segmented view-switcher" id="calculatorSwitcher" role="tablist" aria-label="Calculator selection">
-          <button class="segment" type="button" id="slipTab" role="tab" data-view="slip" aria-selected="true" aria-controls="view-slip">Propeller Slip</button>
-          <button class="segment" type="button" id="whatIfTab" role="tab" data-view="whatif" aria-selected="false" aria-controls="view-whatif" tabindex="-1">Theoretical Setup</button>
+          <button class="segment" type="button" id="slipTab" role="tab" data-view="slip" aria-selected="true" aria-controls="view-slip" aria-label="Propeller Slip">
+            <span class="segment-full">Propeller Slip</span>
+            <span class="segment-short" aria-hidden="true">Slip</span>
+          </button>
+          <button class="segment" type="button" id="whatIfTab" role="tab" data-view="whatif" aria-selected="false" aria-controls="view-whatif" tabindex="-1" aria-label="Theoretical Setup">
+            <span class="segment-full">Theoretical Setup</span>
+            <span class="segment-short" aria-hidden="true">Setup</span>
+          </button>
         </div>
 
         <div id="view-slip" class="view stack" role="tabpanel" aria-labelledby="slipTab">
@@ -107,6 +102,7 @@
               <div class="field-row">
                 <div class="field-label">
                   <label for="gearRatio">Gear ratio</label>
+                  <span>Lower-unit ratio, such as 1.75:1.</span>
                 </div>
                 <div class="value-control">
                   <input id="gearRatio" name="gearRatio" type="number" inputmode="decimal" min="0.1" step="0.01" value="1.75" autocomplete="off">
@@ -127,6 +123,7 @@
               <div class="field-row">
                 <div class="field-label">
                   <label for="speed">GPS speed</label>
+                  <span>Use speed from the same run as RPM.</span>
                 </div>
                 <div class="value-control">
                   <input id="speed" name="speed" type="number" inputmode="decimal" min="0" step="0.1" value="68" autocomplete="off">
@@ -295,7 +292,6 @@
           <button class="menu-item footer-menu-item" type="button" data-open-sheet="accessibilitySheet">Accessibility</button>
           <button class="menu-item footer-menu-item" type="button" data-open-sheet="termsSheet">Terms & Disclaimer</button>
           <button class="menu-item footer-menu-item" type="button" data-open-sheet="contactSheet">Contact</button>
-          <button class="menu-item" type="button" data-open-sheet="mobileAppsSheet">Mobile Apps</button>
           <button class="menu-item" type="button" data-open-sheet="settingsSheet">Settings</button>
         </div>
       </div>
@@ -486,27 +482,6 @@
           <section class="info-item">
             <h3>Feedback</h3>
             <p>Use contact messages for calculator bugs, accessibility barriers, and formula questions. Do not send sensitive personal, financial, medical, or location information.</p>
-          </section>
-        </div>
-      </div>
-    </dialog>
-
-    <dialog class="sheet" id="mobileAppsSheet" aria-labelledby="mobileAppsTitle">
-      <div class="sheet-body">
-        <div class="grabber" aria-hidden="true"></div>
-        <div class="sheet-head">
-          <button class="back-button" type="button" data-back-menu>Menu</button>
-          <h2 id="mobileAppsTitle">Mobile Apps</h2>
-          <button class="done-button" type="button" data-close="mobileAppsSheet">Done</button>
-        </div>
-        <div class="info-list">
-          <section class="info-item">
-            <h3>iOS and Android</h3>
-            <p>PropSlip plans to support iOS and Android in the future. The current MVP is this website with the Propeller Slip and Theoretical Setup calculators.</p>
-          </section>
-          <section class="info-item">
-            <h3>App privacy</h3>
-            <p>Before app release, the public privacy notice and store disclosures should match the app's actual data collection, permissions, diagnostics, and third-party SDKs.</p>
           </section>
         </div>
       </div>
