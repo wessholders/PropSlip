@@ -144,6 +144,7 @@
         padding: 18px 0 17px;
         border: 1px solid rgba(7, 19, 27, 0.82);
         border-right: 0;
+        border-bottom: 0;
         border-left: 0;
         border-radius: 0;
         color: #f5fbfc;
@@ -168,7 +169,7 @@
         z-index: 0;
         top: -18px;
         right: 74px;
-        bottom: -17px;
+        bottom: -14px;
         width: 22px;
         background: var(--race-red);
         box-shadow: 12px 0 0 var(--race-yellow);
@@ -1178,7 +1179,7 @@
         .header-inner::after {
           top: -24px;
           right: clamp(300px, 36vw, 430px);
-          bottom: -22px;
+          bottom: -19px;
           width: 26px;
           box-shadow: 14px 0 0 var(--race-yellow);
         }
