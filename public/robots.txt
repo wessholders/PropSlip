@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://propslip.wessholders.workers.dev/sitemap.xml
+Sitemap: https://prop-slip.com/sitemap.xml
