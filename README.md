@@ -66,6 +66,7 @@ The script uses a temporary Chrome profile to avoid path/profile lock issues, ca
 
 This repo is ready for a static host with a custom domain.
 
+- Cloudflare Pages: connect the repository, leave the build command empty, and use `public` as the build output directory. `public/_headers` defines the security headers for Pages.
 - Netlify: import the repository, leave the build command empty, and use `public` as the publish directory. `netlify.toml` already defines this.
 - Vercel: import the repository as a static project. `vercel.json` points the output directory at `public` and enables clean URLs and basic security headers.
 - Render: create a Static Site from the repository, or use the included `render.yaml`. The static publish path is `public` and the build command is `true`.
