@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "propslip",
+  "compatibility_date": "2026-08-14",
+  "assets": {
+    "directory": "./public"
+  }
+}
