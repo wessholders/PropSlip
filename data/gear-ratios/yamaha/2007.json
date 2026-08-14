@@ -1,0 +1,697 @@
+{
+  "2.5": {
+    "F2.5MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "4": {
+    "F4MLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F4MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "6": {
+    "F6MLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F6MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F6AMLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.boats.net/catalog/yamaha/outboard/2007/6hp/f6amsh/lower-casing-drive-1"
+    },
+    "F6AMSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.boats.net/catalog/yamaha/outboard/2007/6hp/f6amsh/lower-casing-drive-1"
+    }
+  },
+  "8": {
+    "8MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F8MLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F8MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F8CMLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F8CMSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T8ELH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8EXH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8PLH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8PLR": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8PXH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8PXR": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8DELH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8DEXH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8DPLH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8DPLR": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8DPXH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T8DPXR": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    }
+  },
+  "9.9": {
+    "9.9MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9ELR2K": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9MLH2K": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9MSH2K": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9FELR": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9FMLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9FMSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9ELH2K": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T9.9ELR2K": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T9.9EXH2K": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T9.9GELH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T9.9GEXH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T9.9GPLH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T9.9GPLR": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T9.9GPXH": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    },
+    "T9.9GPXR": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.yamaha-motor.co.nz/products/marine/outboard/portable/t9-9"
+    }
+  },
+  "15": {
+    "15MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15CELH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15CESH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15CMLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15CMSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15CPLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15PLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15PLR": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "20": {
+    "F20ELH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20ELR": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20ESH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20ESR": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20MLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20PLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20PLR": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "25": {
+    "25ELH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "25ELR": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "25ESH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "25ESR": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "25MLH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "25MSH": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T25TLR": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.cyclemarine.com/Parts/Parts-Look-Up/yamaha/outboard-motors/2007/t25tlr-0406/lower-casing-drive-1/8103c0fd-2294-4d85-aae3-a62756d8412d"
+    }
+  },
+  "40": {
+    "F40MLH": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F40MSH": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F40TLR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "50": {
+    "50TLR": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F50TLR": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T50TLR": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "60": {
+    "F60TLR": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T60TLR": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "70": {
+    "70TLR": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "75": {
+    "F75TLR": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "90": {
+    "90TLR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F90TLR": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://jlmmarine.com/es/blogs/diagrams/yamaha-2007-f90tlr-outboard-motor-parts-diagram-catalog"
+    },
+    "F90TXR": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://jlmmarine.com/es/blogs/diagrams/yamaha-2007-f90tlr-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "115": {
+    "115TLR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F115TLR": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F115TXR": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LF115TXR": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "150": {
+    "150TXR": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F150TLR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F150TXR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LF150TXR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "V150TLR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "VZ150TLR": {
+      "ratios": [
+        "1.86:1",
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2007-vz150tlr-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "175": {
+    "VZ175TLR": {
+      "ratios": [
+        "1.86:1",
+        "2.00:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2007-vz175tlr-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "200": {
+    "F200TXR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LF200TXR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LZ200TXR": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "VZ200TLR": {
+      "ratios": [
+        "1.81:1",
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2007-vz200tlr-outboard-motor-parts-diagram-catalog"
+    },
+    "Z200TXR": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "225": {
+    "F225TLR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F225TXR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LF225TXR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "VZ225TLR": {
+      "ratios": [
+        "1.81:1",
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2007-vz225tlr-outboard-motor-parts-diagram-catalog"
+    },
+    "VZ225HTLR": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.redlinepowersportsparts.com/oemparts/a/yob/55a480e887a866164c90800f/lower-casing-drive-1"
+    }
+  },
+  "250": {
+    "F250TUR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F250TXR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LF250TUR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LF250TXR": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "VZ250TLR": {
+      "ratios": [
+        "1.81:1",
+        "1.75:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-2007-vz250tlr-outboard-motor-parts-diagram-catalog"
+    },
+    "VZ250FTLR": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.gohondapart.com/oemparts/a/yob/55a4841e87a866164c9081fb/lower-casing-drive-1"
+    }
+  },
+  "300": {
+    "LZ300TUR": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LZ300TXR": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "VZ300TLR": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "Z300TUR": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "Z300TXR": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  }
+}
