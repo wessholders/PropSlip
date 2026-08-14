@@ -15,6 +15,7 @@
         --ios-accent-pressed: #006a8d;
         --ios-marine: #00a5b5;
         --ios-marine-dark: #073746;
+        --header-divider: #29c6d6;
         --race-red: #e3342f;
         --race-yellow: #f2b705;
         --panel-ink: #0b1820;
@@ -59,6 +60,7 @@
         --ios-accent-pressed: #7ddff0;
         --ios-marine: #31c4d1;
         --ios-marine-dark: #062f38;
+        --header-divider: #5ee3ef;
         --race-red: #ff625b;
         --race-yellow: #ffd45f;
         --panel-ink: #f3fbfc;
@@ -179,7 +181,7 @@
         position: absolute;
         inset: auto 0 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--ios-marine), transparent 64%);
+        background: var(--header-divider);
       }
 
       .brand-lockup {
