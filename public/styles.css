@@ -38,7 +38,8 @@
         --tap: 46px;
         --banner-inner: 1040px;
         --desktop-inner: 1040px;
-        --sans: Bahnschrift, "Aptos", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+        --display: Bahnschrift, "Aptos Display", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+        --sans: Inter, "Aptos", "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
         --mono: "Cascadia Mono", "Roboto Mono", "SFMono-Regular", Consolas, monospace;
         font-family: var(--sans);
       }
@@ -174,6 +175,7 @@
 
       .loader-brand {
         color: #f5fbfc;
+        font-family: var(--display);
         font-size: clamp(2.35rem, 10.8vw, 3.75rem);
         font-style: italic;
         font-weight: 900;
@@ -285,6 +287,7 @@
         margin: 0;
         max-width: none;
         color: inherit;
+        font-family: var(--display);
         font-size: clamp(2.65rem, 13vw, 4.25rem);
         font-style: italic;
         font-weight: 900;
