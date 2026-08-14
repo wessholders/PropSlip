@@ -10,5 +10,6 @@
         const theme = stored === "system" ? (prefersDark ? "dark" : "light") : stored;
         document.documentElement.dataset.appearance = stored;
         document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#0b1720");
       })();
 

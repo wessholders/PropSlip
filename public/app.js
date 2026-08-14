@@ -413,7 +413,7 @@
         const theme = resolveTheme(appearance);
         document.documentElement.dataset.appearance = appearance;
         document.documentElement.dataset.theme = theme;
-        fields.themeColor.setAttribute("content", theme === "dark" ? "#000000" : "#f2f2f7");
+        fields.themeColor.setAttribute("content", "#0b1720");
 
         fields.appearanceButtons.forEach((button) => {
           button.setAttribute("aria-pressed", String(button.dataset.appearance === appearance));

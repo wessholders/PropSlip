@@ -44,36 +44,36 @@
 
       [data-theme="dark"] {
         color-scheme: dark;
-        --app-bg: #1e1e1e;
-        --app-top: #252526;
-        --app-bottom: #1e1e1e;
-        --page-fill: #1e1e1e;
-        --label: #d4d4d4;
-        --secondary-label: #a9b0b5;
-        --tertiary-label: #858b90;
-        --separator: rgba(255, 255, 255, 0.14);
-        --group-bg: #252526;
-        --ios-control-bg: #2d2d30;
-        --elevated-bg: #252526;
-        --ios-accent: #35c7e8;
-        --ios-accent-pressed: #64d2ff;
-        --ios-marine: #27d1c4;
+        --app-bg: #0d171d;
+        --app-top: #13232b;
+        --app-bottom: #0d171d;
+        --page-fill: linear-gradient(180deg, var(--app-top), var(--app-bottom));
+        --label: #edf6f7;
+        --secondary-label: #a8bbc2;
+        --tertiary-label: #748b94;
+        --separator: rgba(173, 211, 222, 0.16);
+        --group-bg: #13232b;
+        --ios-control-bg: #182b34;
+        --elevated-bg: #101d25;
+        --ios-accent: #4ccde1;
+        --ios-accent-pressed: #7ddff0;
+        --ios-marine: #31c4d1;
         --ios-marine-dark: #062f38;
-        --race-red: #ff5a52;
-        --race-yellow: #ffd166;
-        --panel-ink: #eaf6f7;
-        --panel-rail: #007acc;
-        --surface-sheen: rgba(255, 255, 255, 0.025);
-        --control-sheen: rgba(255, 255, 255, 0.035);
-        --tab-sheen: rgba(255, 255, 255, 0.04);
+        --race-red: #ff625b;
+        --race-yellow: #ffd45f;
+        --panel-ink: #f3fbfc;
+        --panel-rail: #2b7482;
+        --surface-sheen: rgba(255, 255, 255, 0.04);
+        --control-sheen: rgba(255, 255, 255, 0.05);
+        --tab-sheen: rgba(255, 255, 255, 0.045);
         --header-sheen: rgba(255, 255, 255, 0.05);
-        --nav-rail: #1b1b1c;
-        --nav-active: #2d2d30;
+        --nav-rail: #07131b;
+        --nav-active: #17313d;
         --ios-success: #32d74b;
         --ios-danger: #ff453a;
-        --sheet-backdrop: rgba(0, 0, 0, 0.58);
-        --ios-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
-        --ios-soft-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+        --sheet-backdrop: rgba(0, 0, 0, 0.62);
+        --ios-shadow: 0 20px 48px rgba(0, 0, 0, 0.38);
+        --ios-soft-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
       }
 
       * {
