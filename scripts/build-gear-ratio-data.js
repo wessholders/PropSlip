@@ -4,6 +4,7 @@ const path = require("node:path");
 const root = path.resolve(__dirname, "..");
 const dataRoot = path.join(root, "data", "gear-ratios");
 const outputPath = path.join(root, "public", "gear-ratio-data.js");
+const manufacturerOutputDir = path.join(root, "public", "gear-ratio-data");
 
 function isPlainObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
@@ -121,14 +122,36 @@ function collectData() {
 
 function main() {
   const bundle = collectData();
+  fs.rmSync(manufacturerOutputDir, { recursive: true, force: true });
+  fs.mkdirSync(manufacturerOutputDir, { recursive: true });
+
+  for (const [manufacturer, byYear] of Object.entries(bundle.data)) {
+    const manufacturerPath = path.join(manufacturerOutputDir, `${manufacturer}.js`);
+    const contents = [
+      "window.PropSlipGearRatioManufacturers = window.PropSlipGearRatioManufacturers || {};",
+      `window.PropSlipGearRatioManufacturers[${JSON.stringify(manufacturer)}] = `,
+      JSON.stringify(byYear, null, 2),
+      ";\n"
+    ].join("");
+
+    fs.writeFileSync(manufacturerPath, contents, "utf8");
+  }
+
+  const manifest = {
+    generatedFrom: bundle.generatedFrom,
+    manufacturers: bundle.manufacturers,
+    data: {}
+  };
+
   const contents = [
     "window.PropSlipGearRatioData = ",
-    JSON.stringify(bundle, null, 2),
-    ";\n"
+    JSON.stringify(manifest, null, 2),
+    ";\n",
+    "window.PropSlipGearRatioManufacturers = window.PropSlipGearRatioManufacturers || {};\n"
   ].join("");
 
   fs.writeFileSync(outputPath, contents, "utf8");
-  console.log(`Wrote ${path.relative(root, outputPath)} with ${bundle.manufacturers.length} manufacturers.`);
+  console.log(`Wrote ${path.relative(root, outputPath)} and ${bundle.manufacturers.length} manufacturer data files.`);
 }
 
 main();

@@ -148,70 +148,89 @@ try {
 
   const defaultState = await evaluateValue(ws, expression);
   const screenshot = await send(ws, "Page.captureScreenshot", { format: "png" });
-  const gearState = await evaluateValue(ws, `(() => {
+  const gearState = await evaluateValue(ws, `(async () => {
       const cleanText = (text) => text.trim().replace(/\\s+/g, " ");
+      const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+      const waitFor = async (predicate) => {
+        for (let attempt = 0; attempt < 80; attempt += 1) {
+          if (predicate()) return true;
+          await wait(50);
+        }
+        return false;
+      };
       const rows = () => [...document.querySelectorAll("#gearList .gear-row")];
       const rowTexts = () => rows().map((button) => cleanText(button.textContent.replace(/>$/, "")));
-      const clickRow = (label) => {
+      const waitForLookup = async () => {
+        await waitFor(() => cleanText(document.querySelector("#gearLevelTitle").textContent) !== "Loading");
+      };
+      const clickRow = async (label) => {
         const button = rows().find((candidate) => cleanText(candidate.textContent.replace(/>$/, "")) === label);
         if (!button) return false;
         button.click();
+        await waitForLookup();
         return true;
       };
-      const clickPath = (index) => {
+      const clickPath = async (index) => {
         const button = document.querySelectorAll("#gearPath .gear-path-button")[index];
         if (!button) return false;
         button.click();
+        await waitForLookup();
         return true;
       };
       const state = {};
 
       document.querySelector("#gearMobileToggle").click();
+      await waitForLookup();
       state.mobileExpandedAfterClick = document.querySelector("#gearMobileToggle").getAttribute("aria-expanded");
+      state.mobileGearListOverflowY = getComputedStyle(document.querySelector("#gearList")).overflowY;
+      state.mobileGearListMaxHeight = getComputedStyle(document.querySelector("#gearList")).maxHeight;
       state.initialManufacturers = rowTexts();
-      clickRow("Yamaha");
+      state.manufacturerDataLoadedBeforeSelection = Object.keys(window.PropSlipGearRatioManufacturers || {}).length;
+      await clickRow("Yamaha");
+      state.manufacturerDataLoadedAfterYamaha = Object.keys(window.PropSlipGearRatioManufacturers || {});
       state.yamahaYears = rowTexts().slice(0, 5);
-      clickRow("2005");
+      await clickRow("2005");
       state.yamaha2005Hp = rowTexts();
-      clickRow("70 HP");
+      await clickRow("70 HP");
       state.yamaha70Models = rowTexts();
-      clickRow("70TLRD");
+      await clickRow("70TLRD");
       state.yamahaResult = cleanText(document.querySelector("#gearResult").innerText);
       state.yamahaPath = cleanText(document.querySelector("#gearPath").innerText);
       state.yamahaUrl = location.search;
       state.pathIncludesRatio = /2\\.33/.test(state.yamahaPath);
-      clickPath(2);
+      await clickPath(2);
       state.afterHpBreadcrumbTitle = cleanText(document.querySelector("#gearLevelTitle").textContent);
       state.afterHpBreadcrumbPath = cleanText(document.querySelector("#gearPath").innerText);
       state.afterHpBreadcrumbRowsInclude70 = rowTexts().includes("70 HP");
 
-      clickRow("70 HP");
-      clickRow("70TLRD");
-      clickPath(0);
+      await clickRow("70 HP");
+      await clickRow("70TLRD");
+      await clickPath(0);
       state.afterMakeBreadcrumbTitle = cleanText(document.querySelector("#gearLevelTitle").textContent);
       state.afterMakeBreadcrumbPathHidden = document.querySelector("#gearPath").hidden;
 
-      clickRow("Force");
+      await clickRow("Force");
       state.forceYears = rowTexts();
-      clickRow("1999");
+      await clickRow("1999");
       state.force1999Hp = rowTexts();
-      clickRow("40 HP");
+      await clickRow("40 HP");
       state.force40Models = rowTexts();
-      clickRow("Force 40 2-Stroke");
+      await clickRow("Force 40 2-Stroke");
       state.forceResult = cleanText(document.querySelector("#gearResult").innerText);
       state.forcePath = cleanText(document.querySelector("#gearPath").innerText);
 
-      clickPath(0);
-      clickRow("Mariner");
+      await clickPath(0);
+      await clickRow("Mariner");
       state.marinerYears = rowTexts();
 
-      clickPath(0);
-      clickRow("Mercury");
-      clickRow("2005");
+      await clickPath(0);
+      await clickRow("Mercury");
+      await clickRow("2005");
       state.mercury2005Hp = rowTexts().slice(0, 8);
 
       history.pushState({}, "", "?make=nope&year=bad&hp=999&model=missing");
       dispatchEvent(new PopStateEvent("popstate"));
+      await waitForLookup();
       state.invalidTitle = cleanText(document.querySelector("#gearLevelTitle").textContent);
       state.invalidMessage = cleanText(document.querySelector("#gearMessage").textContent);
 
@@ -350,6 +369,10 @@ try {
   if (refreshState.storedComparisonMode !== null) failures.push("refresh should clear stored comparison mode");
   if (!gearState.yamahaYears.includes("2026")) failures.push("Yamaha year list should include available current years");
   if (gearState.mobileExpandedAfterClick !== "true") failures.push("mobile gear reference trigger should open the lookup");
+  if (gearState.mobileGearListOverflowY !== "visible") failures.push("mobile gear reference list should not have its own vertical scrollbar");
+  if (gearState.mobileGearListMaxHeight !== "none") failures.push("mobile gear reference list should open to full height");
+  if (gearState.manufacturerDataLoadedBeforeSelection !== 0) failures.push("manufacturer data should not load before a manufacturer is selected");
+  if (!gearState.manufacturerDataLoadedAfterYamaha.includes("yamaha")) failures.push("selecting Yamaha should lazy-load Yamaha data");
   if (!gearState.yamaha2005Hp.includes("70 HP")) failures.push("Yamaha 2005 horsepower list should include 70 HP");
   if (!gearState.yamaha70Models.includes("70TLRD")) failures.push("Yamaha 2005 70 HP model list should include 70TLRD");
   if (!gearState.yamahaResult.includes("2.33 : 1")) failures.push(`expected Yamaha result 2.33 : 1, got ${gearState.yamahaResult}`);

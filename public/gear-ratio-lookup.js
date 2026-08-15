@@ -1,5 +1,7 @@
 (() => {
   const bundle = window.PropSlipGearRatioData;
+  const manufacturerData = window.PropSlipGearRatioManufacturers || {};
+  const manufacturerRequests = new Map();
   const elements = {
     header: document.querySelector(".app-header"),
     dock: document.querySelector(".gear-dock"),
@@ -64,8 +66,38 @@
     return manufacturerList().find((manufacturer) => manufacturer.slug === slug) || null;
   }
 
+  function loadScript(src) {
+    return new Promise((resolveLoad, rejectLoad) => {
+      const existing = document.querySelector(`script[src="${src}"]`);
+      if (existing) {
+        existing.addEventListener("load", resolveLoad, { once: true });
+        existing.addEventListener("error", rejectLoad, { once: true });
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = src;
+      script.async = true;
+      script.addEventListener("load", resolveLoad, { once: true });
+      script.addEventListener("error", rejectLoad, { once: true });
+      document.head.append(script);
+    });
+  }
+
+  async function loadManufacturerData(make) {
+    if (!make || manufacturerData[make]) return manufacturerData[make] || null;
+
+    if (!manufacturerRequests.has(make)) {
+      manufacturerRequests.set(make, loadScript(`gear-ratio-data/${make}.js`)
+        .then(() => manufacturerData[make] || null)
+        .catch(() => null));
+    }
+
+    return manufacturerRequests.get(make);
+  }
+
   function recordsFor(make, year) {
-    return bundle?.data?.[make]?.[String(year)] || [];
+    return manufacturerData?.[make]?.[String(year)] || [];
   }
 
   function horsepowerOptions(make, year) {
@@ -233,7 +265,7 @@
       button.addEventListener("click", () => {
         clearDownstream(segment.level);
         updateUrl();
-        render();
+        void render();
       });
       elements.path.append(button);
     });
@@ -289,7 +321,7 @@
     }
   }
 
-  function render() {
+  async function render() {
     setMessage();
     renderPath();
 
@@ -311,7 +343,7 @@
         selection.hp = null;
         selection.model = null;
         updateUrl();
-        render();
+        void render();
       });
       return;
     }
@@ -320,9 +352,28 @@
     if (!manufacturer) {
       clearDownstream("make");
       updateUrl("replace");
-      render();
+      await render();
       setMessage("That manufacturer is not available.");
       return;
+    }
+
+    if (!manufacturerData[selection.make]) {
+      elements.title.textContent = "Loading";
+      elements.result.hidden = true;
+      elements.result.replaceChildren();
+      elements.list.hidden = false;
+      elements.list.replaceChildren();
+      await loadManufacturerData(selection.make);
+
+      if (!manufacturerData[selection.make]) {
+        clearDownstream("make");
+        updateUrl("replace");
+        await render();
+        setMessage("Gear ratio data is not available for that manufacturer.");
+        return;
+      }
+
+      renderPath();
     }
 
     if (!selection.year) {
@@ -334,7 +385,7 @@
         selection.hp = null;
         selection.model = null;
         updateUrl();
-        render();
+        void render();
       });
       return;
     }
@@ -344,7 +395,7 @@
       selection.hp = null;
       selection.model = null;
       updateUrl("replace");
-      render();
+      await render();
       setMessage("That year is not available for this manufacturer.");
       return;
     }
@@ -354,7 +405,7 @@
         selection.hp = option.id;
         selection.model = null;
         updateUrl();
-        render();
+        void render();
       });
       return;
     }
@@ -363,7 +414,7 @@
       selection.hp = null;
       selection.model = null;
       updateUrl("replace");
-      render();
+      await render();
       setMessage("That horsepower is not available for this year.");
       return;
     }
@@ -372,7 +423,7 @@
       renderRows("Model", modelOptions(selection.make, selection.year, selection.hp), (option) => {
         selection.model = option.id;
         updateUrl();
-        render();
+        void render();
       });
       return;
     }
@@ -380,7 +431,7 @@
     if (!selectedModelOption()) {
       selection.model = null;
       updateUrl("replace");
-      render();
+      await render();
       setMessage("That model is not available for this horsepower.");
       return;
     }
@@ -403,7 +454,7 @@
   window.addEventListener("popstate", () => {
     loadFromUrl();
     if (hasSelection()) setMobileOpen(true);
-    render();
+    void render();
   });
 
   window.addEventListener("resize", syncSidebarTop);
@@ -415,5 +466,5 @@
   syncSidebarTop();
   loadFromUrl();
   if (hasSelection()) setMobileOpen(true);
-  render();
+  void render();
 })();

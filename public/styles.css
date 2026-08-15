@@ -39,8 +39,13 @@
         --tap: 46px;
         --banner-inner: 1040px;
         --desktop-inner: 1220px;
-        --gear-sidebar-width: clamp(236px, 19vw, 288px);
+        --gear-sidebar-width: 23%;
         --gear-sidebar-top: 164px;
+        --toc-gutter: 6%;
+        --toc-row-block: 3%;
+        --toc-font: 0.8rem;
+        --toc-meta-font: 0.68rem;
+        --toc-hover: color-mix(in srgb, var(--ios-marine) 8%, transparent);
         --display: Bahnschrift, "Aptos Display", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
         --sans: "Aptos", "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
         --mono: "Cascadia Mono", "Roboto Mono", "SFMono-Regular", Consolas, monospace;
@@ -276,11 +281,10 @@
         width: 100%;
         min-height: var(--tap);
         border: 1px solid var(--separator);
-        border-left: 3px solid var(--ios-marine);
         border-radius: var(--radius-md);
         padding: 0 12px;
-        color: var(--ios-accent);
-        background: var(--group-bg);
+        color: var(--label);
+        background: var(--elevated-bg);
         font-size: 0.92rem;
         font-weight: 760;
         line-height: 1.25;
@@ -291,7 +295,7 @@
       .gear-mobile-toggle::after {
         content: ">";
         float: right;
-        color: var(--tertiary-label);
+        color: var(--ios-accent);
         font-family: var(--mono);
         font-weight: 780;
         transform: rotate(90deg);
@@ -304,13 +308,18 @@
       .gear-lookup {
         display: grid;
         align-content: start;
-        gap: 10px;
+        gap: 0;
       }
 
       .gear-path-wrap {
         display: grid;
-        gap: 7px;
-        padding: 0 2px;
+        gap: 8px;
+        padding: 0 var(--toc-gutter) 10px;
+        border-bottom: 1px solid var(--separator);
+      }
+
+      .gear-path-wrap:has(.gear-path[hidden]) {
+        display: none;
       }
 
       .gear-eyebrow {
@@ -326,7 +335,7 @@
         min-height: 24px;
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 6px;
         flex-wrap: wrap;
       }
 
@@ -339,10 +348,10 @@
         max-width: 100%;
         border: 0;
         border-radius: var(--radius-md);
-        padding: 2px 4px;
+        padding: 2px 0;
         color: var(--ios-accent);
         background: transparent;
-        font-size: 0.82rem;
+        font-size: var(--toc-font);
         font-weight: 760;
         line-height: 1.25;
         text-align: left;
@@ -353,7 +362,9 @@
       .gear-path-button:hover,
       .gear-path-button:focus-visible {
         color: var(--ios-accent-pressed);
-        background: color-mix(in srgb, var(--ios-accent) 9%, transparent);
+        background: transparent;
+        text-decoration: underline;
+        text-underline-offset: 3px;
       }
 
       .gear-path-separator {
@@ -372,12 +383,12 @@
       }
 
       .gear-panel-head {
-        min-height: 44px;
+        min-height: 38px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 12px;
-        padding: 12px 2px 8px;
+        padding: 10px var(--toc-gutter) 8px;
         border-bottom: 1px solid var(--separator);
       }
 
@@ -385,16 +396,15 @@
         margin: 0;
         color: var(--secondary-label);
         font-family: var(--mono);
-        font-size: 0.7rem;
+        font-size: var(--toc-meta-font);
         font-weight: 820;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
       }
 
       .gear-list {
-        max-height: min(54vh, 520px);
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        max-height: none;
+        overflow: visible;
       }
 
       .gear-row-item + .gear-row-item {
@@ -403,25 +413,25 @@
 
       .gear-row {
         width: 100%;
-        min-height: 40px;
+        min-height: 34px;
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
         align-items: center;
-        gap: 12px;
+        gap: 8px;
         border: 0;
-        padding: 10px 2px;
+        padding: var(--toc-row-block) var(--toc-gutter);
         color: var(--label);
         background: transparent;
-        font-size: 0.88rem;
+        font-size: var(--toc-font);
         font-weight: 650;
-        line-height: 1.22;
+        line-height: 1.25;
         text-align: left;
         cursor: pointer;
       }
 
       .gear-row:hover,
       .gear-row:focus-visible {
-        background: color-mix(in srgb, var(--ios-marine) 10%, transparent);
+        background: var(--toc-hover);
       }
 
       .gear-row-label {
@@ -430,13 +440,14 @@
       }
 
       .gear-row-indicator {
-        color: var(--tertiary-label);
+        color: var(--ios-accent);
         font-family: var(--mono);
+        font-size: var(--toc-font);
         font-weight: 780;
       }
 
       .gear-result {
-        padding: 20px 2px 22px;
+        padding: 16px var(--toc-gutter) 20px;
       }
 
       .ratio-list {
@@ -448,7 +459,7 @@
         margin: 0;
         color: var(--panel-ink);
         font-family: var(--mono);
-        font-size: 0.98rem;
+        font-size: var(--toc-font);
         font-style: normal;
         font-weight: 820;
         font-variant-numeric: tabular-nums;
@@ -457,13 +468,13 @@
       }
 
       .ratio-list.multiple .ratio-value {
-        font-size: 0.98rem;
+        font-size: var(--toc-font);
       }
 
       .gear-result-note {
         margin: 12px 0 0;
         color: var(--secondary-label);
-        font-size: 0.8rem;
+        font-size: var(--toc-font);
         line-height: 1.38;
       }
 
@@ -1373,8 +1384,8 @@
       @media (min-width: 700px) {
         .app {
           min-height: auto;
-          padding-top: 42px;
-          padding-bottom: 42px;
+          padding-top: 24px;
+          padding-bottom: 36px;
         }
       }
 
@@ -1388,12 +1399,12 @@
           width: 100%;
           flex: 0 0 auto;
           min-height: auto;
-          padding: 14px 28px 22px;
+          padding: 0 28px 22px;
         }
 
         .app-layout {
           display: block;
-          width: min(760px, calc(100vw - (var(--gear-sidebar-width) * 2) - 56px));
+          width: min(52.8%, calc(100% - (var(--gear-sidebar-width) * 2) - 4%));
           margin: 0 auto;
         }
 
@@ -1405,11 +1416,12 @@
           z-index: 4;
           width: var(--gear-sidebar-width);
           min-width: 0;
-          padding: 16px 14px max(16px, env(safe-area-inset-bottom));
+          padding: 12px 0 max(16px, env(safe-area-inset-bottom));
           border-right: 1px solid var(--separator);
           background: var(--elevated-bg);
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
+          scrollbar-gutter: stable;
         }
 
         .gear-mobile-toggle {
@@ -1627,7 +1639,7 @@
         }
 
         .site-footer {
-          width: min(760px, calc(100vw - (var(--gear-sidebar-width) * 2) - 56px));
+          width: min(52.8%, calc(100% - (var(--gear-sidebar-width) * 2) - 4%));
           margin: 10px auto 0;
           padding: 0 28px 34px;
         }
@@ -1783,8 +1795,18 @@
       }
 
       @media (min-width: 1280px) {
+        :root {
+          --gear-sidebar-width: 19%;
+        }
+
         .calculator-column #view-slip {
           grid-template-columns: minmax(300px, 0.9fr) minmax(380px, 1.1fr);
+        }
+      }
+
+      @media (min-width: 1100px) and (max-width: 1279px) {
+        :root {
+          --gear-sidebar-width: 20%;
         }
       }
 
