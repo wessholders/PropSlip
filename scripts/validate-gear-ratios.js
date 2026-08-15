@@ -10,6 +10,40 @@ const schemaByManufacturer = new Map([
   ["yamaha", yamahaSchemaPath]
 ]);
 
+const genericYearSchema = {
+  type: "object",
+  propertyNames: {
+    pattern: "[0-9]+(?:\\.[0-9]+)?"
+  },
+  additionalProperties: {
+    type: "object",
+    propertyNames: {
+      minLength: 1
+    },
+    additionalProperties: {
+      type: "object",
+      required: ["ratios"],
+      properties: {
+        ratios: {
+          type: "array",
+          items: {
+            type: "string",
+            pattern: "^[0-9]+(?:\\.[0-9]+)?:1$"
+          }
+        },
+        source: {
+          type: "string",
+          format: "uri"
+        },
+        diagram: {
+          type: "string",
+          format: "uri"
+        }
+      }
+    }
+  }
+};
+
 function readJson(filePath) {
   try {
     return JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -166,19 +200,20 @@ function validateFile(filePath) {
   const manufacturer = relativeParts[0];
   const schemaPath = schemaByManufacturer.get(manufacturer);
 
-  if (!schemaPath) {
-    return [`${relativePath}: no schema is registered for manufacturer directory ${JSON.stringify(manufacturer)}`];
-  }
-
   let data;
   let schema;
 
   try {
     data = readJson(filePath);
-    schema = readJson(schemaPath);
+    schema = schemaPath ? readJson(schemaPath) : genericYearSchema;
   } catch (error) {
     return [`${relativePath}: ${error.message}`];
   }
+
+  const filename = path.basename(filePath, ".json");
+  const filenameErrors = /^[0-9]{4}$/.test(filename)
+    ? []
+    : [`${relativePath}: year files must be named with a four-digit year, such as 2005.json`];
 
   const errors = validateSchema(data, schema).map((error) => `${relativePath}: ${error}`);
 
@@ -186,7 +221,7 @@ function validateFile(filePath) {
     errors.push(...validateYamahaFilename(filePath).map((error) => `${relativePath}: ${error}`));
   }
 
-  return errors;
+  return [...filenameErrors, ...errors];
 }
 
 function main() {

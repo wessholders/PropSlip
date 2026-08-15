@@ -38,7 +38,9 @@
         --radius-md: 6px;
         --tap: 46px;
         --banner-inner: 1040px;
-        --desktop-inner: 1040px;
+        --desktop-inner: 1220px;
+        --gear-sidebar-width: clamp(236px, 19vw, 288px);
+        --gear-sidebar-top: 164px;
         --display: Bahnschrift, "Aptos Display", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
         --sans: "Aptos", "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
         --mono: "Cascadia Mono", "Roboto Mono", "SFMono-Regular", Consolas, monospace;
@@ -91,6 +93,18 @@
 
       [hidden] {
         display: none !important;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
       }
 
       html {
@@ -236,6 +250,221 @@
       .stack {
         display: grid;
         gap: 16px;
+      }
+
+      .app-layout {
+        display: grid;
+        gap: 18px;
+      }
+
+      .calculator-column {
+        order: 2;
+      }
+
+      .gear-dock {
+        order: 1;
+        min-width: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .gear-dock:not(.mobile-open) .gear-lookup {
+        display: none;
+      }
+
+      .gear-mobile-toggle {
+        width: 100%;
+        min-height: var(--tap);
+        border: 1px solid var(--separator);
+        border-left: 3px solid var(--ios-marine);
+        border-radius: var(--radius-md);
+        padding: 0 12px;
+        color: var(--ios-accent);
+        background: var(--group-bg);
+        font-size: 0.92rem;
+        font-weight: 760;
+        line-height: 1.25;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      .gear-mobile-toggle::after {
+        content: ">";
+        float: right;
+        color: var(--tertiary-label);
+        font-family: var(--mono);
+        font-weight: 780;
+        transform: rotate(90deg);
+      }
+
+      .gear-dock.mobile-open .gear-mobile-toggle::after {
+        transform: rotate(-90deg);
+      }
+
+      .gear-lookup {
+        display: grid;
+        align-content: start;
+        gap: 10px;
+      }
+
+      .gear-path-wrap {
+        display: grid;
+        gap: 7px;
+        padding: 0 2px;
+      }
+
+      .gear-eyebrow {
+        margin: 0 0 0 4px;
+        color: var(--secondary-label);
+        font-family: var(--sans);
+        font-size: 0.8rem;
+        font-weight: 760;
+        letter-spacing: 0;
+      }
+
+      .gear-path {
+        min-height: 24px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+
+      .gear-path[hidden] {
+        display: none !important;
+      }
+
+      .gear-path-button {
+        min-height: 26px;
+        max-width: 100%;
+        border: 0;
+        border-radius: var(--radius-md);
+        padding: 2px 4px;
+        color: var(--ios-accent);
+        background: transparent;
+        font-size: 0.82rem;
+        font-weight: 760;
+        line-height: 1.25;
+        text-align: left;
+        cursor: pointer;
+        overflow-wrap: anywhere;
+      }
+
+      .gear-path-button:hover,
+      .gear-path-button:focus-visible {
+        color: var(--ios-accent-pressed);
+        background: color-mix(in srgb, var(--ios-accent) 9%, transparent);
+      }
+
+      .gear-path-separator {
+        color: var(--tertiary-label);
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        font-weight: 780;
+      }
+
+      .gear-panel {
+        overflow: hidden;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .gear-panel-head {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 2px 8px;
+        border-bottom: 1px solid var(--separator);
+      }
+
+      .gear-panel-head .section-title {
+        margin: 0;
+        color: var(--secondary-label);
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        font-weight: 820;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .gear-list {
+        max-height: min(54vh, 520px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .gear-row-item + .gear-row-item {
+        border-top: 1px solid var(--separator);
+      }
+
+      .gear-row {
+        width: 100%;
+        min-height: 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        border: 0;
+        padding: 10px 2px;
+        color: var(--label);
+        background: transparent;
+        font-size: 0.88rem;
+        font-weight: 650;
+        line-height: 1.22;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      .gear-row:hover,
+      .gear-row:focus-visible {
+        background: color-mix(in srgb, var(--ios-marine) 10%, transparent);
+      }
+
+      .gear-row-label {
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .gear-row-indicator {
+        color: var(--tertiary-label);
+        font-family: var(--mono);
+        font-weight: 780;
+      }
+
+      .gear-result {
+        padding: 20px 2px 22px;
+      }
+
+      .ratio-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .ratio-value {
+        margin: 0;
+        color: var(--panel-ink);
+        font-family: var(--mono);
+        font-size: 0.98rem;
+        font-style: normal;
+        font-weight: 820;
+        font-variant-numeric: tabular-nums;
+        line-height: 1.22;
+        letter-spacing: 0;
+      }
+
+      .ratio-list.multiple .ratio-value {
+        font-size: 0.98rem;
+      }
+
+      .gear-result-note {
+        margin: 12px 0 0;
+        color: var(--secondary-label);
+        font-size: 0.8rem;
+        line-height: 1.38;
       }
 
       .result-card {
@@ -1156,13 +1385,58 @@
         }
 
         .app {
-          width: min(100%, var(--desktop-inner));
+          width: 100%;
           flex: 0 0 auto;
           min-height: auto;
-          padding: 28px 28px 22px;
+          padding: 14px 28px 22px;
+        }
+
+        .app-layout {
+          display: block;
+          width: min(760px, calc(100vw - (var(--gear-sidebar-width) * 2) - 56px));
+          margin: 0 auto;
+        }
+
+        .gear-dock {
+          position: fixed;
+          top: var(--gear-sidebar-top);
+          bottom: 0;
+          left: 0;
+          z-index: 4;
+          width: var(--gear-sidebar-width);
+          min-width: 0;
+          padding: 16px 14px max(16px, env(safe-area-inset-bottom));
+          border-right: 1px solid var(--separator);
+          background: var(--elevated-bg);
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .gear-mobile-toggle {
+          display: none;
+        }
+
+        .gear-dock:not(.mobile-open) .gear-lookup {
+          display: grid;
+        }
+
+        .gear-list {
+          max-height: none;
+        }
+
+        .calculator-column {
+          width: 100%;
+          margin: 0;
+          order: 1;
+        }
+
+        .gear-dock {
+          order: 0;
         }
 
         .app-header {
+          width: 100%;
+          margin-left: 0;
           margin-bottom: 4px;
           padding: 24px 0 22px;
         }
@@ -1235,6 +1509,10 @@
 
         #view-slip {
           align-items: stretch;
+        }
+
+        .calculator-column .view {
+          grid-template-columns: minmax(0, 1fr);
         }
 
         .result-card {
@@ -1349,7 +1627,7 @@
         }
 
         .site-footer {
-          width: min(100%, var(--desktop-inner));
+          width: min(760px, calc(100vw - (var(--gear-sidebar-width) * 2) - 56px));
           margin: 10px auto 0;
           padding: 0 28px 34px;
         }
@@ -1501,6 +1779,12 @@
 
         select {
           min-width: 48px;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .calculator-column #view-slip {
+          grid-template-columns: minmax(300px, 0.9fr) minmax(380px, 1.1fr);
         }
       }
 

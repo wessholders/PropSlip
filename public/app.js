@@ -669,4 +669,4 @@
       clearStoredComparisonMode();
       switchView("slip");
       applyComparisonMode(false);
-
+      document.documentElement.dataset.ready = "true";

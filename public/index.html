@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b1720">
-    <meta name="description" content="PropSlip offers calculators for propeller slip, speed estimates, and propeller setup comparisons.">
+    <meta name="description" content="PropSlip offers outboard gear-ratio lookup, propeller slip, speed estimates, and propeller setup comparisons.">
     <link rel="canonical" href="https://prop-slip.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="PropSlip">
-    <meta property="og:title" content="PropSlip Boating Calculators">
-    <meta property="og:description" content="Calculate propeller slip, prop RPM, and theoretical setup speed from pitch, gear ratio, RPM, and GPS speed.">
+    <meta property="og:title" content="PropSlip Outboard Gear Ratio Lookup">
+    <meta property="og:description" content="Look up outboard gear ratios by manufacturer, year, horsepower, and model.">
     <meta property="og:url" content="https://prop-slip.com/">
     <meta property="og:image" content="https://prop-slip.com/og-image.png">
     <meta property="og:image:type" content="image/png">
@@ -17,10 +17,10 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="PropSlip boating calculator with classic raceboat stripe styling.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PropSlip Boating Calculators">
-    <meta name="twitter:description" content="Calculate propeller slip, prop RPM, and theoretical setup speed from pitch, gear ratio, RPM, and GPS speed.">
+    <meta name="twitter:title" content="PropSlip Outboard Gear Ratio Lookup">
+    <meta name="twitter:description" content="Look up outboard gear ratios by manufacturer, year, horsepower, and model.">
     <meta name="twitter:image" content="https://prop-slip.com/og-image.png">
-    <title>PropSlip Boating Calculators</title>
+    <title>PropSlip Outboard Gear Ratio Lookup</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-cleaver.png">
     <link rel="manifest" href="site.webmanifest">
@@ -41,15 +41,34 @@
     <header class="app-header">
       <div class="header-inner">
         <div class="brand-lockup">
-          <p class="brand-kicker">Prop setup calculator</p>
+          <p class="brand-kicker">Outboard reference</p>
           <h1 id="app-title">PropSlip</h1>
-          <p class="subtitle">Pitch / RPM / Gear / Speed</p>
+          <p class="subtitle">Gear Ratio / Pitch / RPM / Speed</p>
         </div>
       </div>
     </header>
 
     <main class="app" aria-labelledby="app-title">
-      <section class="stack" aria-label="Boating calculators">
+      <div class="app-layout">
+        <aside class="gear-dock" aria-labelledby="gearLookupTitle">
+          <button class="gear-mobile-toggle" type="button" id="gearMobileToggle" aria-expanded="false" aria-controls="gearLookupPanel">Click here for gear ratio reference</button>
+          <section class="gear-lookup" id="gearLookupPanel">
+            <div class="gear-path-wrap">
+              <h2 class="visually-hidden" id="gearLookupTitle">Gear ratio reference</h2>
+              <nav class="gear-path" id="gearPath" aria-label="Current gear ratio lookup path"></nav>
+            </div>
+            <div class="gear-panel" aria-live="polite" aria-atomic="false">
+              <div class="gear-panel-head">
+                <p class="section-title" id="gearLevelTitle">Manufacturer</p>
+              </div>
+              <div class="gear-list" id="gearList" role="list"></div>
+              <div class="gear-result" id="gearResult" hidden></div>
+              <p class="validation-message" id="gearMessage" aria-live="polite" hidden></p>
+            </div>
+          </section>
+        </aside>
+
+        <section class="stack calculator-column" aria-label="Boating calculators">
         <div class="segmented view-switcher" id="calculatorSwitcher" role="tablist" aria-label="Calculator selection">
           <button class="segment" type="button" id="slipTab" role="tab" data-view="slip" aria-selected="true" aria-controls="view-slip" aria-label="Propeller Slip">
             <span class="segment-full">Propeller Slip</span>
@@ -263,7 +282,8 @@
             </div>
           </form>
         </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer" aria-label="Site information">
@@ -516,6 +536,8 @@
     </dialog>
 
     <script src="calculators.js"></script>
+    <script src="gear-ratio-data.js"></script>
+    <script src="gear-ratio-lookup.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
