@@ -1,385 +1,313 @@
 {
   "2.5": {
-    "Mariner 2.5 2-Stroke": {
+    "2.5 TwoStroke": {
       "ratios": [
         "1.85:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/2-5hp/2-5hp-0g710613-thru-0t894576"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "3.3": {
-    "Mariner 3.3 2-Stroke": {
+    "3.3 TwoStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/3-3hp/3hp-0g710613-thru-0t894576"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "4": {
-    "Mariner 4 2-Stroke": {
+    "4 TwoStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/4hp/4hp-0p401000-thru-0r411837"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     },
-    "Mariner 4 FourStroke": {
+    "F4 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "5": {
-    "Mariner 5 2-Stroke": {
+    "5 TwoStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/5hp/5hp-0g710613-thru-0t894438"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     },
-    "Mariner 5 FourStroke": {
+    "F5 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "6": {
-    "Mariner 6 2-Stroke": {
+    "6 TwoStroke": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/6hp/6hp-9792200-thru-0p016999"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     },
-    "Mariner 6 FourStroke": {
+    "F6 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "8": {
-    "Mariner 8 2-Stroke": {
+    "8 TwoStroke": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/8hp/8hp-0g760300-thru-0t979999"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     },
-    "Mariner 8 FourStroke": {
+    "F8 FourStroke - early generation": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2005/4-stroke/10241051.pdf"
     }
   },
   "9.9": {
-    "Mariner 9.9 2-Stroke": {
+    "9.9 TwoStroke": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/9-9hp/9-9hp-0d281000-thru-0g760299"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     },
-    "Mariner 9.9 BigFoot / ProKicker": {
-      "ratios": [
-        "2.40:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 9.9 FourStroke": {
+    "F9.9 FourStroke - early generation": {
       "ratios": [
         "2.01:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    }
-  },
-  "13.5": {
-    "Mariner 13.5": {
-      "ratios": [
-        "2.00:1",
-        "2.42:1"
-      ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/13-5hp"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2005/4-stroke/10241051.pdf"
     }
   },
   "15": {
-    "Mariner 15 2-Stroke": {
+    "15 TwoStroke": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/15hp/15hp-9792200-thru-0p016999"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     },
-    "Mariner 15 FourStroke": {
+    "F15 FourStroke - early generation": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 15 Marathon XD": {
-      "ratios": [
-        "2.25:1"
-      ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/15hp/15hp-marathon-xd-0p017000-thru-0p325499"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/4-stroke/10185060.pdf"
     }
   },
   "20": {
-    "Mariner 20 2-Stroke": {
+    "20 TwoStroke": {
       "ratios": [
         "2.25:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "25": {
-    "Mariner 25 2-Stroke": {
+    "25 TwoStroke": {
       "ratios": [
         "2.25:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 25 BigFoot FourStroke": {
-      "ratios": [
-        "2.40:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 25 Marathon": {
-      "ratios": [
-        "2.25:1"
-      ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/25hp/25hp-marathon-0g760300-thru-0t979999"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "30": {
-    "Mariner 30 2-Stroke": {
+    "30 TwoStroke - legacy": {
       "ratios": [
         "2.25:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 30 EFI FourStroke": {
-      "ratios": [
-        "2.00:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "40": {
-    "Mariner 40 2-Stroke": {
+    "40 TwoStroke - 644 cc": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2017/2-stroke/8m0133626.pdf"
     },
-    "Mariner 40 EFI FourStroke": {
+    "F40 FourStroke - pre-EFI/early generation": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-40-60hp"
-    },
-    "Mariner 40 FourStroke": {
-      "ratios": [
-        "2.00:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "50": {
-    "Mariner 50 2-Stroke": {
+    "50 TwoStroke": {
       "ratios": [
         "1.83:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     },
-    "Mariner 50 EFI 2-Stroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/50hp/50hp-efi-0p153500-thru-0p400999"
-    },
-    "Mariner 50 FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 50 FourStroke BigFoot / Command Thrust": {
+    "F50 BigFoot": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    }
-  },
-  "55": {
-    "Mariner 55 3-Cylinder": {
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
+    },
+    "F50 FourStroke - early generation": {
       "ratios": [
         "1.83:1"
       ],
-      "source": "https://www.scribd.com/document/84424720/Mercury-Outboard-Drive-Parts"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "60": {
-    "Mariner 60 2-Stroke": {
+    "60 TwoStroke": {
       "ratios": [
         "1.64:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     },
-    "Mariner 60 EFI FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-40-60hp"
-    },
-    "Mariner 60 FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 60 FourStroke BigFoot / Command Thrust": {
+    "60 TwoStroke BigFoot": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
+    },
+    "F60 BigFoot / Command Thrust": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    },
+    "F60 FourStroke - early generation": {
+      "ratios": [
+        "1.83:1"
+      ],
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "75": {
-    "Mariner 75 3-Cylinder 2-Stroke": {
+    "75 TwoStroke - 3 cylinder": {
       "ratios": [
         "2.31:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     },
-    "Mariner 75 FourStroke": {
+    "F75 FourStroke - early generation": {
       "ratios": [
         "2.07:1"
       ],
-      "source": "https://www.marineengine.com/parts/mercury-outboard-parts/75-90-fourstroke"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "90": {
-    "Mariner 90 3-Cylinder 2-Stroke": {
+    "90 TwoStroke - 3 cylinder": {
       "ratios": [
         "2.31:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     },
-    "Mariner 90 FourStroke": {
+    "F90 FourStroke - early generation": {
       "ratios": [
         "2.07:1"
       ],
-      "source": "https://www.marineengine.com/parts/mercury-outboard-parts/75-90-fourstroke"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "100": {
-    "Mariner 100 4-Cylinder 2-Stroke": {
+    "100 TwoStroke - 4 cylinder": {
       "ratios": [
         "2.07:1",
         "2.31:1"
       ],
-      "source": "https://www.scribd.com/document/84424720/Mercury-Outboard-Drive-Parts"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "115": {
-    "Mariner 115 4-Cylinder 2-Stroke": {
+    "115 TwoStroke - 4 cylinder": {
       "ratios": [
         "2.07:1",
         "2.31:1"
       ],
-      "source": "https://www.scribd.com/document/84424720/Mercury-Outboard-Drive-Parts"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     },
-    "Mariner 115 FourStroke": {
+    "F115 EFI FourStroke - early generation": {
       "ratios": [
         "2.07:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "125": {
-    "Mariner 125 4-Cylinder 2-Stroke [0D283222-0G760299]": {
+    "125 TwoStroke - 4 cylinder": {
       "ratios": [
         "2.07:1",
         "2.31:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/125hp/125hp-0d283222-thru-0g760299"
-    },
-    "Mariner 125 4-Cylinder 2-Stroke [0G760300-UP]": {
-      "ratios": [
-        "2.07:1"
-      ],
-      "source": "https://www.scribd.com/document/84424720/Mercury-Outboard-Drive-Parts"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "135": {
-    "Mariner 135 DFI / OptiMax": {
+    "135 OptiMax": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     }
   },
   "150": {
-    "Mariner 150 EFI / XRI 2-Stroke": {
+    "150 EFI / Magnum EFI TwoStroke": {
       "ratios": [
         "1.87:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 150 V6 / XR6 2-Stroke": {
-      "ratios": [
-        "1.78:1",
-        "1.87:1"
-      ],
-      "source": "https://www.boats.net/catalog/mercury/outboard/150hp/150hp-0d082000-thru-0g303045"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "175": {
-    "Mariner 175 DFI / OptiMax": {
+    "175 OptiMax": {
       "ratios": [
         "1.87:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     },
-    "Mariner 175 EFI 2-Stroke": {
+    "175 V6 / EFI TwoStroke": {
       "ratios": [
         "1.87:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/download/dosearch/@isnew/desc?categories=OUTBOARD%24&lang=EN&mod=4"
     }
   },
   "200": {
-    "Mariner 200 DFI / OptiMax 3.0L": {
-      "ratios": [
-        "1.75:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 200 V6 / EFI 2.5L": {
+    "200 EFI / Magnum EFI TwoStroke": {
       "ratios": [
         "1.87:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
+    },
+    "200 OptiMax": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     }
   },
   "225": {
-    "Mariner 225 DFI / OptiMax": {
+    "225 EFI / Magnum EFI TwoStroke": {
       "ratios": [
         "1.75:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     },
-    "Mariner 225 EFI 3.0L": {
+    "225 OptiMax": {
       "ratios": [
         "1.75:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     }
   },
   "250": {
-    "Mariner 250 EFI / XB 3.0L": {
+    "250 EFI TwoStroke": {
       "ratios": [
         "1.75:1"
       ],
-      "source": "https://www.boats.net/catalog/mercury/outboard"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   }
 }

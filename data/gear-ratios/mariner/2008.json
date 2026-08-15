@@ -1,287 +1,284 @@
 {
   "2.5": {
-    "Mariner 2.5 FourStroke": {
+    "F2.5 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "3.5": {
-    "Mariner 3.5 FourStroke": {
+    "F3.5 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "4": {
-    "Mariner 4 FourStroke": {
+    "F4 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "5": {
-    "Mariner 5 FourStroke": {
+    "F5 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "6": {
-    "Mariner 6 FourStroke": {
+    "F6 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "8": {
-    "Mariner 8 FourStroke": {
+    "F8 FourStroke": {
       "ratios": [
         "2.08:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2005/4-stroke/10241051.pdf"
     }
   },
   "9.9": {
-    "Mariner 9.9 BigFoot / ProKicker": {
-      "ratios": [
-        "2.42:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 9.9 FourStroke": {
+    "F9.9 FourStroke": {
       "ratios": [
         "2.08:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2005/4-stroke/10241051.pdf"
     }
   },
   "15": {
-    "Mariner 15 FourStroke": {
+    "F15 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "20": {
+    "F20 EFI FourStroke": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "25": {
-    "Mariner 25 EFI FourStroke": {
+    "F25 EFI FourStroke - 526 cc generation": {
       "ratios": [
         "1.92:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "30": {
-    "Mariner 30 EFI FourStroke": {
+    "F30 EFI FourStroke - 526 cc generation": {
       "ratios": [
         "1.92:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "40": {
-    "Mariner 40 EFI FourStroke": {
-      "ratios": [
-        "2.00:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-40-60hp"
-    },
-    "Mariner 40 FourStroke": {
-      "ratios": [
-        "2.00:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 40 FourStroke BigFoot / Command Thrust": {
+    "F40 EFI BigFoot": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
+    },
+    "F40 EFI FourStroke": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "50": {
-    "Mariner 50 FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 50 FourStroke BigFoot / Command Thrust": {
+    "F50 BigFoot": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
+    },
+    "F50 EFI FourStroke": {
+      "ratios": [
+        "1.83:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "60": {
-    "Mariner 60 EFI FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-40-60hp"
-    },
-    "Mariner 60 FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 60 FourStroke BigFoot / Command Thrust": {
+    "F60 BigFoot / Command Thrust": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://fybmarine.shop/download/sample/89"
+    },
+    "F60 EFI FourStroke": {
+      "ratios": [
+        "1.83:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "75": {
-    "Mariner 75 DFI / OptiMax": {
+    "75 OptiMax": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10208060_1.pdf"
     },
-    "Mariner 75 FourStroke": {
+    "F75 FourStroke": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2014/4-stroke/8m0087582r.pdf"
     }
   },
   "80": {
-    "Mariner 80 EFI FourStroke": {
+    "F80 EFI FourStroke": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "90": {
-    "Mariner 90 DFI / OptiMax": {
+    "90 OptiMax": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10208060_1.pdf"
     },
-    "Mariner 90 FourStroke": {
+    "F90 FourStroke": {
       "ratios": [
         "2.33:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2014/4-stroke/8m0087582r.pdf"
+    }
+  },
+  "100": {
+    "F100 EFI FourStroke": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "115": {
-    "Mariner 115 DFI / OptiMax": {
+    "115 OptiMax": {
       "ratios": [
         "2.07:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10208060_1.pdf"
     },
-    "Mariner 115 FourStroke": {
+    "F115 EFI FourStroke - early generation": {
       "ratios": [
         "2.07:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "135": {
-    "Mariner 135 DFI / OptiMax": {
+    "135 OptiMax": {
       "ratios": [
         "2.00:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     },
-    "Mariner 135 Verado": {
+    "Verado 135 L4": {
       "ratios": [
         "2.08:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2007/verado/10249r71.pdf"
     }
   },
   "150": {
-    "Mariner 150 DFI / OptiMax": {
+    "150 OptiMax": {
       "ratios": [
         "1.87:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     },
-    "Mariner 150 Verado": {
+    "Verado 150 L4": {
       "ratios": [
         "2.08:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2007/verado/10249r71.pdf"
     }
   },
   "175": {
-    "Mariner 175 DFI / OptiMax": {
+    "175 OptiMax": {
       "ratios": [
         "1.87:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     },
-    "Mariner 175 Verado": {
+    "Verado 175 L4": {
       "ratios": [
         "2.08:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2007/verado/10249r71.pdf"
     }
   },
   "200": {
-    "Mariner 200 DFI / OptiMax 3.0L": {
+    "200 OptiMax": {
       "ratios": [
         "1.75:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     },
-    "Mariner 200 Verado": {
+    "Verado 200 L6": {
       "ratios": [
-        "2.08:1"
+        "1.85:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "225": {
-    "Mariner 225 DFI / OptiMax": {
+    "225 OptiMax": {
       "ratios": [
         "1.75:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2006/optimax/10199060_1.pdf"
     },
-    "Mariner 225 Verado": {
+    "Verado 225 L6": {
       "ratios": [
         "1.85:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "250": {
-    "Mariner 250 Verado L6": {
+    "Verado 250 L6": {
       "ratios": [
         "1.85:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "275": {
-    "Mariner 275 Verado": {
+    "Verado 275 L6": {
       "ratios": [
         "1.85:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "300": {
-    "Mariner 300 Verado L6": {
+    "Verado 300 L6": {
       "ratios": [
-        "1.75:1",
         "1.85:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2014/verado/8m0087584r.pdf"
     }
   }
 }

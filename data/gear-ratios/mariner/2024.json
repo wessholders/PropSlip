@@ -1,268 +1,222 @@
 {
   "2.5": {
-    "Mariner 2.5 FourStroke": {
+    "F2.5 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "3.5": {
-    "Mariner 3.5 FourStroke": {
+    "F3.5 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "4": {
-    "Mariner 4 FourStroke": {
+    "F4 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "5": {
-    "Mariner 5 FourStroke": {
+    "F5 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "6": {
-    "Mariner 6 FourStroke": {
+    "F6 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://www.yumpu.com/en/document/view/3587377/mariner-outboards-2006"
     }
   },
   "8": {
-    "Mariner 8 FourStroke": {
+    "F8 FourStroke": {
       "ratios": [
         "2.08:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2005/4-stroke/10241051.pdf"
     }
   },
   "9.9": {
-    "Mariner 9.9 BigFoot / ProKicker": {
-      "ratios": [
-        "2.42:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 9.9 FourStroke": {
+    "F9.9 FourStroke": {
       "ratios": [
         "2.08:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    }
-  },
-  "10": {
-    "Mariner 10 EFI FourStroke": {
-      "ratios": [
-        "2.08:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2005/4-stroke/10241051.pdf"
     }
   },
   "15": {
-    "Mariner 15 FourStroke": {
+    "F15 FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "20": {
-    "Mariner 20 FourStroke": {
+    "F20 EFI FourStroke": {
       "ratios": [
         "2.15:1"
       ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "25": {
-    "Mariner 25 EFI FourStroke (new generation)": {
-      "ratios": [
-        "2.17:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-25-30hp"
-    }
-  },
-  "30": {
-    "Mariner 30 EFI FourStroke (new generation)": {
-      "ratios": [
-        "2.17:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-25-30hp"
-    }
-  },
-  "40": {
-    "Mariner 40 EFI FourStroke": {
-      "ratios": [
-        "2.00:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-40-60hp"
-    },
-    "Mariner 40 FourStroke": {
-      "ratios": [
-        "2.00:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 40 FourStroke BigFoot / Command Thrust": {
-      "ratios": [
-        "2.33:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    }
-  },
-  "50": {
-    "Mariner 50 FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 50 FourStroke BigFoot / Command Thrust": {
-      "ratios": [
-        "2.33:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    }
-  },
-  "60": {
-    "Mariner 60 EFI FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-40-60hp"
-    },
-    "Mariner 60 FourStroke": {
-      "ratios": [
-        "1.83:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 60 FourStroke BigFoot / Command Thrust": {
-      "ratios": [
-        "2.33:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    }
-  },
-  "75": {
-    "Mariner 75 FourStroke": {
-      "ratios": [
-        "2.07:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
-    }
-  },
-  "90": {
-    "Mariner 90 FourStroke": {
-      "ratios": [
-        "2.07:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
-    },
-    "Mariner 90 FourStroke Command Thrust": {
-      "ratios": [
-        "2.38:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
-    }
-  },
-  "115": {
-    "Mariner 115 FourStroke": {
-      "ratios": [
-        "2.07:1"
-      ],
-      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
-    },
-    "Mariner 115 FourStroke Command Thrust": {
-      "ratios": [
-        "2.38:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
-    }
-  },
-  "150": {
-    "Mariner 150 EFI FourStroke": {
+    "F25 EFI FourStroke - 526 cc generation": {
       "ratios": [
         "1.92:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "30": {
+    "30 Marathon Commercial": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    },
+    "F30 EFI FourStroke - 526 cc generation": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "40": {
+    "F40 EFI FourStroke": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "50": {
+    "50 Marathon Commercial": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    },
+    "F50 EFI FourStroke": {
+      "ratios": [
+        "1.83:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "60": {
+    "60 Marathon Commercial": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    },
+    "F60 BigFoot / Command Thrust": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    },
+    "F60 EFI FourStroke": {
+      "ratios": [
+        "1.83:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "70": {
+    "F70 EFI FourStroke": {
+      "ratios": [
+        "2.07:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "90": {
+    "90 Marathon Commercial": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    },
+    "F90 EFI FourStroke": {
+      "ratios": [
+        "2.07:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "115": {
+    "F115 EFI Command Thrust": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    },
+    "F115 EFI FourStroke": {
+      "ratios": [
+        "2.07:1"
+      ],
+      "source": "https://fybmarine.shop/download/sample/89"
+    }
+  },
+  "150": {
+    "F150 EFI FourStroke": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://download.brunswick-marine.com/filereader/file/pdf/4/enen/outboard/2014/4-stroke/8m0087583r.pdf"
     }
   },
   "175": {
-    "Mariner 175 FourStroke V6": {
+    "F175 EFI V6 FourStroke": {
       "ratios": [
         "1.85:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-175-225hp"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "200": {
-    "Mariner 200 FourStroke V6": {
+    "F200 EFI V6 FourStroke": {
       "ratios": [
         "1.85:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-175-225hp"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "225": {
-    "Mariner 225 FourStroke V6": {
+    "F225 EFI V6 FourStroke": {
       "ratios": [
         "1.85:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-175-225hp"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "250": {
-    "Mariner 250 FourStroke / Verado V8": {
+    "Verado 250 V8": {
       "ratios": [
         "1.85:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-250-300hp"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   },
   "300": {
-    "Mariner 300 FourStroke / Verado V8": {
+    "Verado 300 V8": {
       "ratios": [
-        "1.75:1",
         "1.85:1"
       ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-250-300hp"
-    }
-  },
-  "350": {
-    "Mariner 350 Verado V10": {
-      "ratios": [
-        "2.08:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/verado/verado-350-400hp"
-    }
-  },
-  "400": {
-    "Mariner 400 Verado V10": {
-      "ratios": [
-        "2.08:1"
-      ],
-      "source": "https://www.mercurymarine.com/us/en/engines/outboard/verado/verado-350-400hp"
-    }
-  },
-  "600": {
-    "Mariner 600 Verado V12": {
-      "ratios": [
-        "2.97:1",
-        "2.50:1"
-      ],
-      "source": "https://soundingsonline.com/features/mercury-verado-600/"
+      "source": "https://fybmarine.shop/download/sample/89"
     }
   }
 }
