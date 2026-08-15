@@ -1,0 +1,82 @@
+{
+  "2": {
+    "BF2 / BF2D legacy": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "5": {
+    "BF5A / BF5D": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "8": {
+    "BF8A legacy": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "9.9": {
+    "BF9.9A legacy": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "15": {
+    "BF15A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "25": {
+    "BF25A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "30": {
+    "BF30A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "35": {
+    "BF35A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "45": {
+    "BF45A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "90": {
+    "BF90A legacy": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://marine.honda.com/company/about-us"
+    }
+  }
+}

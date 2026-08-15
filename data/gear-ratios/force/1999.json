@@ -1,0 +1,46 @@
+{
+  "40": {
+    "Force 40 2-Stroke": {
+      "ratios": [
+        "2.00:1",
+        "1.64:1"
+      ],
+      "source": "https://www.brunswick.com/investors/sec-filings/annual-reports/content/0001047469-98-012167/10-K405.txt"
+    }
+  },
+  "50": {
+    "Force 50 2-Stroke": {
+      "ratios": [
+        "2.00:1",
+        "1.64:1"
+      ],
+      "source": "https://www.brunswick.com/investors/sec-filings/annual-reports/content/0001047469-98-012167/10-K405.txt"
+    }
+  },
+  "75": {
+    "Force 75 2-Stroke": {
+      "ratios": [
+        "1.64:1"
+      ],
+      "source": "https://www.brunswick.com/investors/sec-filings/annual-reports/content/0001047469-98-012167/10-K405.txt"
+    }
+  },
+  "90": {
+    "Force 90 2-Stroke": {
+      "ratios": [
+        "2.00:1",
+        "1.93:1"
+      ],
+      "source": "https://www.brunswick.com/investors/sec-filings/annual-reports/content/0001047469-98-012167/10-K405.txt"
+    }
+  },
+  "120": {
+    "Force 120 2-Stroke": {
+      "ratios": [
+        "1.93:1",
+        "1.73:1"
+      ],
+      "source": "https://www.brunswick.com/investors/sec-filings/annual-reports/content/0001047469-98-012167/10-K405.txt"
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "2.5": {
+    "DF2.5 / DF2.5A": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboards/"
+    }
+  },
+  "4": {
+    "DF4A": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/2-5-30hp/df4/"
+    }
+  },
+  "5": {
+    "DF5A": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/2-5-30hp/df4/"
+    }
+  },
+  "6": {
+    "DF6A": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/2-5-30hp/df4/"
+    }
+  },
+  "9.9": {
+    "DF9.9B EFI": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/2-5-30hp/df9-9b/"
+    }
+  },
+  "15": {
+    "DF15A EFI": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/2-5-30hp/df9-9b/"
+    }
+  },
+  "20": {
+    "DF20A EFI": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/2-5-30hp/df9-9b/"
+    }
+  },
+  "25": {
+    "DF25A": {
+      "ratios": [
+        "2.09:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/2-5-30hp/df25a/"
+    }
+  },
+  "30": {
+    "DF30A": {
+      "ratios": [
+        "2.09:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/2-5-30hp/df25a/"
+    }
+  },
+  "40": {
+    "DF40A": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "50": {
+    "DF50A": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DF50AV High Energy Rotation": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "60": {
+    "DF60A": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DF60AV High Energy Rotation": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "70": {
+    "DF70A": {
+      "ratios": [
+        "2.59:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/40-90hp/df90a/"
+    }
+  },
+  "80": {
+    "DF80A": {
+      "ratios": [
+        "2.59:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/40-90hp/df90a/"
+    }
+  },
+  "90": {
+    "DF90A": {
+      "ratios": [
+        "2.59:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/40-90hp/df90a/"
+    }
+  },
+  "115": {
+    "DF115A": {
+      "ratios": [
+        "2.59:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "140": {
+    "DF140A": {
+      "ratios": [
+        "2.59:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "150": {
+    "DF150 / DF150A": {
+      "ratios": [
+        "2.50:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DF150AP": {
+      "ratios": [
+        "2.50:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "175": {
+    "DF175 / DF175A": {
+      "ratios": [
+        "2.50:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DF175AP": {
+      "ratios": [
+        "2.50:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "200": {
+    "DF200 V6": {
+      "ratios": [
+        "2.29:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DF200A / DF200AP Inline-4": {
+      "ratios": [
+        "2.50:1"
+      ],
+      "source": "https://www.suzukimarine.com/outboard/115-200hp/df200a/"
+    }
+  },
+  "225": {
+    "DF225 V6": {
+      "ratios": [
+        "2.29:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "250": {
+    "DF250 V6": {
+      "ratios": [
+        "2.29:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DF250AP": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "300": {
+    "DF300AP": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "325": {
+    "DF325A Dual Prop": {
+      "ratios": [
+        "2.29:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "350": {
+    "DF350A Dual Prop": {
+      "ratios": [
+        "2.29:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  }
+}

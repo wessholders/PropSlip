@@ -1,0 +1,168 @@
+{
+  "4": {
+    "DT4 legacy 2-Stroke": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "5": {
+    "DT5 legacy 2-Stroke": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "6": {
+    "DT6 legacy 2-Stroke": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "8": {
+    "DT8 legacy 2-Stroke": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "9.9": {
+    "DF9.9 legacy 4-Stroke": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DT9.9 legacy 2-Stroke": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "15": {
+    "DF15 legacy 4-Stroke": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DT15 legacy 2-Stroke": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "25": {
+    "DF25 / DF25V legacy": {
+      "ratios": [
+        "2.09:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DT25 legacy 2-Stroke": {
+      "ratios": [
+        "2.09:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "30": {
+    "DF30 legacy": {
+      "ratios": [
+        "2.09:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DT30 legacy 2-Stroke": {
+      "ratios": [
+        "2.09:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "40": {
+    "DF40 legacy": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    },
+    "DT40 legacy 2-Stroke": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "50": {
+    "DF50 legacy": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "55": {
+    "DT55 legacy 2-Stroke": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "60": {
+    "DF60 legacy": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "65": {
+    "DT65 legacy 2-Stroke": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "70": {
+    "DF70 legacy": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "90": {
+    "DF90 legacy": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "115": {
+    "DF115 legacy": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "140": {
+    "DF140 legacy": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  }
+}

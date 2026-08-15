@@ -1,0 +1,126 @@
+{
+  "4": {
+    "J4 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "5": {
+    "J5 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "6": {
+    "J6 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "8": {
+    "J8 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "9.9": {
+    "9.9 HP Johnson 2-Stroke": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/"
+    },
+    "J9.9 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "15": {
+    "15 HP Johnson 2-Stroke": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/"
+    },
+    "J15 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "25": {
+    "J25 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.09:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "30": {
+    "J30 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.09:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "40": {
+    "J40 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "50": {
+    "J50 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "70": {
+    "J70 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "90": {
+    "J90 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "115": {
+    "J115 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  },
+  "140": {
+    "J140 4-Stroke (Suzuki-built)": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.suzukimarine.com/wp-content/uploads/2023/01/Suzuki-2023-Full-Line-Catalog-reduced.pdf"
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "2.3": {
+    "BF2.3": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://marine.honda.com/outboards/models/portable/bf2_3"
+    }
+  },
+  "5": {
+    "BF5A / BF5D": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "8": {
+    "BF8D": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://marine.honda.com/outboards/models/portable/bf8-9_9"
+    }
+  },
+  "9.9": {
+    "BF9.9D": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://marine.honda.com/outboards/models/portable/bf8-9_9"
+    }
+  },
+  "15": {
+    "BF15D": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/outboards/models/portable/bf15-20"
+    }
+  },
+  "20": {
+    "BF20D": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/outboards/models/portable/bf15-20"
+    }
+  },
+  "25": {
+    "BF25A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "30": {
+    "BF30A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "40": {
+    "BF40A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "50": {
+    "BF50A": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "75": {
+    "BF75A legacy": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "90": {
+    "BF90A legacy": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://marine.honda.com/company/about-us"
+    }
+  },
+  "115": {
+    "BF115A": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "130": {
+    "BF130A": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals/models/bf130"
+    }
+  },
+  "135": {
+    "BF135A": {
+      "ratios": [
+        "2.14:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "150": {
+    "BF150A / current BF150": {
+      "ratios": [
+        "2.14:1"
+      ],
+      "source": "https://marine.honda.com/outboards/models/highpower/bf115-140-150"
+    }
+  },
+  "175": {
+    "BF175A": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "200": {
+    "BF200A/D legacy V6": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  },
+  "225": {
+    "BF225A/D legacy V6": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://marine.honda.com/support/manuals"
+    }
+  }
+}

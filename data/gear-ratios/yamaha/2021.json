@@ -1,0 +1,878 @@
+{
+  "2.5": {
+    "F2.5LMHB": {
+      "ratios": [
+        "2.01:1"
+      ],
+      "source": "https://yamahamarinemedia.com/wp-content/uploads/2016/01/YamahaF2.5_HotSheet.pdf"
+    },
+    "F2.5SMHB": {
+      "ratios": [
+        "2.01:1"
+      ],
+      "source": "https://yamahamarinemedia.com/wp-content/uploads/2016/01/YamahaF2.5_HotSheet.pdf"
+    }
+  },
+  "4": {
+    "F4LMHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F4SMHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "6": {
+    "F6LMHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F6SMHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "8": {
+    "F8LMHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F8SMHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "9.9": {
+    "F9.9LEB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9LMHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9SMHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9LPB": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9LPHB": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9LWHB": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9XPB": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9XPHB": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9XWHB": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "15": {
+    "F15LEHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15LMHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15LPHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15SEHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15SMHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "20": {
+    "F20LMHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20LWB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20LWHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20LWPB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20LWPHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20SMHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20SWB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20SWHB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F20SWPB": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "25": {
+    "F25LC": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25LMHC": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25LWC": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25LWHC": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25LWTC": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25SMHC": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25SWC": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25SWHC": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T25LWTC": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T25XWTC": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "30": {
+    "F30LA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F30LEHA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "40": {
+    "F40LA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F40LEHA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "50": {
+    "F50LB": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T50LB": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "60": {
+    "F60LB": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T60LB": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "70": {
+    "F70LA": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/115-30-hp/115-75-hp"
+    }
+  },
+  "75": {
+    "F75LB": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/115-30-hp/115-75-hp"
+    }
+  },
+  "90": {
+    "F90LB": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/115-30-hp/115-75-hp"
+    },
+    "F90XB": {
+      "ratios": [
+        "2.27:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/115-30-hp/115-75-hp"
+    },
+    "VF90LA": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-in-line-4"
+    },
+    "VF90XA": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-in-line-4"
+    }
+  },
+  "115": {
+    "F115LB": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/115-30-hp/115-75-hp"
+    },
+    "F115XB": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/115-30-hp/115-75-hp"
+    },
+    "LF115XB": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/115-30-hp/115-75-hp"
+    },
+    "VF115LA": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-in-line-4"
+    },
+    "VF115XA": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-in-line-4"
+    }
+  },
+  "150": {
+    "F150LB": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F150LCA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F150XB": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F150XCA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "LF150XB": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "LF150XCA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "VF150LA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-in-line-4"
+    },
+    "VF150XA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-in-line-4"
+    }
+  },
+  "175": {
+    "F175LA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F175LCA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F175XA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F175XCA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "LF175XCA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "VF175LA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-in-line-4"
+    },
+    "VF175XA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-in-line-4"
+    }
+  },
+  "200": {
+    "F200LB": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F200LCA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F200XB": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "F200XCA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "LF200LCA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "LF200XB": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "LF200XCA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/in-line-4"
+    },
+    "VF200LA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-4-2l"
+    },
+    "VF200XA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-4-2l"
+    }
+  },
+  "225": {
+    "F225UCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F225XB": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F225XCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF225UCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF225XCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "VF225LA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-4-2l"
+    }
+  },
+  "250": {
+    "F250UCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F250XB": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F250XCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF250UCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF250XB": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF250XCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "VF250LA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-4-2l"
+    },
+    "VF250XA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/v-max-sho/v-max-4-2l"
+    }
+  },
+  "300": {
+    "F300ECA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F300ECA2": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F300UCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F300UCA2": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F300XA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F300XCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "F300XCA2": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF300ECA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF300ECA2": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF300UCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF300UCA2": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF300XA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF300XCA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    },
+    "LF300XCA2": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/350-150-hp/v6-4-2l"
+    }
+  },
+  "350": {
+    "F350UCC": {
+      "ratios": [
+        "1.73:1"
+      ],
+      "source": "https://cdn1.polaris.com/globalassets/godfrey/2019/performance-tests/performance-test/2015_250express_yamaha_f350xcb.pdf?v=73c22e5e"
+    },
+    "F350UCC2": {
+      "ratios": [
+        "1.73:1"
+      ],
+      "source": "https://cdn1.polaris.com/globalassets/godfrey/2019/performance-tests/performance-test/2015_250express_yamaha_f350xcb.pdf?v=73c22e5e"
+    },
+    "F350XCC": {
+      "ratios": [
+        "1.73:1"
+      ],
+      "source": "https://cdn1.polaris.com/globalassets/godfrey/2019/performance-tests/performance-test/2015_250express_yamaha_f350xcb.pdf?v=73c22e5e"
+    },
+    "F350XCC2": {
+      "ratios": [
+        "1.73:1"
+      ],
+      "source": "https://cdn1.polaris.com/globalassets/godfrey/2019/performance-tests/performance-test/2015_250express_yamaha_f350xcb.pdf?v=73c22e5e"
+    },
+    "LF350UCC": {
+      "ratios": [
+        "1.73:1"
+      ],
+      "source": "https://cdn1.polaris.com/globalassets/godfrey/2019/performance-tests/performance-test/2015_250express_yamaha_f350xcb.pdf?v=73c22e5e"
+    },
+    "LF350UCC2": {
+      "ratios": [
+        "1.73:1"
+      ],
+      "source": "https://cdn1.polaris.com/globalassets/godfrey/2019/performance-tests/performance-test/2015_250express_yamaha_f350xcb.pdf?v=73c22e5e"
+    },
+    "LF350XCC": {
+      "ratios": [
+        "1.73:1"
+      ],
+      "source": "https://cdn1.polaris.com/globalassets/godfrey/2019/performance-tests/performance-test/2015_250express_yamaha_f350xcb.pdf?v=73c22e5e"
+    },
+    "LF350XCC2": {
+      "ratios": [
+        "1.73:1"
+      ],
+      "source": "https://cdn1.polaris.com/globalassets/godfrey/2019/performance-tests/performance-test/2015_250express_yamaha_f350xcb.pdf?v=73c22e5e"
+    }
+  },
+  "425": {
+    "LXF425ESA": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "LXF425ESA2": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "LXF425ESA7": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "LXF425USA": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "LXF425USA2": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "LXF425USA7": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "LXF425XSA": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "LXF425XSA2": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "LXF425XSA7": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425ESA": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425ESA2": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425ESA7": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425USA": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425USA2": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425USA7": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425XSA": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425XSA2": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    },
+    "XF425XSA7": {
+      "ratios": [
+        "1.79:1"
+      ],
+      "source": "https://yamahaoutboards.com/outboards/xto-offshore/v8-5-6l"
+    }
+  }
+}

@@ -1,0 +1,638 @@
+{
+  "2": {
+    "2MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-1995-2msht-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "3": {
+    "3MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-1995-3msht-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "4": {
+    "F4MLHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F4MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "5": {
+    "5MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "6": {
+    "F6MLHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F6MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "8": {
+    "8MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F8MLHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F8MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T8ELHA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T8EXHA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T8LRA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T8PLHA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T8PXHA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T8PXRA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "9.9": {
+    "9.9MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9ELRA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9MLHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F9.9MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9ELHA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9ELRA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T9.9EXHA": {
+      "ratios": [
+        "2.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "15": {
+    "15MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15ELHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15ESHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15MLHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15PLHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F15PLRA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "25": {
+    "25MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "25MSHA3": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.walmart.ca/en/ip/Forward-Gear-24-teeth-For-Yamaha-Outboard-25HP-30HP-2-4T-6J8-45560-00/4YA9QII2DZE0"
+    },
+    "F25ELHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25ELRA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25ESHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25ESRA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25MLHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25MSHA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F25TLRA": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T25TLRA": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "30": {
+    "30MSHA": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.walmart.ca/en/ip/Forward-Gear-24-teeth-For-Yamaha-Outboard-25HP-30HP-2-4T-6J8-45560-00/4YA9QII2DZE0"
+    },
+    "F30TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T30ESHA": {
+      "ratios": [
+        "2.33:1"
+      ]
+    }
+  },
+  "40": {
+    "40TLRA": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "C40TLRA": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F40ESRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F40MLHA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F40MSHA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F40TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "50": {
+    "50TLRA": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F50TLRA": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "T50TLRA": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-1997-p60tlhv-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "60": {
+    "60TLRA": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-1997-p60tlhv-outboard-motor-parts-diagram-catalog"
+    },
+    "F60TLRA": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "70": {
+    "70TLRA": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://jlmmarine.com/blogs/diagrams/yamaha-1997-p60tlhv-outboard-motor-parts-diagram-catalog"
+    }
+  },
+  "80": {
+    "F80TLRA": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "90": {
+    "90TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.yamahaparts.co.uk/75hk/1997?c=6H0&h=Boitier+Dhelice%2C+Transmissio&id=1604&m=P75&n=75+TLH&pic=36241&r=Europe+General+%28999%29"
+    }
+  },
+  "100": {
+    "F100TLRA": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F100TXRA": {
+      "ratios": [
+        "2.31:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "115": {
+    "115TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "115TXRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "F115TLRA": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "F115TXRA": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    },
+    "LF115TXRA": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Yamaha"
+    }
+  },
+  "130": {
+    "130TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "130TXRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    }
+  },
+  "150": {
+    "150TXRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "DX150TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "SX150TXRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "V150TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "VX150TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "LZ150TXRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "VZ150TLRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "Z150TLRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "Z150TXRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    }
+  },
+  "175": {
+    "VZ175TLRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "Z175TXRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    }
+  },
+  "200": {
+    "SX200TXRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "VX200TLRA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "F200TXRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "LF200TXRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "LZ200TXRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "VZ200TLRA": {
+      "ratios": [
+        "1.86:1",
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "Z200TXRA": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    }
+  },
+  "225": {
+    "LX225TXRA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "SX225TURA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "SX225TXRA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "VX225TLRA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "F225TURA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "F225TXRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "LF225TURA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "LF225TXRA": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "VZ225TLRA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    }
+  },
+  "250": {
+    "LX250TURA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "LX250TXRA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "SX250TURA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "SX250TXRA": {
+      "ratios": [
+        "1.81:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    },
+    "VX250TLRA": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.sterndrivereplacement.com/categories/outboard-lower-unit/yamaha-lower-unit-reference-guide-84-06-outboard-lower-unit/"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "15": {
+    "15 E-TEC": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    },
+    "15 E-TEC H.O.": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/594"
+    }
+  },
+  "25": {
+    "25 E-TEC": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "30": {
+    "30 E-TEC": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "40": {
+    "40 E-TEC": {
+      "ratios": [
+        "2.67:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "50": {
+    "50 E-TEC": {
+      "ratios": [
+        "2.67:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "60": {
+    "60 E-TEC": {
+      "ratios": [
+        "2.67:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "65": {
+    "65 E-TEC": {
+      "ratios": [
+        "2.67:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "75": {
+    "75 E-TEC": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "90": {
+    "90 E-TEC": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "115": {
+    "115 E-TEC": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "130": {
+    "130 E-TEC": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "150": {
+    "150 E-TEC": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    },
+    "150 E-TEC H.O.": {
+      "ratios": [
+        "1.86:1",
+        "2.17:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/594"
+    }
+  },
+  "175": {
+    "175 E-TEC": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "200": {
+    "200 E-TEC": {
+      "ratios": [
+        "1.86:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    },
+    "200 E-TEC H.O.": {
+      "ratios": [
+        "1.86:1",
+        "2.17:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/594"
+    }
+  },
+  "225": {
+    "225 E-TEC": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "250": {
+    "250 E-TEC": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  },
+  "300": {
+    "300 E-TEC": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.operatorsguides.brp.com/F/744"
+    }
+  }
+}

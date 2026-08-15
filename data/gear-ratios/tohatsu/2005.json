@@ -1,0 +1,250 @@
+{
+  "2.5": {
+    "M2.5A2": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/common/owners_manual/003-11045-EBC1_M2.5-3.5B_EX_EN_web.pdf"
+    }
+  },
+  "3.5": {
+    "M3.5A2": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/common/owners_manual/003-11045-EBC1_M2.5-3.5B_EX_EN_web.pdf"
+    },
+    "M3.5B2": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/common/owners_manual/003-11045-EBC1_M2.5-3.5B_EX_EN_web.pdf"
+    }
+  },
+  "4": {
+    "M4C": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M4C.html"
+    },
+    "MFS4B": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M4C.html"
+    }
+  },
+  "5": {
+    "M5B": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M4C.html"
+    },
+    "MFS5B": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M4C.html"
+    }
+  },
+  "6": {
+    "M6": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M8B.html"
+    },
+    "MFS6B": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M4C.html"
+    }
+  },
+  "8": {
+    "M8B": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M8B.html"
+    },
+    "MFS8A2": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/mfs8c.html"
+    }
+  },
+  "9.8": {
+    "M9.8B": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M9.8B.html"
+    },
+    "MFS9.8A2": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/na/outboards/9_8_4st_1.html"
+    }
+  },
+  "9.9": {
+    "M9.9D2": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/common/owners_manual/003-11049-MBD1_M99-18E2_EX_EN_web.pdf"
+    },
+    "MFS9.9B2": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/MFS9.9E.html"
+    }
+  },
+  "15": {
+    "M15D2": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/common/owners_manual/003-11049-MBD1_M99-18E2_EX_EN_web.pdf"
+    },
+    "MFS15B2": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/MFS15E.html"
+    }
+  },
+  "18": {
+    "M18E2": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/common/owners_manual/003-11049-MBD1_M99-18E2_EX_EN_web.pdf"
+    },
+    "MFS18B2": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/MFS15E.html"
+    }
+  },
+  "25": {
+    "M25H": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M25H.html"
+    },
+    "MFS25B": {
+      "ratios": [
+        "2.17:1"
+      ],
+      "source": "https://www.tohatsu.com/int/tech_info/own_man_pdfs/MFS25-30C_EU%20Model_English%20web.pdf"
+    }
+  },
+  "30": {
+    "M30H": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M30H.html"
+    },
+    "MFS30B": {
+      "ratios": [
+        "2.17:1"
+      ],
+      "source": "https://www.tohatsu.com/int/tech_info/own_man_pdfs/MFS25-30C_EU%20Model_English%20web.pdf"
+    }
+  },
+  "40": {
+    "M40D2": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M50D2.html"
+    },
+    "MD40B": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/tech_info/own_man_pdfs/Toh_40B2_50B2_75C2_90C2_115A2_003-11075-D.pdf"
+    }
+  },
+  "50": {
+    "M50D2": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/marine/int/outboards/M50D2.html"
+    },
+    "MD50B": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.tohatsu.com/tech_info/own_man_pdfs/Toh_40B2_50B2_75C2_90C2_115A2_003-11075-D.pdf"
+    }
+  },
+  "60": {
+    "M60C": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.tohatsu.com/int/tech_info/own_man_pdfs/M60C-140A_OM2018_EX.pdf"
+    }
+  },
+  "70": {
+    "M70C": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.tohatsu.com/int/tech_info/own_man_pdfs/M60C-140A_OM2018_EX.pdf"
+    },
+    "M70CX": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.tohatsu.com/int/tech_info/own_man_pdfs/M60C-140A_OM2018_EX.pdf"
+    },
+    "MD70B": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.tohatsu.com/tech_info/own_man_pdfs/Toh_40B2_50B2_75C2_90C2_115A2_003-11075-D.pdf"
+    }
+  },
+  "90": {
+    "M90A2": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.tohatsu.com/int/tech_info/own_man_pdfs/M60C-140A_OM2018_EX.pdf"
+    },
+    "MD90B": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.tohatsu.com/tech_info/own_man_pdfs/Toh_40B2_50B2_75C2_90C2_115A2_003-11075-D.pdf"
+    }
+  },
+  "115": {
+    "M115A2": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.tohatsu.com/int/tech_info/own_man_pdfs/M60C-140A_OM2018_EX.pdf"
+    }
+  },
+  "140": {
+    "M140A2": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.tohatsu.com/int/tech_info/own_man_pdfs/M60C-140A_OM2018_EX.pdf"
+    }
+  }
+}

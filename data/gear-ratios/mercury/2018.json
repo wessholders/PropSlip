@@ -1,0 +1,550 @@
+{
+  "2.5HP FourStroke": {
+    "CURRENT-PLATFORM": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+    }
+  },
+  "3.5HP FourStroke": {
+    "CURRENT-PLATFORM": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+    }
+  },
+  "4HP FourStroke": {
+    "FOURSTROKE": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+    }
+  },
+  "5HP FourStroke": {
+    "FOURSTROKE": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+    }
+  },
+  "6HP FourStroke": {
+    "FOURSTROKE": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-2-5-20hp"
+    }
+  },
+  "8HP FourStroke": {
+    "2005-UP": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "9.9HP BigFoot / ProKicker": {
+    "2006-UP": {
+      "ratios": [
+        "2.42:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "9.9HP FourStroke": {
+    "2005-UP": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "15HP FourStroke": {
+    "2007-UP": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "15HP SeaPro FourStroke": {
+    "CURRENT": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "20HP FourStroke": {
+    "2009-UP": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "20HP SeaPro FourStroke": {
+    "CURRENT": {
+      "ratios": [
+        "2.15:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "25HP EFI FourStroke": {
+    "2006-2021": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "30HP EFI FourStroke": {
+    "2006-2021": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "40HP EFI FourStroke": {
+    "EFI-FOURSTROKE": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-40-60hp"
+    }
+  },
+  "40HP FourStroke": {
+    "1997-UP": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "40HP FourStroke BigFoot / Command Thrust": {
+    "2004-UP": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "40HP SeaPro FourStroke": {
+    "COMMAND-THRUST": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "50HP FourStroke": {
+    "1998-UP": {
+      "ratios": [
+        "1.83:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "50HP FourStroke BigFoot / Command Thrust": {
+    "BIGFOOT-CT": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "50HP SeaPro FourStroke": {
+    "COMMAND-THRUST": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "60HP EFI FourStroke": {
+    "EFI-FOURSTROKE": {
+      "ratios": [
+        "1.83:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-40-60hp"
+    }
+  },
+  "60HP FourStroke": {
+    "2001-UP": {
+      "ratios": [
+        "1.83:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "60HP FourStroke BigFoot / Command Thrust": {
+    "2001-UP": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "60HP SeaPro FourStroke": {
+    "COMMAND-THRUST": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "75HP DFI / OptiMax": {
+    "2004-2018": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "75HP FourStroke": {
+    "2015-UP": {
+      "ratios": [
+        "2.07:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
+    }
+  },
+  "75HP SeaPro FourStroke": {
+    "COMMAND-THRUST": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "90HP DFI / OptiMax": {
+    "2005-2018": {
+      "ratios": [
+        "2.33:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "90HP FourStroke": {
+    "2015-UP": {
+      "ratios": [
+        "2.07:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
+    }
+  },
+  "90HP FourStroke Command Thrust": {
+    "2015-UP-CT": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
+    }
+  },
+  "90HP SeaPro FourStroke": {
+    "COMMAND-THRUST": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "115HP DFI / OptiMax": {
+    "2007-2018": {
+      "ratios": [
+        "2.07:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "115HP FourStroke": {
+    "2001-UP": {
+      "ratios": [
+        "2.07:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "115HP FourStroke Command Thrust": {
+    "2015-UP-CT": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
+    }
+  },
+  "115HP Pro XS": {
+    "STANDARD-OR-CT": {
+      "ratios": [
+        "2.07:1",
+        "2.38:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/pro-xs/pro-xs-115-150hp"
+    }
+  },
+  "115HP SeaPro FourStroke": {
+    "COMMAND-THRUST": {
+      "ratios": [
+        "2.38:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "125HP DFI / OptiMax": {
+    "2011-2018": {
+      "ratios": [
+        "2.07:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "135HP DFI / OptiMax": {
+    "1996-2018": {
+      "ratios": [
+        "2.00:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "150HP DFI / OptiMax": {
+    "2004-2018": {
+      "ratios": [
+        "1.87:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "150HP EFI FourStroke": {
+    "2012-UP": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-75-150hp"
+    }
+  },
+  "150HP OptiMax Pro XS": {
+    "2011-2018": {
+      "ratios": [
+        "1.87:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "150HP Pro XS FourStroke": {
+    "2018-UP": {
+      "ratios": [
+        "2.08:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/about-us/news/mercury-marine-announces-new-150-pro-xs-outboard"
+    }
+  },
+  "150HP SeaPro FourStroke": {
+    "CURRENT": {
+      "ratios": [
+        "1.92:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "175HP DFI / OptiMax": {
+    "2000-2018": {
+      "ratios": [
+        "1.87:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "175HP FourStroke V6": {
+    "2018-UP": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-175-225hp"
+    }
+  },
+  "175HP OptiMax Pro XS": {
+    "2008-2018": {
+      "ratios": [
+        "1.87:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "175HP Pro XS V6": {
+    "2018-UP": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/pro-xs/pro-xs-175-300hp"
+    }
+  },
+  "200HP DFI / OptiMax 3.0L": {
+    "1998-2018": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "200HP FourStroke V6": {
+    "2018-UP": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-175-225hp"
+    }
+  },
+  "200HP OptiMax Pro XS": {
+    "2011-2018": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "200HP Pro XS V8": {
+    "AVAILABLE-GEARCASES": {
+      "ratios": [
+        "1.75:1",
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/pro-xs/pro-xs-175-300hp"
+    }
+  },
+  "200HP SeaPro": {
+    "CURRENT": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "225HP FourStroke V6": {
+    "2018-UP": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-175-225hp"
+    }
+  },
+  "225HP OptiMax Pro XS": {
+    "2006-2018": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "225HP Pro XS V8": {
+    "TORQUEMASTER": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/pro-xs/pro-xs-175-300hp"
+    }
+  },
+  "225HP SeaPro": {
+    "CURRENT": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "250HP FourStroke / Verado V8": {
+    "2018-UP": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-250-300hp"
+    }
+  },
+  "250HP OptiMax Pro XS": {
+    "2007-2018": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.rubexprops.com/boat-propellers/rpm-range/?make=Mercury"
+    }
+  },
+  "250HP Pro XS V8": {
+    "TORQUEMASTER": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/pro-xs/pro-xs-175-300hp"
+    }
+  },
+  "250HP SeaPro": {
+    "CURRENT": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "300HP FourStroke / Verado V8": {
+    "AVAILABLE-GEARCASES": {
+      "ratios": [
+        "1.75:1",
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/fourstroke/fourstroke-250-300hp"
+    }
+  },
+  "300HP Pro XS V8": {
+    "TORQUEMASTER": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/pro-xs/pro-xs-175-300hp"
+    }
+  },
+  "300HP SeaPro": {
+    "CURRENT": {
+      "ratios": [
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/seapro"
+    }
+  },
+  "350HP Verado L6": {
+    "L6-350": {
+      "ratios": [
+        "1.75:1",
+        "1.85:1"
+      ],
+      "source": "https://www.mercurymarine.com/us/en/engines/outboard/verado"
+    }
+  },
+  "250R Racing": {
+    "2018-UP": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.mercuryracing.com/engines/r-series/250r.html"
+    }
+  },
+  "300R Racing": {
+    "2018": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.mercuryracing.com/engines/r-series/300.html"
+    }
+  },
+  "400R Racing L6": {
+    "L6-2015-2022": {
+      "ratios": [
+        "1.75:1"
+      ],
+      "source": "https://www.mercuryracing.com/engines/r-series/400-old.html"
+    }
+  }
+}
