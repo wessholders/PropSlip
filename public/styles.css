@@ -109,7 +109,10 @@
         overflow-x: hidden;
       }
 
-      button {
+      button,
+      label,
+      input,
+      select {
         touch-action: manipulation;
       }
 
@@ -671,15 +674,6 @@
         overflow: hidden;
       }
 
-      body.sheet-open::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        z-index: 999;
-        background: var(--sheet-backdrop);
-        backdrop-filter: blur(4px);
-      }
-
       .sheet-body {
         padding: 10px 16px max(22px, env(safe-area-inset-bottom));
         box-sizing: border-box;
@@ -900,11 +894,13 @@
 
       .compare-button input {
         position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        overflow: hidden;
         opacity: 0;
-        cursor: pointer;
       }
 
       .compare-button span {

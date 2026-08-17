@@ -669,4 +669,5 @@
       clearStoredComparisonMode();
       switchView("slip");
       applyComparisonMode(false);
-
+      syncSheetOpenState();
+      document.documentElement.dataset.ready = "true";
