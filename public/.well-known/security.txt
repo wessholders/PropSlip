@@ -1,0 +1,4 @@
+Contact: mailto:propslipsupport@gmail.com
+Expires: 2027-08-16T23:59:59Z
+Preferred-Languages: en
+Canonical: https://prop-slip.com/.well-known/security.txt
