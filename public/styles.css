@@ -1293,7 +1293,13 @@
         #view-whatif > .result-card {
           position: relative;
           top: auto;
+          width: min(100%, 560px);
+          justify-self: center;
           min-height: 218px;
+        }
+
+        #view-whatif:has(#comparisonModeToggle:checked) > .result-card {
+          width: 100%;
         }
 
         #view-whatif .result-content {
